@@ -14,7 +14,6 @@ namespace GuildWars2Orchestra.Tests.Unit
         [TestCase("G,", Note.Keys.Note5, Note.Octaves.Low, 1, 1)]
         [TestCase("A,", Note.Keys.Note6, Note.Octaves.Low, 1, 1)]
         [TestCase("B,", Note.Keys.Note7, Note.Octaves.Low, 1, 1)]
-
         [TestCase("C", Note.Keys.Note1, Note.Octaves.Middle, 1, 1)]
         [TestCase("D", Note.Keys.Note2, Note.Octaves.Middle, 1, 1)]
         [TestCase("E", Note.Keys.Note3, Note.Octaves.Middle, 1, 1)]
@@ -22,7 +21,6 @@ namespace GuildWars2Orchestra.Tests.Unit
         [TestCase("G", Note.Keys.Note5, Note.Octaves.Middle, 1, 1)]
         [TestCase("A", Note.Keys.Note6, Note.Octaves.Middle, 1, 1)]
         [TestCase("B", Note.Keys.Note7, Note.Octaves.Middle, 1, 1)]
-
         [TestCase("c", Note.Keys.Note1, Note.Octaves.High, 1, 1)]
         [TestCase("d", Note.Keys.Note2, Note.Octaves.High, 1, 1)]
         [TestCase("e", Note.Keys.Note3, Note.Octaves.High, 1, 1)]
@@ -33,14 +31,28 @@ namespace GuildWars2Orchestra.Tests.Unit
         [TestCase("c'", Note.Keys.Note8, Note.Octaves.High, 1, 1)]
         public void it_parses_note(string text, Note.Keys key, Note.Octaves octave, int nominator, int denominator)
         {
-            var noteParser = new NoteParser();
+            var noteParser = new NoteParser(new Fraction(1, 4));
 
             var note = noteParser.Parse(text);
 
             Assert.That(note.Key, Is.EqualTo(key));
             Assert.That(note.Octave, Is.EqualTo(octave));
-            Assert.That(note.Nominator, Is.EqualTo(nominator));
-            Assert.That(note.Denominator, Is.EqualTo(denominator));
+            Assert.That(note.Length.Nominator, Is.EqualTo(nominator));
+            Assert.That(note.Length.Denominator, Is.EqualTo(denominator));
+        }
+
+        [Test]
+        [TestCase("C", Note.Keys.Note1, Note.Octaves.Middle, 1, 1)]
+        public void it_parses_duration(string text, Note.Keys key, Note.Octaves octave, int nominator, int denominator)
+        {
+            var noteParser = new NoteParser(new Fraction(1, 4));
+
+            var note = noteParser.Parse(text);
+
+            Assert.That(note.Key, Is.EqualTo(key));
+            Assert.That(note.Octave, Is.EqualTo(octave));
+            Assert.That(note.Length.Nominator, Is.EqualTo(nominator));
+            Assert.That(note.Length.Denominator, Is.EqualTo(denominator));
         }
     }
 }

@@ -21,23 +21,21 @@
             High
         }
 
-        public Note(Keys key, Octaves octave, int nominator, int denominator)
+        public Note(Keys key, Octaves octave, Fraction length)
         {
-            Denominator = denominator;
-            Nominator = nominator;
+            Length = length;
             Key = key;
             Octave = octave;
         }
 
-        public int Nominator { get; }
-        public int Denominator { get; }
+        public Fraction Length { get; }
 
         public Keys Key { get; }
         public Octaves Octave { get; }
 
         public override string ToString()
         {
-            return $"{(Octave == Octaves.High ? "▲" : Octave == Octaves.Low ? "▼" : string.Empty)}{Key} {Nominator}/{Denominator}";
+            return $"{(Octave == Octaves.High ? "▲" : Octave == Octaves.Low ? "▼" : string.Empty)}{Key} {Length}";
         }
     }
 }

@@ -42,6 +42,7 @@
     <Compile Include="Music\ScoreNote.cs" />
     <Compile Include="Parsers\NoteParser.cs" />
     <Compile Include="Values\Beat.cs" />
+    <Compile Include="Values\Fraction.cs" />
     <Compile Include="Values\MetronomeMark.cs" />
     <Compile Include="Controls\NotePlayer.cs" />
     <Compile Include="Extensions\TimeSpanExtension.cs" />

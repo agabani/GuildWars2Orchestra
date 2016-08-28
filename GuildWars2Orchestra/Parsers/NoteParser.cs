@@ -5,11 +5,18 @@ namespace GuildWars2Orchestra.Parsers
 {
     public class NoteParser
     {
+        private readonly Fraction _notesPerBeat;
+
+        public NoteParser(Fraction notesPerBeat)
+        {
+            _notesPerBeat = notesPerBeat;
+        }
+
         public Note Parse(string text)
         {
             var key = ParseKey(text);
             var octave = ParseOctave(text);
-            return new Note(key, octave, 1, 1);
+            return new Note(key, octave, new Fraction(1, 1));
         }
 
         private static Note.Keys ParseKey(string text)
