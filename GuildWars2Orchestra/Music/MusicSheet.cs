@@ -3,16 +3,16 @@ using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Music
 {
-    public class Score
+    public class MusicSheet
     {
-        public Score(MetronomeMark metronomeMark, List<Chord> scoreNotes)
+        public MusicSheet(MetronomeMark metronomeMark, IEnumerable<ChordOffset> melody)
         {
             MetronomeMark = metronomeMark;
-            ScoreNotes = scoreNotes;
+            Melody = melody;
         }
 
         public MetronomeMark MetronomeMark { get; private set; }
 
-        public List<Chord> ScoreNotes { get; private set; }
+        public IEnumerable<ChordOffset> Melody { get; private set; }
     }
 }

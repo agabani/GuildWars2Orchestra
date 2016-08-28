@@ -38,7 +38,8 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Music\Score.cs" />
+    <Compile Include="Music\ChordOffset.cs" />
+    <Compile Include="Music\MusicSheet.cs" />
     <Compile Include="Values\Chord.cs" />
     <Compile Include="Parsers\ChordParser.cs" />
     <Compile Include="Parsers\NoteParser.cs" />
