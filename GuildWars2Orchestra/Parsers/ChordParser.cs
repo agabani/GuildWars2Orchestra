@@ -1,25 +1,34 @@
-﻿using GuildWars2Orchestra.Values;
+﻿using System.Linq;
+using System.Text.RegularExpressions;
+using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Parsers
 {
     public class ChordParser
     {
-        private Fraction _notesPerBeat;
+        private static readonly Regex ComponentRegex = new Regex(@"\[([ABCDEFGabcdefg',]+)\](\d+)?\/?(\d+)?");
+        private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefg][,']?)");
+        private readonly NoteParser _noteParser;
 
-        public ChordParser(Fraction notesPerBeat)
+        public ChordParser(NoteParser noteParser)
         {
-            _notesPerBeat = notesPerBeat;
+            _noteParser = noteParser;
         }
 
         public Note[] Parse(string text)
         {
-            return new[]
-            {
-                new Note(Note.Keys.Note2, Note.Octaves.Low, new Fraction(1, 4)),
-                new Note(Note.Keys.Note2, Note.Octaves.High, new Fraction(1, 4)),
-                new Note(Note.Keys.Note4, Note.Octaves.High, new Fraction(1, 4)),
-                new Note(Note.Keys.Note6, Note.Octaves.High, new Fraction(1, 4))
-            };
+            var match = ComponentRegex.Match(text);
+
+            var chord = match.Groups[1].Value;
+            var nominator = match.Groups[2].Value;
+            var denomintor = match.Groups[3].Value;
+
+            var lengthText = string.IsNullOrEmpty(denomintor) ? nominator : $"{nominator}/{denomintor}";
+
+            return NoteRegex.Matches(chord)
+                .Cast<Match>()
+                .Select(x => _noteParser.Parse(x.Groups[1].Value + lengthText))
+                .ToArray();
         }
     }
 }
