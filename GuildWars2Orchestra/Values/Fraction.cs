@@ -39,5 +39,7 @@
                 return (Nominator*397) ^ Denominator;
             }
         }
+
+        public static implicit operator decimal(Fraction fraction) => fraction.Nominator/(decimal) fraction.Denominator;
     }
 }

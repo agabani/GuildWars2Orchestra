@@ -2,11 +2,11 @@
 {
     public class Beat
     {
-        public Beat(int value)
+        public Beat(decimal value)
         {
             Value = value;
         }
 
-        public int Value { get; private set; }
+        public decimal Value { get; private set; }
     }
 }

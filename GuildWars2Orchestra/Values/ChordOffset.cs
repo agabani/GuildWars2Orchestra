@@ -1,6 +1,4 @@
-﻿using GuildWars2Orchestra.Values;
-
-namespace GuildWars2Orchestra.Music
+﻿namespace GuildWars2Orchestra.Values
 {
     public class ChordOffset
     {

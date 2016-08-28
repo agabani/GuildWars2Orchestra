@@ -12,6 +12,11 @@ namespace GuildWars2Orchestra.Values
 
         public Fraction Length { get; }
 
-        public IEnumerable<Note> Notes { get; private set; }
+        public IEnumerable<Note> Notes { get; }
+
+        public override string ToString()
+        {
+            return $"{Notes} {Length}";
+        }
     }
 }

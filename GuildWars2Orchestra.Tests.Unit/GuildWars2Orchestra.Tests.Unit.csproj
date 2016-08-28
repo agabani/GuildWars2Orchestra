@@ -39,8 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Parser\ChordParserTests.cs" />
+    <Compile Include="Parser\MelodyParserTests.cs" />
     <Compile Include="Parser\NoteParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestData\Melodies.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
