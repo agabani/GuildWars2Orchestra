@@ -21,21 +21,18 @@
             High
         }
 
-        public Note(Keys key, Octaves octave, Fraction length)
+        public Note(Keys key, Octaves octave)
         {
-            Length = length;
             Key = key;
             Octave = octave;
         }
-
-        public Fraction Length { get; }
 
         public Keys Key { get; }
         public Octaves Octave { get; }
 
         public override string ToString()
         {
-            return $"{(Octave == Octaves.High ? "▲" : Octave == Octaves.Low ? "▼" : string.Empty)}{Key} {Length}";
+            return $"{(Octave == Octaves.High ? "▲" : Octave == Octaves.Low ? "▼" : string.Empty)}{Key}";
         }
 
         public override bool Equals(object obj)
@@ -45,17 +42,14 @@
 
         protected bool Equals(Note other)
         {
-            return Equals(Length, other.Length) && Key == other.Key && Octave == other.Octave;
+            return Key == other.Key && Octave == other.Octave;
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                var hashCode = Length?.GetHashCode() ?? 0;
-                hashCode = (hashCode*397) ^ (int) Key;
-                hashCode = (hashCode*397) ^ (int) Octave;
-                return hashCode;
+                return ((int) Key*397) ^ (int) Octave;
             }
         }
     }

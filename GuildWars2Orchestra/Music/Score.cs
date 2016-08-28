@@ -5,7 +5,7 @@ namespace GuildWars2Orchestra.Music
 {
     public class Score
     {
-        public Score(MetronomeMark metronomeMark, List<ScoreNote> scoreNotes)
+        public Score(MetronomeMark metronomeMark, List<Chord> scoreNotes)
         {
             MetronomeMark = metronomeMark;
             ScoreNotes = scoreNotes;
@@ -13,6 +13,6 @@ namespace GuildWars2Orchestra.Music
 
         public MetronomeMark MetronomeMark { get; private set; }
 
-        public List<ScoreNote> ScoreNotes { get; private set; }
+        public List<Chord> ScoreNotes { get; private set; }
     }
 }

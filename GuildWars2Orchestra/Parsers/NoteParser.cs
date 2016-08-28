@@ -1,32 +1,16 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Parsers
 {
     public class NoteParser
     {
-        private static readonly Regex Regex = new Regex(@"([ABCDEFGabcdefg',]+)(\d+)?\/?(\d+)?");
-        private readonly Fraction _notesPerBeat;
-
-        public NoteParser(Fraction notesPerBeat)
-        {
-            _notesPerBeat = notesPerBeat;
-        }
-
         public Note Parse(string text)
         {
-            var match = Regex.Match(text);
+            var key = ParseKey(text);
+            var octave = ParseOctave(text);
 
-            var note = match.Groups[1].Value;
-            var nominator = match.Groups[2].Value;
-            var denomintor = match.Groups[3].Value;
-
-            var key = ParseKey(note);
-            var octave = ParseOctave(note);
-            var fraction = ParseFraction(nominator, denomintor);
-
-            return new Note(key, octave, fraction*_notesPerBeat);
+            return new Note(key, octave);
         }
 
         private static Note.Keys ParseKey(string text)
@@ -115,13 +99,6 @@ namespace GuildWars2Orchestra.Parsers
                     throw new NotSupportedException(text);
             }
             return octave;
-        }
-
-        private static Fraction ParseFraction(string nominator, string denominator)
-        {
-            return new Fraction(
-                string.IsNullOrEmpty(nominator) ? 1 : int.Parse(nominator),
-                string.IsNullOrEmpty(denominator) ? 1 : int.Parse(denominator));
         }
     }
 }

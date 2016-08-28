@@ -38,8 +38,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chord\ChordParserTests.cs" />
-    <Compile Include="Chord\NoteParserTest.cs" />
+    <Compile Include="Parser\ChordParserTests.cs" />
+    <Compile Include="Parser\NoteParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

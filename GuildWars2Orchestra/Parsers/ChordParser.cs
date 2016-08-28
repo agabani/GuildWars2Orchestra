@@ -6,29 +6,46 @@ namespace GuildWars2Orchestra.Parsers
 {
     public class ChordParser
     {
-        private static readonly Regex ComponentRegex = new Regex(@"\[([ABCDEFGabcdefg',]+)\](\d+)?\/?(\d+)?");
+        private static readonly Regex MultipleNotesAndDurationRegex = new Regex(@"\[([ABCDEFGabcdefg',]+)\](\d+)?\/?(\d+)?");
+        private static readonly Regex SingleNoteAndDurationRegex = new Regex(@"([ABCDEFGabcdefg',]+)(\d+)?\/?(\d+)?");
         private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefg][,']?)");
         private readonly NoteParser _noteParser;
+        private readonly Fraction _notesPerBeat;
 
-        public ChordParser(NoteParser noteParser)
+        public ChordParser(NoteParser noteParser, Fraction notesPerBeat)
         {
+            _notesPerBeat = notesPerBeat;
             _noteParser = noteParser;
         }
 
-        public Note[] Parse(string text)
+        public Chord Parse(string text)
         {
-            var match = ComponentRegex.Match(text);
+            var notesAndDuration = IsSingleNote(text)
+                ? SingleNoteAndDurationRegex.Match(text)
+                : MultipleNotesAndDurationRegex.Match(text);
 
-            var chord = match.Groups[1].Value;
-            var nominator = match.Groups[2].Value;
-            var denomintor = match.Groups[3].Value;
+            var notes = notesAndDuration.Groups[1].Value;
+            var nominator = notesAndDuration.Groups[2].Value;
+            var denomintor = notesAndDuration.Groups[3].Value;
 
-            var lengthText = string.IsNullOrEmpty(denomintor) ? nominator : $"{nominator}/{denomintor}";
+            var length = ParseFraction(nominator, denomintor)*_notesPerBeat;
 
-            return NoteRegex.Matches(chord)
+            return new Chord(NoteRegex.Matches(notes)
                 .Cast<Match>()
-                .Select(x => _noteParser.Parse(x.Groups[1].Value + lengthText))
-                .ToArray();
+                .Select(x => _noteParser.Parse(x.Groups[1].Value)),
+                length);
+        }
+
+        private static Fraction ParseFraction(string nominator, string denominator)
+        {
+            return new Fraction(
+                string.IsNullOrEmpty(nominator) ? 1 : int.Parse(nominator),
+                string.IsNullOrEmpty(denominator) ? 1 : int.Parse(denominator));
+        }
+
+        private static bool IsSingleNote(string text)
+        {
+            return !text.StartsWith("[");
         }
     }
 }

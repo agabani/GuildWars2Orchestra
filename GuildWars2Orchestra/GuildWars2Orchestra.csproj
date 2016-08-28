@@ -39,7 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Music\Score.cs" />
-    <Compile Include="Music\ScoreNote.cs" />
+    <Compile Include="Values\Chord.cs" />
     <Compile Include="Parsers\ChordParser.cs" />
     <Compile Include="Parsers\NoteParser.cs" />
     <Compile Include="Values\Beat.cs" />
