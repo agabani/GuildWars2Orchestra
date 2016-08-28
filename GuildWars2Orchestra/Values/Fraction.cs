@@ -16,5 +16,10 @@
         {
             return $"{Nominator}/{Denominator}";
         }
+
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return new Fraction(a.Nominator*b.Nominator, a.Denominator*b.Denominator);
+        }
     }
 }
