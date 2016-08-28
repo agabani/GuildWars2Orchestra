@@ -44,15 +44,3 @@ namespace GuildWars2Orchestra.Tests.Unit
         }
     }
 }
-
-/* ==== NOTE MAPPING ====
-
-    C,	D,	E,	F,	G,	A,	B,
-    ▼1	▼2	▼3	▼4	▼5	▼6	▼7
-
-    C	D	E	F	G	A	B
-    1	2	3	4	5	6	7
-
-    c	d	e	f	g	a	b	c'
-    ▲1	▲2	▲3	▲4	▲5	▲6	▲7	▲8
-*/
