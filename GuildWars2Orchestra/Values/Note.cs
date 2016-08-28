@@ -37,5 +37,26 @@
         {
             return $"{(Octave == Octaves.High ? "▲" : Octave == Octaves.Low ? "▼" : string.Empty)}{Key} {Length}";
         }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Note) obj);
+        }
+
+        protected bool Equals(Note other)
+        {
+            return Equals(Length, other.Length) && Key == other.Key && Octave == other.Octave;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = Length?.GetHashCode() ?? 0;
+                hashCode = (hashCode*397) ^ (int) Key;
+                hashCode = (hashCode*397) ^ (int) Octave;
+                return hashCode;
+            }
+        }
     }
 }

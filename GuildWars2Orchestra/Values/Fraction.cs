@@ -21,5 +21,23 @@
         {
             return new Fraction(a.Nominator*b.Nominator, a.Denominator*b.Denominator);
         }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Fraction) obj);
+        }
+
+        protected bool Equals(Fraction other)
+        {
+            return Nominator == other.Nominator && Denominator == other.Denominator;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (Nominator*397) ^ Denominator;
+            }
+        }
     }
 }

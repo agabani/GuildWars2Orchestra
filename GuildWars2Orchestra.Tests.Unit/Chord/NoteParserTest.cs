@@ -2,9 +2,10 @@
 using GuildWars2Orchestra.Values;
 using NUnit.Framework;
 
-namespace GuildWars2Orchestra.Tests.Unit
+namespace GuildWars2Orchestra.Tests.Unit.Chord
 {
-    public class NoteParserTest
+    [TestFixture]
+    internal class NoteParserTest
     {
         [Test]
         [TestCase("C,", Note.Keys.Note1, Note.Octaves.Low, 1, 4)]
