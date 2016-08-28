@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra", "Guil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedWinapi", "ManagedWinapi\ManagedWinapi.csproj", "{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Tests.Unit", "GuildWars2Orchestra.Tests.Unit\GuildWars2Orchestra.Tests.Unit.csproj", "{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

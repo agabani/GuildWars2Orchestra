@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using GuildWars2Orchestra.Values;
 using ManagedWinapi;
 using ManagedWinapi.Windows;
 
@@ -12,6 +13,8 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
+            var metronomeMark = new MetronomeMark(60);
+
             var process = Process.GetProcesses()
                 .FirstOrDefault(
                     p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
