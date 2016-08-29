@@ -9,11 +9,9 @@ namespace GuildWars2Orchestra.Values
         {
             Metronome = metronome;
 
-            WholeNoteLength = TimeSpan
-                .FromMinutes(1)
-                .Divide(metronome)
-                .Multiply(beatsPerMeasure.Denominator)
-                .Divide(beatsPerMeasure.Nominator);
+            WholeNoteLength = TimeSpan.FromMinutes(1)
+                .Divide(metronome*16/beatsPerMeasure.Denominator)
+                .Multiply(4);
         }
 
         public int Metronome { get; }

@@ -17,7 +17,7 @@ namespace GuildWars2Orchestra
             int nomintor;
             int denomintor;
 
-            switch (6)
+            switch (1)
             {
                 case 1:
                     melody = Melodies.FinalFantasyXiii2.AWish.Melody;

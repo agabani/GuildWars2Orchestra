@@ -13,5 +13,10 @@ namespace GuildWars2Orchestra.Extensions
         {
             return TimeSpan.FromTicks(timeSpan.Ticks/dividor);
         }
+
+        public static TimeSpan Divide(this TimeSpan timeSpan, decimal dividor)
+        {
+            return TimeSpan.FromTicks((long) (timeSpan.Ticks / dividor));
+        }
     }
 }

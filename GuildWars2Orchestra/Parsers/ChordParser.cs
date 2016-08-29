@@ -10,17 +10,10 @@ namespace GuildWars2Orchestra.Parsers
         private static readonly Regex SingleNoteAndDurationRegex = new Regex(@"([ABCDEFGabcdefg',]+)(\d+)?\/?(\d+)?");
         private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefg][,']?)");
         private readonly NoteParser _noteParser;
-        private Fraction _notesPerBeat;
 
         public ChordParser(NoteParser noteParser)
         {
             _noteParser = noteParser;
-        }
-
-        public ChordParser WithNotesPerBeat(Fraction notesPerBeat)
-        {
-            _notesPerBeat = notesPerBeat;
-            return this;
         }
 
         public Chord Parse(string text)
@@ -33,7 +26,7 @@ namespace GuildWars2Orchestra.Parsers
             var nominator = notesAndDuration.Groups[2].Value;
             var denomintor = notesAndDuration.Groups[3].Value;
 
-            var length = ParseFraction(nominator, denomintor)*_notesPerBeat;
+            var length = ParseFraction(nominator, denomintor);
 
             return new Chord(NoteRegex.Matches(notes)
                 .Cast<Match>()
