@@ -139,6 +139,42 @@ A c [EB] G A2 E/2 G/2 A c [EB] G [AA,] G, A, B,
 [CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [CGc]
 ";
             }
+
+            public static class TheGreatWarrior
+            {
+                public const int Tempo = 95;
+                public const int Nominator = 1;
+                public const int Denominator = 4;
+                public const string Melody = @"
+[EGBe]1 e1 [Be]/2 f1 e/2 [DGBd]8/2 [EGBe]1 e1 [Bg]/2 f1 e/2 [DGBd]8/2
+
+[F,A,A]/2 A,/3 z/8 C/3 z/8 [EG]/2 [FA]/2 B3/2 [F,A,Dc]/2 A,/3 z/8 D/3 z/8 [FB]/2 [Ac]/2 d3/2 [G,B,DB]/2 B,/3 z/8 D/2 F/2 G4/2
+
+[F,DA]/2 B,/3 z/8 D/2 F/2 A4/2 [EGBe]1 e1 [Be]/2 f1 e/2 [DFBd]8/2 [EGBe]1 e1
+
+[Bg]/2 f1 e/2 [DFBd]6/2 [A,A]/3 z/8 E/3 z/8 A/3 z/8 [Gc]/3 z/8 [Ae]/2 [B,B]3/2 [Ec]/3 z/8 G/3 z/8 c/3 z/8 [Be]/3 z/8 [cg]/2 d3/2
+
+[D,F,e]/2 A,/3 z/8 d/2 f/2 a4/2 [D,G]/2 [A,A]/3 z/8 [dg]/3 z/8 f/2 [fa]1 [Fd]1 [B,De]/2 G/3 z/8 B/3 z/8 e/3 z/8
+
+f/3 z/8 e/3 z/8 B/3 z/8 G/3 z/8 g/3 z/8 e/3 z/8 B/3 z/8 a/3 z/8 e/3 z/8 B/3 z/8 g/3 z/8 e/3 z/8 [E,DGc]/2 E/3 z/8 A/3 z/8 c/3 z/8
+
+e/3 z/8 c/3 z/8 A/3 z/8 E/3 z/8 c/3 z/8 A/3 z/8 E/3 z/8 d/3 z/8 A/3 z/8 E/3 z/8 c/3 z/8 A/3 z/8 [E,B,DB]/2 G/3 z/8 B/3 z/8 e/3 z/8
+
+f/3 z/8 e/3 z/8 B/3 z/8 G/3 z/8 g/3 z/8 e/3 z/8 B/3 z/8 a/3 z/8 e/3 z/8 B/3 z/8 g/3 z/8 e/3 z/8 [E,DGc]/2 E/3 z/8 A/3 z/8 c/3 z/8
+
+e/3 z/8 c/3 z/8 A/3 z/8 E/3 z/8 [B,DFd]/2 G/3 z/8 B/3 z/8 d/3 z/8 g/3 z/8 d/3 z/8 B/3 z/8 G/3 z/8 [C,F,Be]1 [F,AB]/3 z/8 F,/3 z/8 [F,GB]/3 z/8
+
+d/3 z/8 [F,E]/3 z/8 [D,B]/3 z/6 [F,B,FA]1 [F,E]/3 z/8 F,/3 z/8 [F,DGd]1 [F,F]/3 z/8 F,/3 z/8 [F,A,EAc]1 [F,F]/3 z/8 F,/3 z/8 [F,G]1 [F,A]/3 z/8 F,/3 z/8 [E,F,GB]/3 z/8
+
+B,/3 z/8 [D,F]/3 z/8 [F,G,]/3 z/8 [F,Ed]/3 z/8 F,/2 E/6 F/4 [D,G]/4 A/4 [F,Be]1 [F,AB]/3 z/8 F,/3 z/8 [F,GB]/3 z/8 d/3 z/8 [F,E]/3 z/8 [D,B]/3 z/6 [F,B,A]1
+
+[F,E]/3 z/8 F,/3 z/8 [F,DGd]1 [F,F]/3 z/8 F,/3 z/8 [F,A,EAc]1 [F,F]/3 z/8 F,/3 z/8 [F,G]1 [F,A]/3 z/8 F,/3 z/8 [F,A,E]1 F,/2 F,/2 F,1 F,/2 F,/2
+
+[E,GBe]1 e1 e1 D,/2 d/2 [C,Gce]/2 g2 g/3 z/8 [B,a]/3 z/8 g/3 z/8 [A,Ecb]1 b1 [E,b]/3 z/8 a/3 z/8 g/3 z/8 a/3 z/8 [D,GBb]2 G2
+
+[G,DBg]1 g1 g1 F,/3 z/8 f/3 z/8 [E,Bg]/2 b2 D,1 [C,Ecg]1 g1 [D,DFcg]3/2 f/2 [E,Bg]3 B,2
+";
+            }
         }
 
         public static class FinalFantasy

@@ -17,7 +17,7 @@ namespace GuildWars2Orchestra
             int nomintor;
             int denomintor;
 
-            switch (5)
+            switch (6)
             {
                 case 1:
                     melody = Melodies.FinalFantasyXiii2.AWish.Melody;
@@ -52,6 +52,13 @@ namespace GuildWars2Orchestra
                     tempo = Melodies.FinalFantasyVii.GoldSaucer.Tempo;
                     nomintor = Melodies.FinalFantasyVii.GoldSaucer.Nominator;
                     denomintor = Melodies.FinalFantasyVii.GoldSaucer.Denominator;
+                    break;
+
+                case 6:
+                    melody = Melodies.FinalFantasyVii.TheGreatWarrior.Melody;
+                    tempo = Melodies.FinalFantasyVii.TheGreatWarrior.Tempo;
+                    nomintor = Melodies.FinalFantasyVii.TheGreatWarrior.Nominator;
+                    denomintor = Melodies.FinalFantasyVii.TheGreatWarrior.Denominator;
                     break;
 
                 default:
