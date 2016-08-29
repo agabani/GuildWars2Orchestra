@@ -51,7 +51,6 @@
     <Compile Include="Values\Beat.cs" />
     <Compile Include="Values\Fraction.cs" />
     <Compile Include="Values\MetronomeMark.cs" />
-    <Compile Include="Controls\NotePlayer.cs" />
     <Compile Include="Extensions\TimeSpanExtension.cs" />
     <Compile Include="Controls\IKeyboard.cs" />
     <Compile Include="Program.cs" />
