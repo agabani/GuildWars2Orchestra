@@ -111,6 +111,34 @@ C,1/2 G,1/2 [CEGc1/2] E1/2 [cdEG,1/2] E,1/2 [CEGe1/2] E,1/2 [gcAF,1/2] C1/2  F1/
 [gG,1/2] [D,Fd1/2] [dFF,1/2] [CGe1/2] [fA1/2] E,1/2  [D,CE1/2] F1/2 [DG,1/2] D,1/2 [A,C] [CA,F,] [B,G,] [C,G,C1/2] G,1/2 E,1/2 G,1/2 C,1/2 G,1/2 E,1/2 G,1/2  [E,CG,C,]
 ";
             }
+
+            public static class GoldSaucer
+            {
+                public const int Tempo = 70;
+                public const int Nominator = 1;
+                public const int Denominator = 2;
+                public const string Melody = @"
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2 
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2 
+[GB]/2 c/2 [GBd]/2 e/2 [Gd]/2 F/2 [Gg]/2 E/2 [Df] [ca] [Fd] [De]/2 f/2 g [EBe] d [DAc] [GB] [DA]/2 c/2 [GB] [FG]/2 E/2
+[DF] [AG] A G/2 G/2 [FA] [EB] [Dc] F/2 B/2 [Ac] d [Ee]/2 d/2 c/2 B/2 [DA]/2 B/2 [Dc]/2 B/2 [EA] F
+[GB]/2 c/2 [GBd]/2 e/2 [Gd]/2 F/2 [Gg]/2 E/2 [Df] [ca] [Fd] [De]/2 f/2 g [EBe] d [DAc]
+[DGB] [CAc] [DFd]2
+
+A c [EB] G A2 E/2 G/2 A c [EB] G A G A B
+c e [Gd] B c2 G/2 B/2 c e [Gd] B c G c B 
+A c [EB] G A2 E/2 G/2 A c [EB] G [AA,] G, A, B,
+[Cc] e [G,d] B [Cc]2 G,/2 B/2 [Cc] e [Dd]/2 e/2 [A,f]/2 a/2 [Cg] [Ec] [G,B]2
+
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2 
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+[CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [CGc]
+";
+            }
         }
 
         public static class FinalFantasy
