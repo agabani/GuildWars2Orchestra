@@ -6,8 +6,7 @@ namespace GuildWars2Orchestra.Parsers
 {
     public class ChordParser
     {
-        private static readonly Regex MultipleNotesAndDurationRegex = new Regex(@"\[([ABCDEFGabcdefg',]+)\](\d+)?\/?(\d+)?");
-        private static readonly Regex SingleNoteAndDurationRegex = new Regex(@"([ABCDEFGabcdefg',]+)(\d+)?\/?(\d+)?");
+        private static readonly Regex NotesAndDurationRegex = new Regex(@"\[?([ABCDEFGabcdefg',]+)\]?(\d+)?\/?(\d+)?");
         private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefg][,']?)");
         private readonly NoteParser _noteParser;
 
@@ -18,9 +17,7 @@ namespace GuildWars2Orchestra.Parsers
 
         public Chord Parse(string text)
         {
-            var notesAndDuration = IsSingleNote(text)
-                ? SingleNoteAndDurationRegex.Match(text)
-                : MultipleNotesAndDurationRegex.Match(text);
+            var notesAndDuration = NotesAndDurationRegex.Match(text);
 
             var notes = notesAndDuration.Groups[1].Value;
             var nominator = notesAndDuration.Groups[2].Value;
@@ -39,11 +36,6 @@ namespace GuildWars2Orchestra.Parsers
             return new Fraction(
                 string.IsNullOrEmpty(nominator) ? 1 : int.Parse(nominator),
                 string.IsNullOrEmpty(denominator) ? 1 : int.Parse(denominator));
-        }
-
-        private static bool IsSingleNote(string text)
-        {
-            return !text.StartsWith("[");
         }
     }
 }

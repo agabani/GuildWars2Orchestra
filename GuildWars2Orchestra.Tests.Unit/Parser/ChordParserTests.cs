@@ -34,10 +34,10 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
         }
 
         [Test]
-        public void it_parses_notes()
+        [TestCase("[D,dfa]6")]
+        [TestCase("[D,dfa6]")]
+        public void it_parses_notes(string text)
         {
-            const string text = "[D,dfa]6";
-
             var chordParser = new ChordParser(new NoteParser());
 
             var chord = chordParser.Parse(text);
