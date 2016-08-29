@@ -224,5 +224,32 @@ D,1/2 A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 E1/2 F D1/2 E1/2 [FD
 ";
             }
         }
+
+        public static class Pokemon
+        {
+            public static class PokemonCenterTheme
+            {
+                public const int Tempo = 115;
+                public const int Nominator = 1;
+                public const int Denominator = 2;
+                public const string Melody = @"
+[C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G, 
+[D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [C,c] [G,e] A, B, C B, A, G, 
+[C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G, 
+[D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [E,c] A, G, A, B, C D E 
+[C,e] G, E, G, [C,g] G, E, G, [D,f] [A,g] [F,f] [A,e] [D,d] A, F, A, 
+[D,B] G, F, G, [D,d] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c] G, A, G, 
+[C,e] G, E, G, [C,g] G, E, G, [D,f] [A,e] [F,f] [A,g] [D,a] A, F, A, 
+[D,g] G, [F,f] [G,e] [D,f] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c]4 
+[C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G, 
+[D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [C,c] [G,e] A, B, C B, A, G, 
+[C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G, 
+[D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [E,c] A, G, A, B, C D E 
+[C,e] G, E, G, [C,g] G, E, G, [D,f] [A,g] [F,f] [A,e] [D,d] A, F, A, 
+[D,B] G, F, G, [D,d] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c] G, A, G, 
+[C,e] G, E, G, [C,g] G, E, G, [D,f] [A,e] [F,f] [A,g] [D,a] A, F, A, 
+[D,g] G, [F,f] [G,e] [D,f] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,E,G,c]4";
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace GuildWars2Orchestra.Instrument
         };
 
         private readonly IKeyboard _keyboard;
-        public readonly int NoteTimeout = 3;
+        private const int NoteTimeout = 5;
 
         private Note.Octaves _currentOctave = Note.Octaves.Middle;
 
@@ -109,8 +109,8 @@ namespace GuildWars2Orchestra.Instrument
         private void PressNote(string key)
         {
             _keyboard.Press(key);
-            Thread.Sleep(NoteTimeout);
             _keyboard.Release(key);
+            Thread.Sleep(NoteTimeout);
         }
     }
 }

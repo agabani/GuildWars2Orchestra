@@ -17,7 +17,7 @@ namespace GuildWars2Orchestra
             int nomintor;
             int denomintor;
 
-            switch (1)
+            switch (7)
             {
                 case 1:
                     melody = Melodies.FinalFantasyXiii2.AWish.Melody;
@@ -59,6 +59,13 @@ namespace GuildWars2Orchestra
                     tempo = Melodies.FinalFantasyVii.TheGreatWarrior.Tempo;
                     nomintor = Melodies.FinalFantasyVii.TheGreatWarrior.Nominator;
                     denomintor = Melodies.FinalFantasyVii.TheGreatWarrior.Denominator;
+                    break;
+
+                case 7:
+                    melody = Melodies.Pokemon.PokemonCenterTheme.Melody;
+                    tempo = Melodies.Pokemon.PokemonCenterTheme.Tempo;
+                    nomintor = Melodies.Pokemon.PokemonCenterTheme.Nominator;
+                    denomintor = Melodies.Pokemon.PokemonCenterTheme.Denominator;
                     break;
 
                 default:
