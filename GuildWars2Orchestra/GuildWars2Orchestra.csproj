@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="TestData\Guilty Crown - My Dearest.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
