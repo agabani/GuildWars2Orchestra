@@ -11,9 +11,10 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
-            var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
+            var fileName = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
-            var musicSheet = xmlMusicSheetReader.LoadFromFile(@"TestData\Guilty Crown - My Dearest.xml");
+            var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
+            var musicSheet = xmlMusicSheetReader.LoadFromFile(fileName);
 
             var harp = new Harp(new GuildWarsKeyboard());
 
