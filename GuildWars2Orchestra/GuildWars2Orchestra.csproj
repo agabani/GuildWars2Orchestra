@@ -45,7 +45,6 @@
     <Compile Include="Parsers\MusicSheetParser.cs" />
     <Compile Include="Persistance\XmlMusicSheetReader.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
-    <Compile Include="TestData\Melodies.cs" />
     <Compile Include="Values\ChordOffset.cs" />
     <Compile Include="Music\MusicSheet.cs" />
     <Compile Include="Values\Chord.cs" />

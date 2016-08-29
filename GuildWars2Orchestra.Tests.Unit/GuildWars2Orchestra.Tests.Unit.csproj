@@ -42,6 +42,7 @@
     <Compile Include="Parser\MusicSheetParserTests.cs" />
     <Compile Include="Parser\NoteParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestData\Melodies.cs" />
     <Compile Include="Values\MetronomeMarkTests.cs" />
   </ItemGroup>
   <ItemGroup>

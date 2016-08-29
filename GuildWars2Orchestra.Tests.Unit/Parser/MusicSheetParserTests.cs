@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using GuildWars2Orchestra.Parsers;
-using GuildWars2Orchestra.TestData;
+using GuildWars2Orchestra.Tests.Unit.TestData;
 using GuildWars2Orchestra.Values;
 using NUnit.Framework;
 
