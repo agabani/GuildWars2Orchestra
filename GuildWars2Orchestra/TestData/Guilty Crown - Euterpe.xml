@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Guilty Crown - Euterpe</name>
+  <tempo>100</tempo>
+  <meter>1/4</meter>
+  <melody>
+    [A,Gce2] A, E3 [A,GBd] z1/2 B,1/2 A,1/2 G,1/2 E,3 [CFAc2] C1/2 D1/2
+
+    [EDE,2] E1/2 E1/2 [DCA,] z1/2 E1/2 D1/2 C1/2 [EG,2] C [DA,F,2] D1/2 E1/2 C2 A,1/2 C1/2 [DG,E,] z1/2 D1/2 D1/2 C1/2
+
+    E2 A,1/2 C1/2 [DGd2] E [DG,D,2] A, [B,A,E2] B, G,3 [A,E,C,2] A,
+
+    E3 [A,F,] z1/2 B,1/2 A,1/2 G,1/2 [E,3] [D,F,C] F, [A,C1/2] D1/2 [ED,B,2] [B,E] [DA,D,C] z1/2 E1/2 D1/2 C1/2
+
+    [G,E2] C [DCF,A,2] D1/2 E1/2 C2 [A,C,1/2] C1/2 [DG,D,] z1/2 D1/2 D1/2 C1/2 [ECA,C,] C,1/2 E1/2 A,1/2 C1/2 [DG,] z1/2 D,1/2 E1/2
+
+    [DG,] G, A, [B,A,F,2] A,3 C1/2 D1/2 [ECA,F,] F,1/2 [A,D1/2] [CE1/2] [EA1/2] [EC1/2] D1/2 [A,D1/2] [F,1/2] F,1/2
+
+    [E,G,B,D] E,1/2  [G,C1/2] [B,D1/2] [DF1/2] [B,E1/2] C1/2 [CG,1/2] [E,1/2] E,1/2 [D,F,A,C] A,1/2 [D,C1/2] [B,F,D,1/2] A,1/2 [B,G,E,] B,1/2 E,1/2 [E,G,C1/2] D1/2 [A,CE] C,1/2 E,1/2 A,1/2 C,1/2
+
+    z z1/2 E, z1/2 [F,e] F,1/2 [C,d1/2] [eF,1/2] [Aea1/2] [gcF,1/2] [C,d1/2] [dF,] [F,1/2] F,1/2 [E,B,d] z1/2 [cE,1/2] [G,d1/2] [fB,1/2] [G,ce1/2] [cA,1/2] [E,c2]
+
+    [eE,2] [Cc1/2] [dD1/2] [C,ce2] [cC1/2] [Dd1/2] [eE,B,3] z2 [Ec] A,1/2 [E,B1/2] [AA,1/2] [CB1/2] [Ec1/2] e1/2
+
+    [BG1/2] G,1/2 A,1/2 B,1/2 D,1/2 G1/2 [ACF,1/2] C,1/2 F,1/2 [A,G1/2] [CF1/2] G1/2 [AF1/3] [GB1/3] c1/3 [EG1/2] E,1/2 F,1/2 G,1/2 A, F1/4 E1/4 [FA,1/2] D,1/2 F,1/2 [A,E1/2]
+
+    [DC,1/2] E1/2 F1/2 A1/2 [EA,C,1/2] E,1/2 A,1/2 D1/2 C1/2 D1/2 [EG,E,C,1/2] A1/2 [AC,A,] A A1/4 G1/4 A1/2 [BE,3] [A,F,D,2] A,
+
+    E3 A, z1/2 B,1/2 A,1/2 G,1/2 E,2 C, [A,E,C2] D E2 E D z1/2 E1/2 D1/2 C1/2
+
+    E F, [A,1/2] C1/2 [DCA,F,] z1/2 D1/2 D1/2 E1/2 C2 A,1/2 C1/2 [DB,G,E,] z1/2 D1/2 D1/2 C1/2 E2 A,1/2 C1/2 [DF,2] E
+
+    [D,G,B,E,2] A, [B,E,6] [FD4]
+
+    C1/2 D1/2 [A,F,EC] F,1/2 [DA,1/2] [CE1/2] [EA1/2] [DG1/2] D1/2 [DA,] F,1/2 F,1/2 [DG,B,E,] E,1/2 [A,C1/2] [B,D1/2] [DF1/2]
+
+    [CE1/2] [CA,1/2] [A,C] E,1/2 E,1/2 [D,F,A,C] A,1/2 [D,C1/2] [B,F,D,1/2] A,1/2 [B,G,E,] B,1/2 E,1/2 [E,G,C1/2] D1/2 [ECG,] C,1/2 E,1/2 A,1/2 C,1/2 B, z1/2 E, z1/2
+
+    [F,e] F,1/2 [C,d1/2] [eF,1/2] [Aea1/2] [gcF,1/2] [C,d1/2] [dF,] F,1/2 F,1/2 [E,d] E,1/2 [G,c1/2] [dB,1/2] [FBf1/2] [ecG,1/2] [E,c1/2] [cA,] A,1/2 A,1/2 [F,ce2] c1/2 d1/2 [eB,2] c1/2 d1/2 [ecC,3] [C,F,2] D1/2 C1/2 [B,G,E,3] [A,F,]
+  </melody>
+</song>

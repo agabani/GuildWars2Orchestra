@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Clannad - Dango Daikazoku</name>
+  <tempo>100</tempo>
+  <meter>1/4</meter>
+  <melody>
+    A1/2 G1/2 c c d d e c G A1/2 G1/2 c c d1/2 d1/2 c4 [FA1/2] G1/2 c [cA] d [dE] e [cA] G [FA1/2] G1/2 c [cA] d
+
+    [dE] e [dB2] [FA1/2] G1/2 c [cA] d [dE] e [cA] G [FA1/2] G1/2 c [cA] d  [cC] G B2 [Af1/2] e1/2 [cF1/2] A1/2  D1/2 c1/2 d1/2 A1/2 [Cc] G [AG,] c
+
+    [fAF1/2] e1/2 c1/2 A1/2 C1/2 c1/2 d1/2 A1/2 [Cc] G A c [Af1/2] e1/2 [cF1/2] A1/2  D1/2 c1/2 d1/2 A1/2 [Cc] G [AG,] c [A,G] z1/2 c1/2 F z1/2 F1/2
+
+    G1/2 F1/2 G1/2 F1/2 [B,D,D1/2] [G,G1/2] [Cc1/2] [dD1/2] [dF,] [Cc1/2] [AA,1/2] [CF1/2] [Cc1/2] [dC1/2] [Ee1/2] [gGE,1/2] [Dd1/2] [eEC] [EGc1/2] [G,G1/2] [Cc1/2] [dD1/2] [dF,] [Cc1/2] [AA,1/2] [CF1/2]  [Dd1/2] [cC1/2] [Gg1/2] [eEA,2] [B,D,D1/2] [GG,1/2] [G,Cc1/2] [dD1/2]
+
+    [dF,] [Cc1/2] [AA,1/2] [CF1/2] [Cc1/2] [dC1/2] [Ee1/2] [gGE,1/2] [Dd1/2] [eEC] [EGc]  [BC] [AA,D,1/2] A,1/2 D1/2 [AA,1/2] [G,B1/2] D1/2 [GCc1/2] [BDB,1/2] C,1/2 [Cc1/2] [EG1/2] C1/2 [B,D,D1/2] [G,G1/2] [GCc1/2] [dDB1/2] [dF,] [Cc1/2] [AA,1/2] [CF1/2] [Cc1/2] [dC1/2] [Ee1/2]
+
+    [gGE,1/2] [Dd1/2] [eEC] [EGc1/2] [G,G1/2] [Cc1/2] [dD1/2] [dF,] [Cc1/2] [AA,1/2] [CF1/2]  [Dd1/2] [cC1/2] [Gg1/2] [eEA,] [Ed] [B,D,D1/2] [GG,1/2] [G,Cc1/2] [dD1/2] [dF,] [Cc1/2] [AA,1/2] [CF1/2] [Cc1/2] [dC1/2] [Ee1/2] [gGE,1/2] [Dd1/2] [eEC] [EGc]  [BC]
+
+    [AFD,] A, [G,GB] [cB,1/2] B c
+  </melody>
+</song>

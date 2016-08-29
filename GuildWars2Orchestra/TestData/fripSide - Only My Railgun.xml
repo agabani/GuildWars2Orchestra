@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>fripSide - Only My Railgun</name>
+  <tempo>125</tempo>
+  <meter>1/2</meter>
+  <melody>
+    A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2 A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2
+    A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2 A, A/2 A,/2 A G/2 A3/2 c B [A,G]
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [G,B] G, [D,G] G, [G,f] G, [D,d] G, [C,d]3/2 [C,d]3/2 [G,e] B, [B,c] [G,B] G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [D,A] D, A, D [D,A] [DB] [A,c] [D,d] [E,B] E, [B,G] E [E,E] E [B,G] E,
+    [F,G] A/2 A/2 F, [A,c] [G,B] G/2 E/2 D, [G,G] [A,G] A/2 A9/2 E,2
+    [C,E,A,]8 [A,c] E, A, B, [Cc] B c d
+    [F,c] C, G, A, [Cc] B c d [C,e] G, C E [Ge] f e d
+    [G,e] [Dd] [Bc] [Gg] [E,e] B, G E [A,c] E, A, C [Cc] [E,B] [Cc] [A,d]
+    [F,c] C, F, A, c [C,B] [A,c] [F,d] [D,e] A, [FA] D [G,d] [D,c] [B,B] [G,c]
+    [A,B] E, A, [E,A] [B,A] E, A, E, [F,e] e/2 e/2 F,/2 e/2 e C, [F,e] [F,d] [C,c]
+    [G,B] B, [G,B] g/2 g/2 D, G, G, g/2 g/2 g [B,f] [E,e] [E,d] f/2 e/2 E,/2 d/2 E, [E,c]
+    [A,B] E,/2 B/2 C [A,A] [A,c] E, G, D, [F,A] A/2 A/2 F,/2 A/2 A C, [A,A] [F,B] [C,c]
+    [G,d] D, [G,B] G/2 G/2 D, B, G, [D,G] [F,A] C, [F,A] [C,G] [A,A] B/2 c/2 F, [A,c]
+    c/2 G,/2 G,/2 G,/2 G,/2 G,/2 B/2 A/2 B/2 G,/2 G,/2 G,/2 G,2 [E,e]3/2 [F,f]3/2 [E,e] E, c B G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [G,B] G, [D,G] G, [G,f] G, [D,d] G, [C,d]3/2 [C,d]3/2 [G,e] B, [B,c] [G,B] G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [D,A] D, A, D [D,A] [DB] [A,c] [D,d] [E,B]3/2 [E,G]3/2 [E,B,E]2 [Ec] B [E,G]
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [G,B] G, [D,G] G, [G,f] G, [D,d] G, [C,d]3/2 [C,d]3/2 [G,e] B, [B,c] [G,B] G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [D,A] D, A, D [D,A] [DB] [A,c] [D,d] [E,B] E, [B,G] E [E,E] E [B,G] E,
+    [F,G] A/2 A3/2 c/2 F,/2 B G/2 E3/2 G/2 G,/2 G A/2 [EA]9/2 E,2
+    [A,CEA]8 [A,c] E, A, B, [Cc] B c d
+    [F,c] C, G, A, [Cc] B c d [C,e] G, C E [Ge] f e d
+    [G,e] [Dd] [Bc] [Gg] [E,e] B, G E [A,c] E, A, C [Cc] [E,B] [Cc] [A,d]
+    [F,c] C, F, A, c [C,B] [A,c] [F,d] [D,e] A, [FA] D [G,d] [D,c] [B,B] [G,c]
+    [A,B] E, A, [E,A] [B,A] E, A, E, [F,e] e/2 e/2 F,/2 e/2 e C, [F,e] [F,d] [C,c]
+    [G,B] B, [G,B] g/2 g/2 D, G, G, g/2 g/2 g [B,f] [E,e] [E,d] f/2 e/2 E,/2 d/2 E, [E,c]
+    [A,B] E,/2 B/2 C [A,A] [A,c] E, G, D, [F,A] A/2 A/2 F,/2 A/2 A C, [A,A] [F,B] [C,c]
+    [G,d] D, [G,B] G/2 G/2 D, B, G, [D,G] [F,A] C, [F,A] [C,G] [A,A] B/2 c/2 F, [A,c]
+    c/2 G,/2 G,/2 G,/2 G,/2 G,/2 B/2 A/2 B/2 G,/2 G,/2 G,/2 G,2 [E,e]3/2 [F,f]3/2 [E,e] E, c B G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [G,B] G, [D,G] G, [G,f] G, [D,d] G, [C,d]3/2 [C,d]3/2 [G,e] B, [B,c] [G,B] G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [D,A] D, A, D [D,A] [DB] [A,c] [D,d] [E,B]3/2 [E,G]3/2 [E,B,E]2 [Ec] B [E,G]
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [G,B] G, [D,G] G, [G,f] G, [D,d] G, [C,d]3/2 [C,d]3/2 [G,e] B, [B,c] [G,B] G
+    [A,G] A/2 A/2 E, [A,G] [A,G] A/2 A/2 E, [A,G] [F,G] A/2 A/2 C, [F,A] [F,A] [F,B] [C,c] [F,d]
+    [D,A] D, A, D [D,A] [DB] [A,c] [D,d] [E,B] E, [B,G] E [E,E] E [B,G] E,
+    [F,G] A/2 A3/2 c/2 F,/2 B G/2 E3/2 G/2 G,/2 [A,G] A/2 [EA]9/2 E,2
+    [A,CEA]4 [C,A,]3/2 [E,C]3/2 [A,E] [F,A] C, F, A, [C,A] A,/2 B/2 F, [C,c]
+    [G,B] D,/2 G/2 G, [B,D] G, [D,G] [B,B] [G,c] [E,d] B, E, G, [B,d] G,/2 e/2 E, [B,f]
+    [A,e] E,/2 A/2 C [E,c] [G,e] D,/2 d/2 B, [D,c] [F,A] C, F, [A,a] C, [A,c'] [F,b] [C,g]
+    [G,d] c/2 B/2 B,/2 G/2 D,/2 d/2 A, [D,B] [G,G] [D,D] [F,A,CF]3 [CFA]3 [C,Fc]2
+    [F,Acf]5 c B G [E,G] A/2 A3/2 G G A/2 A/2 E, G
+    [F,G] A/2 A3/2 A A B c d [D,G,B]2 G2 [Df]2 [Fd]2
+    [G,d]3/2 d3/2 e [B,D] c B G [E,G] A/2 A3/2 G G A/2 A3/2 G
+    [F,G] A/2 A3/2 A A B c d [D,F,A,A]4 A B c d
+    [E,B]3/2 G3/2 E2 c [E,B] G [A,G] A/2 A/2 A, [CG] [EG] A/2 A3/2 G
+    [F,G] A/2 A/2 F, [A,A] [CA] B c d [G,B] D, [G,G] D, [B,f] G, [B,d] G,
+    [C,d] G,/2 d/2 E [G,e] B, [G,c] [B,B] G [A,G] A/2 A/2 A, [E,G] [G,G] A/2 A/2 G, [E,G]
+    [F,G] A/2 A/2 F, [C,A] [E,A] [C,B] [E,c] [C,d] [D,A]4 A B c d
+    [E,B] E, [B,G] E, [B,E] E, [B,G] E, [F,G] A/2 A3/2 c/2 F,/2 B G/2 E3/2 G/2 G,/2
+    [A,G] A/2 A/2 A, B, C D E G [A,CEA]8
+  </melody>
+</song>
