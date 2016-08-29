@@ -1,13 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using GuildWars2Orchestra.Parsers;
-using GuildWars2Orchestra.Tests.Unit.TestData;
+using GuildWars2Orchestra.TestData;
 using GuildWars2Orchestra.Values;
 using NUnit.Framework;
 
 namespace GuildWars2Orchestra.Tests.Unit.Parser
 {
     [TestFixture]
-    internal class MelodyParserTests
+    internal class MusicSheetParserTests
     {
         private static void AssertChord(ChordOffset chordOffset, Note.Keys expectedNote, Note.Octaves expectedOctave, decimal expectedOffset, Fraction expectedFraction)
         {
@@ -19,17 +20,24 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
         }
 
         [Test]
-        public void it_parses_melody()
+        public void it_parses()
         {
             var notesPerBeat = new Fraction(
                 Melodies.FinalFantasyXiii2.AWish.Nominator,
                 Melodies.FinalFantasyXiii2.AWish.Denominator);
 
-            var chordParser = new ChordParser(new NoteParser(), notesPerBeat);
+            var musicSheetParser = new MusicSheetParser(new ChordParser(new NoteParser(), notesPerBeat));
 
-            var melodyParser = new MelodyParser(chordParser);
+            var musicSheet = musicSheetParser.Parse(
+                Melodies.FinalFantasyXiii2.AWish.Melody,
+                Melodies.FinalFantasyXiii2.AWish.Tempo,
+                Melodies.FinalFantasyXiii2.AWish.Nominator,
+                Melodies.FinalFantasyXiii2.AWish.Denominator);
 
-            var melody = melodyParser.Parse(Melodies.FinalFantasyXiii2.AWish.Melody).ToArray();
+            Assert.That(musicSheet.MetronomeMark.Metronome, Is.EqualTo(75));
+            Assert.That(musicSheet.MetronomeMark.WholeNoteLength, Is.EqualTo(TimeSpan.FromMilliseconds(1600)));
+
+            var melody = musicSheet.Melody.ToArray();
 
             AssertChord(melody[0], Note.Keys.Note4, Note.Octaves.Middle, 0m, new Fraction(1, 10));
             AssertChord(melody[1], Note.Keys.Note6, Note.Octaves.Middle, 0.1m, new Fraction(1, 10));

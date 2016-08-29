@@ -1,4 +1,4 @@
-﻿namespace GuildWars2Orchestra.Tests.Unit.TestData
+﻿namespace GuildWars2Orchestra.TestData
 {
     public static class Melodies
     {

@@ -13,7 +13,7 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
-            var metronomeMark = new MetronomeMark(60);
+            var metronomeMark = new MetronomeMark(60, new Fraction(1, 1));
 
             var process = Process.GetProcesses()
                 .FirstOrDefault(

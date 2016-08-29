@@ -5,14 +5,15 @@ namespace GuildWars2Orchestra.Values
 {
     public class MetronomeMark
     {
-        public MetronomeMark(int metronome)
+        public MetronomeMark(int metronome, Fraction beatsPerMeasure)
         {
             Metronome = metronome;
 
             WholeNoteLength = TimeSpan
                 .FromMinutes(1)
                 .Divide(metronome)
-                .Multiply(4);
+                .Multiply(beatsPerMeasure.Denominator)
+                .Divide(beatsPerMeasure.Nominator);
         }
 
         public int Metronome { get; }
