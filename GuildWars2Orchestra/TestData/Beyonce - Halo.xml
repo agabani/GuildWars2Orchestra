@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Beyonce - Halo</name>
+  <tempo>75</tempo>
+  <meter>1/2</meter>
+  <melody>
+    [C,ce] G, [CE]6 [D,df] A, [DF]6 [Ac] E, [A,C]6 [Fc] F, [F,A,C]6
+
+    [C,Ce]/2 G/2 c/2 G/2 e/2 G/2 c/2 G/2 e/2 G/2 c/2 G/2 e/2 G/2 d/2 e/2 [D,Df]/2 A/2 d/2 A/2 f/2 A/2 d/2 A/2 f/2 A/2 d/2 A/2 d/3 e/3 d/3 c/2 B/2 [A,c]/2 E/2 A/2 E/2 c/2 E/2 A/2 E/2 c/2 E/2 A/2 E/2 c/2 d/2 c/2 B/2 [F,c]/2 F/2 A/2 F/2 c/2 F/2 A/2 F/2 c/2 F/2 A/2 F/2 c/2 B/2 A/2 G/2
+
+    [C,CEG]7/2 G/2 [CEGe]/2 e/2 e e d/2 f/2 [A,DFf]2 D,3/2 A/2 [A,DFd]/2 d/2 d/2 A,/2 [Fd]/2 [Ee]/2 [Dc] [E,A,Cc]/2 B/2 A5/2 G/2 [E,A,Cc]/2 c/2 c/2 c/2 c/2 c/2 c/2 [E,d]/2 [F,A,Cc]7/2 G/2 [F,A,Cc]/2 c/2 c/2 c/2 c F/2 E/2
+
+    [C,G,C]2 C,/2 G,/2 C/2 G/2 [G,CEe]/2 e/2 e/2 e/2 [G,e]/2 C/2 [G,d]/2  D/2 [D,A,Df]/2 e/2 d/2 c3/2 d/2 c/2 [A,DFd]/2 c/2 d/2 c/2 [A,DFe] [Dc]/2 E/2 [A,c]/2 B/2 A [E,A,C]2 [E,A,Cc]/2 c/2 c/2 c/2 c/2 c/2 c/2 c/2 [F,A,Cd]/2 c/2 g/2 e5/2 G/2 [F,A,Cc]/2 c/2 c c d
+
+    [G,CEc]/2 G,/2 C/2 D/2 E/2 G,/2 C/2 [Dc]/2 [G,CEg]/2 g/2 [Cg]/2 [Dg]/2 [Ea]/2 D/2 [Ca]/2 B,/2 [A,DFa]/2 [A,g]/2 D/2 E/2 F/2 D/2 [A,e]/2 [Ee]/2 [Fg]/2 [Dg]/2 [A,g]/2 [Eg]/2 [Fc']/2 E/2 [Dc']/2 C/2 [E,A,C]/2 [E,b]/2 [A,a]/2 B,/2 C/2 E,/2 [A,e]/2 [B,f]/2 [Cg] [E,g]/2 [A,e]/2 [Cd]/2 E,/2 [A,c]/2 D/2 [F,B]/2 A/2 F,/2 A,/2 C/2 A,/2
+
+    [F,E]/2 [A,F]/2 [C,G,CG]/2 G/2 G/2 G/2 G B/2 c/2 [CEG]/2 d/2 e3 [CEGc]/2 c/2 c/2 c/2 c [Cc]/2 d/2 [D,A,D]2 [A,DF] c/2 c/2  [DFd]/2 d/2  [A,d] [DFe] [A,c] [A,CEc]/2 A3/2 A, C [A,CEc]/2 c/2 [A,c]/2 c/2 [Cc] [Gc] [A,CFc]/2 G/2 F/2 E/2 [F,A,C]3/2 G/2 [A,Cc]/2 c/2 [F,c] [F,A,Cc] B/2 c/2
+
+    [CE] G, [CE] G,/2 [CG]/2 [CEc]/2 c/2 [G,c]/2 c/2 [CEc] [G,c]/2 B,/2 [DFd] A, [DF] A,/2 c/2 [DFd]/2 c/2 [A,d]/2 c/2 [DFe]/2 d/2 [A,c] [A,CEc]/2 B/2 A A, C [A,CEc]/2 c/2 c/2 c/2 [A,CEc] c/2 c/2 [A,CF]/2 G/2 [DF]/2 E/2 C2 [A,c]/2 c/2 [Cc] [Ec] B/2 c/2 [CE] G, [CE] G,
+
+    [C,e] [G,d] [CE] G, [DFe] [A,d] D [DF] [A,DFf] [Ce] [A,DFd] [Cc]/2 d/2 [A,CEe] [A,d] [CE]2 [E,A,Ce] d/2 c/2 A2 [F,A,Ce] d [F,A,CE]/2  D/2 D [F,A,Cd] c2 D [C,C]/2 g/2 e3 [G,CEe]/2 e/2 e/2 e/2 e d/2 f/2 [A,DF]4 [D,A,D]/2 d/2 d/2 d/2 d/2 d/2 e/2 c/2 c/3 B/3 A/3 G/3 E/3 D/3 C2
+
+    [A,CEc]/2 c/2 c/2 c/2 c/2 c/2 c/2 d/2 [F,A,Cc]5/2 G/2 G/2 G/2 [F,A,C,c] c c F/2 E/2 [C,G,C]7/2 G/2 [G,CEe] e/2 e/2 [G,CEe] d [A,DFd]/2 c3 G/2 [A,DFd]/2 e/2 e/2 e/2 [A,DFe]/2 E/2 [Dd]/2 E/2 [E,A,d]3/2 c/2 [E,A,CA]2 [E,A,Cc]/2 c/2 c c c/2 d/2 [F,A,Cc]3/2 A3/2 G/2 [F,A,Cc]/2 c/2 c [Cc] F/2 E/2
+
+    [G,CEc]/2 G,/2 C/2 D/2 E/2 G,/2 C/2 [Dc]/2 [G,CEg]/2 g/2 [Cg]/2 [Dg]/2 [Ea]/2 D/2 [Ca]/2 B,/2 [A,DFa]/2 [A,g]/2 D/2 E/2 F/2 D/2 [A,e]/2 [Ee]/2 [Fg]/2 [Dg]/2 [A,g]/2 [Eg]/2 [Fc']/2 E/2 [Dc']/2 C/2 [E,A,C]/2 [E,b]/2 [A,a]/2 B,/2 C/2 E,/2 [A,e]/2 [B,f]/2 [Cg] [E,g]/2 [A,e]/2 [Cd]/2 E,/2 [A,c]/2 D/2 [F,B]/2 A/2 F,/2 A,/2 C/2 A,/2
+
+    [F,E]/2 [A,F]/2 [C,G,CG]/2 G/2 G/2 G/2 G B/2 c/2 [CEG]/2 d/2 e3 [CEGc]/2 c/2 c/2 c/2 c [Cc]/2 d/2 [D,A,D]2 [A,DF] c/2 c/2  [DFd]/2 d/2  [A,d] [DFe] [A,c] [A,CEc]/2 A3/2 A, C [A,CEc]/2 c/2 [A,c]/2 c/2 [Cc] [Gc] [A,CFc]/2 G/2 F/2 E/2 [F,A,C]3/2 G/2 [A,Cc]/2 c/2 [F,c] [F,A,Cc] B/2 c/2
+
+    [CE] G, [CE] G,/2 [CG]/2 [CEc]/2 c/2 [G,c]/2 c/2 [CEc] [G,c]/2 B,/2 [DFd] A, [DF] A,/2 c/2 [DFd]/2 c/2 [A,d]/2 c/2 [DFe]/2 d/2 [A,c] [A,CEc]/2 B/2 A A, C [A,CEc]/2 c/2 c/2 c/2 [A,CEc] c/2 c/2 [A,CF]/2 G/2 [DF]/2 E/2 C2 [A,c]/2 c/2 [Cc] [Ec] B [C,G,Cc]4
+
+    [G,CEe] d2 [C,C] [DFe] [A,d] D [DF] [DFf] [A,e] [DFd] [A,c]/2 d/2 [A,CEe] d3 [A,CEe] d/2 c/2 A2 [A,CFe] [Dd] [A,CE]/2  D/2 D [F,A,Cd] c3
+
+
+    [C,Ce]/2 G/2 c/2 G/2 e/2 G/2 c/2 G/2 e/2 G/2 c/2 G/2 e/2 G/2 d/2 e/2 [D,Df]/2 A/2 d/2 A/2 f/2 A/2 d/2 A/2 f/2 A/2 d/2 A/2 d/3 e/3 d/3 c/2 B/2 [A,c]/2 E/2 A/2 E/2 c/2 E/2 A/2 E/2 c/2 E/2 A/2 E/2 c/2 d/2 c/2 B/2 [F,c]/2 F/2 A/2 F/2 c/2 F/2 A/2 F/2 c/2 F/2 A/2 F/2 c/2 B/2 A/2 G/2 [C,CE]
+  </melody>
+</song>

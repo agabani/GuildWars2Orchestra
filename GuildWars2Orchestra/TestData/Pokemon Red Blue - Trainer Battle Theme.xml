@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Pokemon Red Blue - Trainer Battle Theme</name>
+  <tempo>170</tempo>
+  <meter>1/4</meter>
+  <melody>
+    [B,a]/4 [A,g]/4 [G,f]/4 [F,e]/4 [B,a]/4 [F,e]/4 [G,f]/4 [F,e]/4 [B,a]/4 [G,f]/4 [F,e]/4 [E,d]/4 [B,a]/4 [E,d]/4 [F,e]/4 [E,d]/4
+    [B,a]/4 [F,e]/4 [E,d]/4 [D,c]/4 [B,a]/4 [D,c]/4 [E,d]/4 [D,c]/4 [B,a]/4 [E,d]/4 [D,c]/4 [C,B]/4 [B,a]/4 [C,B]/4 [D,c]/4 [C,B]/4
+
+    [B,B]/2 z/2 D,/2 [E,E]/2 z/2 F,/2 [E,F]/2 D,/2
+    D/2 E/2 D,/2 [E,F]/2 z/2 D,/2 c/2 C,/2
+    [DB]/2 z'/2 D,/2 [E,E]/2 z/2 F,/2 [E,F]/2 D,/2
+    D/2 E/2 D,/2 [E,F]/2 z/2 D,/2 [CA]/2
+
+    [DB]/2 z/2 D,/2 [E,Ec]/2 z/2 F,/2 [E,Fd]/2 D,/2
+    [DB]/2 [Ec]/2 D,/2 [E,Fd]/2 z'/2 D,/2 [Ac]/2 C,/2
+    [DB]/2 z/2 D,/2 [E,Ec]/2 z/2 F,/2 [E,Fd]/2 D,/2
+    [DB]/2 [Ec]/2 D,/2 [E,Fd]/2 z'/2 D,/2 [Ac]/2 C,/2
+
+    [A,ca]/2 [Ed]/2 A,/2 [EBe]/2 [A,ce]/2 E/2 [A,A]/2 E/2
+    [A,Ee]/2 E/2 [A,da]/2 [Ec]/2 [A,ce]/2 [EB]/2 [A,ca]/2 [Ed]/2
+    [B,eb]/2 F/2 B,/2 F/2 B,/2 F/2 B/2 F/2 B/2
+
+    B,/2 F/2 G/2 F/2 E/2 D/2 C/2 B/2
+    [A,ca]/2 [Ed]/2 A/2 [EBe]/2 [A,ce]/2 E/2 [A,A]/2 E/2
+
+    [A,Ee]/2 E/2 [A,da]/2 [Ec]/2 [A,ce]/2 [EB]/2 [A,ca]/2 [Ed]/2
+    [G,cg]/2 D/2 G,/2 D/2 [G,B]/2 D/2 G,/2 D/2
+    [G,Ag]/2 D/2 C/2 B,/2 [CB]/2 B,/2 G,/2 F,/2
+    [F,cf]/2 [CB]/2 [F,A]/2 [CG]/2 [F,F]/2 C/2 [F,c]/2 [CB]/2
+
+    [F,c']/2 [CG]/2 [F,F]/2 C/2 [F,cf]/2 [CB]/2 [F,A]/2 [CB]/2
+    [G,dg]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4 [G,c]/2 D/2 [G,E]/4 F/4 [DG]/4 A/4
+    [G,B]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4 [G,c]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4
+
+    [F,cf]/2 [CB]/2 [F,A]/2 [CG]/2 [F,F]/2 C/2 [F,c]/2 [CB]/2
+    [F,c']/2 C/2 F,/2 C,/2 [F,d]/2 C/2 F/2 C/2
+    [G,cg]/2 D/2 G,/2 D/2 [G,B]/2 D/2 G,/2 D/2
+    [G,Ag]/2 D/2 C/2 B,/2 [CB]/2 B,/2 G,/2 F,/2
+
+    [G,Gg]/2 E,/2 B,/2 [G,Ee]/2 [E,Ee]/2 B,/2 [E,G,B,]/2 E,/2
+
+    B,/2 G,/2 [E,Gg]/2 B,/2 [G,Ee]/2 E,/2 [G,Gg]/2 B,/2
+    [A,Ff]/2 F,/2 C/2 [A,cc']/2 F,/2 C/2 [C,A,]/2 F,/2
+    C/2 A,/2 [F,Ff]/2 C/2 [A,cc']/2 F,/2 [A,Aa]/2 C/2
+
+    [G,Gg]/2 E,/2 B,/2 [G,Ee]/2 E,/2 B,/2 [E,G,B,]/2 E,/2
+    B,/2 G,/2 [E,Gg]/2 B,/2 [G,Bb]/2 [E,Aa]/2 [G,Gg]/2 [B,Bb]/2
+    [A,Aa]/2 [F,Ff]/2 C/2 [A,cc']/2 F,/2 C/2 [C,A,]/2 F,/2
+    [Cd]/2 A,/2 F,/2 [Ccc']/2 A,/2 F,/2 [A,Aa]/2 C/2
+
+    [F,ac'] C F, C
+    [F,fb] B, F, B,
+    [F,da] A, F, A,
+    [F,Bb] B, F, B,
+    [F,cac'] C [F,A,A] C
+    [F,Bfb] B, [F,G,G] B,
+    [F,dc'] A, [F,Bb] A,
+    [F,cac'] B, [F,Dd] B,
+
+    [E,fc']/2 B,/2 B,/2 [E,fc']/2 B,/2 B,/2 [E,fc']/2 B,/2
+    [B,ec']/2 E,/2 B,/2 [B,ec']/2 E,/2 B,/2 [B,ec']/2 E,/2
+    [E,cgb]/2 B,/2 B,/2 [E,cgb]/2 B,/2 B,/2 [E,cgb]/2 B,/2
+    [B,dfb]/2 E,/2 B,/2 [B,dfb]/2 E,/2 B,/2 [B,dfb]/2 E,/2
+
+    [A,A]/2 E/2 [A,B]/2 E/2 [A,G]/2 [AE]/2 A,/2 E/2
+    A,/2 E/2 [A,B]/2 [Ec]/2 [A,e]/2 [Ed]/2 [A,c]/2 [EB]/2
+    [B,B]/2 F/2 B,/2 F/2 B,/2 F/2 B,/2 F/2
+    B,/2 [FB]/2 [B,c]/2 [Ff]/2 [B,e]/2 [Fd]/2 [B,c]/2 [Fc]/2
+
+    [B,B]/2 F/2 B,/2 F/2 B,/2 F/2 B,/2 F/2
+    B,/2 [FB]/2 [B,c]/2 [Fg]/2 [B,f]/2 [Fe]/2 [B,d]/2 [FB]/2
+    [C,c]/2 G,/2 C,/2 G,/2 C,/2 G,/2 C,/2 G,/2
+    [C,e]/2 G,/2 F,/2 E,/2 [F,g]/2 E,/2 D,/2 C,/2
+
+    [A,ca]/2 [Ed]/2 A,/2 [EBe]/2 [A,ce]/2 E/2 [A,A]/2 E/2
+    [A,Ee]/2 E/2 [A,da]/2 [Ec]/2 [A,ce]/2 [EB]/2 [A,ca]/2 [Ed]/2
+    [B,eb]/2 F/2 B,/2 F/2 B,/2 F/2 B/2 F/2 B/2
+
+    B,/2 F/2 G/2 F/2 E/2 D/2 C/2 B/2
+    [A,ca]/2 [Ed]/2 A/2 [EBe]/2 [A,ce]/2 E/2 [A,A]/2 E/2
+
+    [A,Ee]/2 E/2 [A,da]/2 [Ec]/2 [A,ce]/2 [EB]/2 [A,ca]/2 [Ed]/2
+    [G,cg]/2 D/2 G,/2 D/2 [G,B]/2 D/2 G,/2 D/2
+    [G,Ag]/2 D/2 C/2 B,/2 [CB]/2 B,/2 G,/2 F,/2
+    [F,cf]/2 [CB]/2 [F,A]/2 [CG]/2 [F,F]/2 C/2 [F,c]/2 [CB]/2
+
+    [F,c']/2 [CG]/2 [F,F]/2 C/2 [F,cf]/2 [CB]/2 [F,A]/2 [CB]/2
+    [G,dg]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4 [G,c]/2 D/2 [G,E]/4 F/4 [DG]/4 A/4
+    [G,B]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4 [G,c]/2 D/2 [G,F]/4 G/4 [DA]/4 B/4
+
+    [F,cf]/2 [CB]/2 [F,A]/2 [CG]/2 [F,F]/2 C/2 [F,c]/2 [CB]/2
+    [F,c']/2 C/2 F,/2 C,/2 [F,d]/2 C/2 F/2 C/2
+    [G,cg]/2 D/2 G,/2 D/2 [G,B]/2 D/2 G,/2 D/2
+    [G,Ag]/2 D/2 C/2 B,/2 [CB]/2 B,/2 G,/2 F,/2
+
+    [G,Gg]/2 E,/2 B,/2 [G,Ee]/2 [E,Ee]/2 B,/2 [E,G,B,]/2 E,/2
+
+    B,/2 G,/2 [E,Gg]/2 B,/2 [G,Ee]/2 E,/2 [G,Gg]/2 B,/2
+    [A,Ff]/2 F,/2 C/2 [A,cc']/2 F,/2 C/2 [C,A,]/2 F,/2
+    C/2 A,/2 [F,Ff]/2 C/2 [A,cc']/2 F,/2 [A,Aa]/2 C/2
+
+    [G,Gg]/2 E,/2 B,/2 [G,Ee]/2 E,/2 B,/2 [E,G,B,]/2 E,/2
+    B,/2 G,/2 [E,Gg]/2 B,/2 [G,Bb]/2 [E,Aa]/2 [G,Gg]/2 [B,Bb]/2
+    [A,Aa]/2 [F,Ff]/2 C/2 [A,cc']/2 F,/2 C/2 [C,A,]/2 F,/2
+    [Cd]/2 A,/2 F,/2 [Ccc']/2 A,/2 F,/2 [A,Aa]/2 C/2
+
+    [F,ac'] C F, C
+    [F,fb] B, F, B,
+    [F,da] A, F, A,
+    [F,Bb] B, F, B,
+    [F,cac'] C [F,A,A] C
+    [F,Bfb] B, [F,G,G] B,
+    [F,dc'] A, [F,Bb] A,
+    [F,cac'] B, [F,Dd] B,
+
+    [E,fc']/2 B,/2 B,/2 [E,fc']/2 B,/2 B,/2 [E,fc']/2 B,/2
+    [B,ec']/2 E,/2 B,/2 [B,ec']/2 E,/2 B,/2 [B,ec']/2 E,/2
+    [E,cgb]/2 B,/2 B,/2 [E,cgb]/2 B,/2 B,/2 [E,cgb]/2 B,/2
+    [B,dfb]/2 E,/2 B,/2 [B,dfb]/2 E,/2 B,/2 [B,dfb]/2 E,/2
+
+    [A,A]/2 E/2 [A,B]/2 E/2 [A,G]/2 [AE]/2 A,/2 E/2
+    A,/2 E/2 [A,B]/2 [Ec]/2 [A,e]/2 [Ed]/2 [A,c]/2 [EB]/2
+    [B,B]/2 F/2 B,/2 F/2 B,/2 F/2 B,/2 F/2
+    B,/2 [FB]/2 [B,c]/2 [Ff]/2 [B,e]/2 [Fd]/2 [B,c]/2 [Fc]/2
+
+    [B,B]/2 F/2 B,/2 F/2 B,/2 F/2 B,/2 F/2
+    B,/2 [FB]/2 [B,c]/2 [Fg]/2 [B,f]/2 [Fe]/2 [B,d]/2 [FB]/2
+    [C,c]/2 G,/2 C,/2 G,/2 C,/2 G,/2 C,/2 G,/2
+    [C,e]/2 G,/2 F,/2 E,/2 [F,g]/2 E,/2 D,/2 C,/2
+
+    [Bb]/2 z/2 D,/2 [E,E]/2 Z/2 F,/2 [E,F]/2 D,/2
+    D/2 E/2 D,/2 [E,F]/2 Z/2 D,/2 c/2 C,/2
+    [db]/2 z/2 D,/2 [E,E]/2 Z/2 F,/2 [E,F]/2 D,/2
+    D/2 E/2 D,/2 [E,F]/2 Z/2 D,/2 a/2 [C,a]/2
+
+    [DB]/2 Z/2 D,/2 [E,Ec]/2 Z/2 F,/2 [E,Fd]/2 D,/2
+    [DB]/2 [Ec]/2 D,/2 [E,Fd]/2 Z/2 D,/2 A/2 [C,A]/2
+    [DB]/2 Z/2 D,/2 [E,Ec]/2 z/2 F,/2 [E,Fd]/2 D,/2
+    [DB]/2 [Ec]/2 D,/2 [E,Fd]/2 Z/2 D,/2 A/2 C,/2
+
+    E/4 F/4 d/4 b/4
+  </melody>
+</song>

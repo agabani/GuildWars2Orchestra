@@ -69,6 +69,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData\Beyonce - Halo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Pokemon Red Blue - Trainer Battle Theme.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\fripSide - Only My Railgun.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

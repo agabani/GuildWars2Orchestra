@@ -11,7 +11,7 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
-            var fileName = args.Length == 1 ? args[0] : @"TestData\fripSide - Only My Railgun.xml";
+            var fileName = args.Length == 1 ? args[0] : @"TestData\Beyonce - Halo.xml";
 
             var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
             var musicSheet = xmlMusicSheetReader.LoadFromFile(fileName);
