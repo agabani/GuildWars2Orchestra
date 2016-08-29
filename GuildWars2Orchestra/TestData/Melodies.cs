@@ -251,5 +251,145 @@ D,1/2 A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 E1/2 F D1/2 E1/2 [FD
 [D,g] G, [F,f] [G,e] [D,f] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,E,G,c]4";
             }
         }
+
+        public static class WuYiFan
+        {
+            public static class TimeBoilsTheRain
+            {
+                public const int Tempo = 175;
+                public const int Nominator = 1;
+                public const int Denominator = 2;
+                public const string Melody = @"
+[F,e]2 C2 [Ae] d e g [G,e]2 D2 [Ae] d e g 
+[A,e]2 E2 [Ae] d e g e4 c' b a g 
+[F,e]2 C2 [Ae] d e a [G,e]2 D2 [Ae] d e g 
+[C,e]2 G,2 D2 G2 E4 c2 d2 
+[F,e]2 C2 [Ae] d e a [G,e]2 D2 [Ag]2 e2 
+[A,c']2 [E,b]2 [Ca]2 g2 [D,a]2 A,2 F2 c2 
+[D,A]2 A,2 C2 [gc']2 [E,da]6 c'2 
+[A,a]2 E,2 G,2 D2 E8 
+F,2 C2 [Ae]2 e2 [G,d]2 D2 A2 B2 
+A,2 [Ec]2 A8 c' b a g 
+[F,e]2 C2 [Ae]2 e2 [G,d]2 [Dc]2 [Ad]2 g2 
+C,2 [G,e]2 D2 E2 G8 
+F,2 C2 [Aa]2 a2 [G,g]2 D2 [Ae]2 d2 
+[A,e]4 d2 G,2 [F,c]8 
+[D,e]2 A,2 [Cd]2 [Fc]2 [E,d]6 B2 
+A,2 [C,A]2 D2 A2 [A,C]2 D2 E4
+F,2 C2 [Ae]2 e2 [G,d]2 D2 A2 B2 
+A,2 [Ec]2 A2 B2 c4 c' b a g 
+[F,e]2 C2 [Ae]2 e2 [G,d]2 [Dc]2 [Ad]2 g2 
+C,2 [G,e]2 D2 E2 G8 
+F,2 C2 [Aa]2 a2 [E,g]2 B,2 [Ge]2 d2 
+[A,e]2 E,2 [Cd]4 [D,Fc]2 A,2 [F,C]4 
+[D,e]2 A,2 [Cd]2 [Fc]2 [G,d]6 c2 
+[C,c]2 F2 G2 d2 c4 d2 g2 
+[C,e]2 [G,c]2 C2 [Dd]2 [Ee]4 [F,G]4 
+C,2 G,2 [Ee]2 g2 [F,a]2 C,2 [Ac']4 
+[E,d]/4 g/4 b3/2 B,2 G,2 g2 [A,e]2 E,2 C2 c2
+[D,c]2 A,2 F,2 a2 [G,a]2 [D,g]2 [B,e]2 d2 
+[C,e]2 G,2 D2 E2 [A,A]2 G,2 [C,G]2 G,2 
+F,2 C,2 [A,e]2 g2 [G,a]2 D,2 [B,c']4 
+[E,d]/4 g/4 b3/2 B,2 G,2 e2 [A,c']2 E,2 C2 e2 
+[D,d]2 A,2 C2 a2 [G,ca]2 [D,g]2 [G,e]2 [D,d]2 
+[C,Ec]2 G,2 C2 D2 E2 c d g a c d 
+[F,e]2 C2 [Ae] d e g [G,e]2 D2 [Ae] d e a 
+[A,e]2 E2 G B c g e2 E2 d2 c d 
+[F,e]2 C2 E A e A [E,d]2 C2 [A,c]2 E,2
+[D,c]2 A,2 [Cc]2 F2 [G,B]2 D,2 [G,D]4 
+F,2 C2 [Ae]2 e2 [G,d]2 D2 A2 B2 
+A,2 [Ec]2 A8 c' b a g 
+[F,e]2 C2 [Ae]2 e2 [G,d]2 [Dc]2 [Ad]2 g2 
+C,2 [G,e]2 D2 E2 G8 
+F,2 C2 [Aa]2 a2 [G,g]2 D2 [Ae]2 d2 
+[A,e]4 d2 G,2 [F,c]8 
+[D,e]2 A,2 [Cd]2 [Fc]2 [E,d]6 B2 
+A,2 [C,A]2 D2 A2 [A,C]2 D2 E4
+F,2 C2 [Ae]2 e2 [G,d]2 D2 A2 B2 
+A,2 [Ec]2 A2 B2 c4 c' b a g 
+[F,e]2 C2 [Ae]2 e2 [G,d]2 [Dc]2 [Ad]2 g2 
+C,2 [G,e]2 D2 E2 G8 
+F,2 C2 [Aa]2 a2 [E,g]2 B,2 [Ge]2 d2 
+[A,e]2 E,2 [Cd]4 [D,Fc]2 A,2 [F,C]4 
+[D,e]2 A,2 [Cd]2 [Fc]2 [G,d]6 c2 
+[C,c]2 F2 G2 d2 c4 d2 g2 
+[C,e]2 [G,c]2 C2 [Dd]2 [Ee]4 [F,G]4 
+C,2 G,2 [Ee]2 g2 [F,a]2 C,2 [Ac']4 
+[E,d]/4 g/4 b3/2 B,2 G,2 g2 [A,e]2 E,2 C2 c2
+[D,c]2 A,2 F,2 a2 [G,a]2 [D,g]2 [B,e]2 d2 
+[C,e]2 G,2 D2 E2 [A,A]2 G,2 [C,G]2 G,2 
+F,2 C,2 [A,e]2 g2 [G,a]2 D,2 [B,c']4 
+[E,d]/4 g/4 b3/2 B,2 G,2 e2 [A,c']2 E,2 C2 e2 
+[D,d]2 A,2 C2 a2 [G,ca]2 [D,g]2 [G,e]2 [D,d]2 
+[C,Ec]2 G,2 C2 D2 E2 c d g a c d 
+[F,e]2 C2 [Ae] d e g [G,e]2 D2 [Ae] d e a 
+[A,e]2 E2 G B c g e2 E2 d2 c d 
+[F,e]2 C2 E A e A [E,d]2 C2 [A,c]2 E,2
+[D,c]2 A,2 [Cc]2 F2 [G,B]2 D,2 [G,D]4 
+[C,c]2 G,2 C2 [Dd] e [F,f]2 [D,e]2 [G,g]2 d2 
+C,2 G,2 [Ee]2 g2 [F,ca]2 C,2 [Cec']4 
+[E,db]2 B,2 G,2 g2 [A,ce]2 [E,B]2 [CA]2 [E,Ec]2
+[D,c]2 A,2 A,2 a2 G,2 [D,g]2 [B,Ge]2 [Fd]2 
+[C,d]2 [G,e]2 D d [G,d] e [C,Ca]2 [G,g]2 [C,e]2 [G,d]2 
+F,2 C,2 [Ce]2 g2 [G,a]2 D,2 D2 c'2 
+[E,d]/4 g/4 b3/2 B,2 G,2 e2 [A,c']2 E,2 C2 e2 
+[D,Fd]2 A,2 C,2 a2 [G,ca]2 [D,g]2 [G,e]2 [D,d]2
+C,2 [G,c]2 C2 D2 E2 c d g a c d 
+F,2 C,2 [F,e]2 [A,g]2 [G,a]2 D,2 B,2 c'2 
+[E,b]2 B,2 [G,e]2 B,2 [A,c] d [E,c]2 [Cc]2 e2 
+[D,d]2 A,2 C2 a2 [F,a]2 [D,g]2 [G,e]2 D,2 
+[C,d]2 [G,c]2 [Cc]2 D2 E8 
+F,2 C2 [Ae]4 [G,d]2 D2 A2 B2 
+A,2 [Ec]2 A2 B2 c4 c' b a e 
+F,2 C2 [Ae]4 [G,d]2 D2 A2 g2 
+C,2 [G,e]2 D2 E2 G8 
+F,2 C2 [Aa]4 [G,g]2 D2 [Ae]2 d2 
+[A,e]2 E,2 C2 d2 [C,F]/4 A/4 c3/2 z'6
+[D,e]2 A,2 [Cd]2 c2 [B,d]8 
+[F,c]2 [CA]2 C E G A e d g e a2 g2 
+d2 c2 [Fc]/4 d/4 g3/2 z2
+";
+            }
+        }
+
+        public static class GuiltyCrown
+        {
+            public static class MyDearest
+            {
+                public const int Tempo = 125;
+                public const int Nominator = 1;
+                public const int Denominator = 4;
+                public const string Melody = @"
+g [c'F,1/2] C1/2 [Fb1/2] [aC1/2] A1/2 [Cg1/2] F1/2 [Cg1/2] G,1/2 [Dd1/2] G1/2 [De1/2] B1/2 D1/2 [Gf1/2] D1/2 [A,e1/2] E1/2 [Af1/2] E1/2 [ce1/2] [fE1/2] A1/2 [Ee1/2] E,1/2 [B,d1/2] [Ec1/2] B,1/2 G,1/2 [BB,1/2] E1/2 [B,c1/2] [F,C,1/2] G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2
+
+c1/2 G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2 c'4 z c d c  [cCE,A,4] [A,c] z1/2 B z1/2 c [gGB,E,4] [E,g] z1/2 [fB,] z1/2 [Ee] [dDC,F,4] F, F [AC,] c
+
+[dDG,] D, G, D, [G,Ee2] D,2
+
+[eG,E,C,2] [C,G,2] [G,E,2] [G,C,] c1/2 g1/2 [gF,] z1/2 f1/2 [F,D,] e [F,D,] c [dF,] c [dA,] d1/2 c1/2 [A,E,2] [A,E,C,2] [A,E,] c1/2 c1/2 [AG,] z1/2 c1/2 [G,E,] e [G,E,] e G,1/2 f z1/2 
+
+[F,e1/2] d1/2 c [F,C,2] [C,F,2] [F,C,] c [GG,E,2] [G,E,2] [G,E,2] [G,E,] d1/2 e1/2 [eF,] f [fF,2] E,2 E, e1/2 d1/2 [eG,1/2] d1/2 z [G,D,2] [F,C,2] z1/6 A,1/5 C1/5 F1/5 A1/5 c1/5 f1/5 g1/5  a1/5 z1/6
+
+[c'F,] [C,b1/2] a1/2 F,1/2 g1/2 C1/2 g1/2
+
+[c'G1/2] d1/2 D,1/2 [eb1/2] G,1/2 f1/2 [aB,1/2] e1/2 [gA,1/2] f1/2 E,1/2 e1/2 A,1/2 f1/2 C1/2 e1/2 [gE1/2] d1/2 [cD1/2] e1/2 C [B,Ae] [c'1/2] [C,F,1/2] [F,b1/2] [C,a1/2] F,1/2 [C,g1/2] F,1/2 [C,g1/2] [cG,1/2] [D,d1/2] G,1/2 [D,e1/2] G,1/2 [D,f1/2] G,1/2 [D,e1/2]
+
+[eA,1/2] [E,f1/2] A,1/2 [E,e1/2] A,1/2 [E,f1/2] A,1/2 [E,e1/2] [cE,1/2] [B,d1/2] [cE,1/2] [B,E1/2] E,1/2 [E,B,1/2] [E,c1/2] [B,g1/2] [c'1/2] F,1/2 [F,b1/2] [aF,1/2] [F,A,1/2] [C,g1/2] [CF,1/2] [A,g1/2] [cD,1/2] [G,d1/2] [G,D,1/2] [G,e1/2] [B,D,1/2] [D,f1/2] [cG,1/2] [B,e1/2] [gE,1/2] [C,f1/2] [C,A,1/2] [A,e1/2] [CE,1/2] [A,f1/2] [EA,1/2] [Ce1/2]
+
+[gE,1/2] [B,d1/2] [cE,1/2] [B,f1/2] E,1/2 [E,B,1/2] [E,E1/2] [GB,1/2] c1/2 F,1/2 [F,B1/2] c1/2 F,1/2 F,1/2 F,1/2 [F,G1/2] [Dd1/2] G,1/2 [G,c1/2] [dE1/2] G,1/2 G,1/2 [F,F1/2] [GG,1/2] [Ee1/2] [fA,1/2] A,1/2 [A,e1/2] A,1/2 [A,f1/2] A,1/2 [A,e1/2]
+
+E1/2 d1/2 [cE,1/2] z1/6 a1/5 g1/5 f1/5 c1/5 A1/5 F1/5 C1/5 A,1/5 z1/2 g1/2
+
+c'1/2 C,1/2 [F,b1/2] [aC,1/2] F,1/2 [C,g1/2] F,1/2 [C,g1/2] G,1/2 [D,d1/2] G,1/2 [D,e1/2] G,1/2 [D,G,1/2] [G,f1/2] [D,G,1/2] [A,e1/2] E,1/2 [A,f1/2] E,1/2 [A,e1/2] [fE,1/2] A,1/2 [E,e1/2] E,1/2 [B,d1/2] [cE,1/2] [B,E,1/2] E,1/2 [E,B,1/2] E,1/2 [B,b1/2] c'1/2 C,1/2 [F,b1/2] [aC,1/2] F,1/2 [C,g1/2] F,1/2 [C,g1/2]
+
+G,1/2 [D,d1/2] G,1/2 [D,e1/2] G,1/2 [D,G,1/2] [G,f1/2] [D,G,1/2] [A,e1/2] E,1/2 [A,f1/2] E,1/2 [A,e1/2] [fE,1/2] A,1/2 [E,e1/2] E,1/2 [B,a1/2] [aE,1/2] [B,g1/2] E,1/2 [E,B,1/2] E,1/2 [B,b1/2] 
+
+
+c'1/2 F,1/2 [Cb1/2] [aF1/2] F,1/2 [Cg1/2] F1/2 [Cg1/2] G,1/2 [G,d1/2] D1/2 [Ge1/2] G,1/2 [D1/2] [Gf1/2] [D1/2] [A,e1/2] E1/2 [Af1/2] E1/2 [ce1/2] [fE1/2] A1/2 [Ee1/2] E,1/2 [B,d1/2] [cE1/2] [B,1/2] G1/2 [B,B1/2] E1/2 [CGc] G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2 c'4
+ 
+
+";
+            }
+        }
     }
 }
