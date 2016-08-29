@@ -36,11 +36,14 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\GuildWarsKeyboard.cs" />
     <Compile Include="Instrument\Harp.cs" />
     <Compile Include="Parsers\MusicSheetParser.cs" />
+    <Compile Include="Persistance\XmlMusicSheetReader.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
     <Compile Include="TestData\Melodies.cs" />
     <Compile Include="Values\ChordOffset.cs" />
@@ -59,12 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="TestData\Guilty Crown - My Dearest.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
       <Project>{fbd3ec1e-47e2-4d2d-81c9-d6506125a09a}</Project>
       <Name>ManagedWinapi</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\Guilty Crown - My Dearest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
