@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Threading;
 using GuildWars2Orchestra.Controls;
+using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Parsers;
 using GuildWars2Orchestra.TestData;
+using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra
 {
     internal class Program
     {
-        private static GuildWarsKeyboard _keyboard;
+        private static Harp _harp;
 
         private static void Main(string[] args)
         {
@@ -18,24 +20,36 @@ namespace GuildWars2Orchestra
                 Melodies.FinalFantasyXiii2.AWish.Nominator,
                 Melodies.FinalFantasyXiii2.AWish.Denominator);
 
+            _harp = new Harp(new GuildWarsKeyboard());
 
-            _keyboard = new GuildWarsKeyboard();
+            Thread.Sleep(200);
 
-            PressNote("1");
-            PressNote("2");
-            PressNote("3");
-            PressNote("4");
-            PressNote("5");
-            PressNote("6");
-            PressNote("7");
-            PressNote("8");
-        }
+            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.Low));
+            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.Low));
+            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.Low));
+//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.Low));
+//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.Low));
+//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.Low));
+//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.Low));
+//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.Low));
 
-        private static void PressNote(string note)
-        {
-            _keyboard.Press(note);
-            Thread.Sleep(TimeSpan.FromMilliseconds(30));
-            _keyboard.Release(note);
+            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.Middle));
+            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.Middle));
+            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.Middle));
+//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.Middle));
+//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.Middle));
+//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.Middle));
+//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.Middle));
+//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.Middle));
+
+            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.High));
+            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.High));
+            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.High));
+//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.High));
+//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.High));
+//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.High));
+//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.High));
+//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.High));
         }
     }
 }

@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\GuildWarsKeyboard.cs" />
+    <Compile Include="Instrument\Harp.cs" />
     <Compile Include="Parsers\MusicSheetParser.cs" />
     <Compile Include="TestData\Melodies.cs" />
     <Compile Include="Values\ChordOffset.cs" />
