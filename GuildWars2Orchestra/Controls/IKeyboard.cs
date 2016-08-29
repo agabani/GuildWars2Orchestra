@@ -1,4 +1,4 @@
-﻿namespace GuildWars2Orchestra
+﻿namespace GuildWars2Orchestra.Controls
 {
     public interface IKeyboard
     {

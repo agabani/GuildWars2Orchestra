@@ -38,6 +38,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\GuildWarsKeyboard.cs" />
     <Compile Include="Parsers\MusicSheetParser.cs" />
     <Compile Include="TestData\Melodies.cs" />
     <Compile Include="Values\ChordOffset.cs" />
@@ -50,8 +51,7 @@
     <Compile Include="Values\MetronomeMark.cs" />
     <Compile Include="Controls\NotePlayer.cs" />
     <Compile Include="Extensions\TimeSpanExtension.cs" />
-    <Compile Include="IKeyboard.cs" />
-    <Compile Include="Keyboard.cs" />
+    <Compile Include="Controls\IKeyboard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Values\Note.cs" />

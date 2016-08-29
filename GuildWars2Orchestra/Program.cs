@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading;
-using System.Windows.Forms;
+using GuildWars2Orchestra.Controls;
 using GuildWars2Orchestra.Parsers;
 using GuildWars2Orchestra.TestData;
-using ManagedWinapi;
-using ManagedWinapi.Windows;
 
 namespace GuildWars2Orchestra
 {
     internal class Program
     {
+        private static GuildWarsKeyboard _keyboard;
+
         private static void Main(string[] args)
         {
             var musicSheet = new MusicSheetParser(new ChordParser(new NoteParser())).Parse(
@@ -20,51 +18,24 @@ namespace GuildWars2Orchestra
                 Melodies.FinalFantasyXiii2.AWish.Nominator,
                 Melodies.FinalFantasyXiii2.AWish.Denominator);
 
-            var process = Process.GetProcesses()
-                .FirstOrDefault(
-                    p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
-                         p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));
 
-            if (process == null)
-            {
-                Console.WriteLine("Guild Wars 2 is not running.");
-                Environment.Exit(1);
-            }
+            _keyboard = new GuildWarsKeyboard();
 
-            var systemWindow = SystemWindow.AllToplevelWindows.First(w => w.HWnd == process.MainWindowHandle);
-
-            SystemWindow.ForegroundWindow = systemWindow;
-
-            while (true)
-            {
-                WalkFoward(TimeSpan.FromSeconds(1));
-                TurnRight(TimeSpan.FromSeconds(1));
-                UseSkill2(TimeSpan.FromMilliseconds(100));
-            }
+            PressNote("1");
+            PressNote("2");
+            PressNote("3");
+            PressNote("4");
+            PressNote("5");
+            PressNote("6");
+            PressNote("7");
+            PressNote("8");
         }
 
-        private static void WalkFoward(TimeSpan duration)
+        private static void PressNote(string note)
         {
-            var keyboardKey = new KeyboardKey(Keys.W);
-            keyboardKey.Press();
-            Thread.Sleep(duration);
-            keyboardKey.Release();
-        }
-
-        private static void TurnRight(TimeSpan duration)
-        {
-            var keyboardKey = new KeyboardKey(Keys.D);
-            keyboardKey.Press();
-            Thread.Sleep(duration);
-            keyboardKey.Release();
-        }
-
-        private static void UseSkill2(TimeSpan duration)
-        {
-            var keyboardKey = new KeyboardKey(Keys.D2);
-            keyboardKey.Press();
-            Thread.Sleep(duration);
-            keyboardKey.Release();
+            _keyboard.Press(note);
+            Thread.Sleep(TimeSpan.FromMilliseconds(30));
+            _keyboard.Release(note);
         }
     }
 }
