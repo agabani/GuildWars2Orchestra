@@ -23,6 +23,7 @@ namespace GuildWars2Orchestra.Instrument
         private readonly IKeyboard _keyboard;
 
         private Note.Octaves _currentOctave = Note.Octaves.Middle;
+        private int _millisecondsTimeout = 1;
 
         public Harp(IKeyboard keyboard)
         {
@@ -67,7 +68,7 @@ namespace GuildWars2Orchestra.Instrument
             }
 
             _keyboard.Press("0");
-            Thread.Sleep(50);
+            Thread.Sleep(_millisecondsTimeout);
             _keyboard.Release("0");
         }
 
@@ -88,14 +89,14 @@ namespace GuildWars2Orchestra.Instrument
             }
 
             _keyboard.Press("9");
-            Thread.Sleep(50);
+            Thread.Sleep(_millisecondsTimeout);
             _keyboard.Release("9");
         }
 
         private void PressNote(string key)
         {
             _keyboard.Press(key);
-            Thread.Sleep(50);
+            Thread.Sleep(_millisecondsTimeout);
             _keyboard.Release(key);
         }
     }
