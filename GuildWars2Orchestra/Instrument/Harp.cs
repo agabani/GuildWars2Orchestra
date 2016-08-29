@@ -21,9 +21,10 @@ namespace GuildWars2Orchestra.Instrument
         };
 
         private readonly IKeyboard _keyboard;
+        public readonly int NoteTimeout = 5;
+        private const int OctaveTimeout = 1;
 
         private Note.Octaves _currentOctave = Note.Octaves.Middle;
-        private int _millisecondsTimeout = 1;
 
         public Harp(IKeyboard keyboard)
         {
@@ -32,8 +33,23 @@ namespace GuildWars2Orchestra.Instrument
 
         public void PlayNote(Note note)
         {
+            note = OptimizeNote(note);
+
             GoToOctave(note.Octave);
             PressNote(NoteMap[note.Key]);
+        }
+
+        private Note OptimizeNote(Note note)
+        {
+            if (note.Equals(new Note(Note.Keys.Note1, Note.Octaves.Middle)) && _currentOctave == Note.Octaves.Low)
+            {
+                note = new Note(Note.Keys.Note8, Note.Octaves.Low);
+            }
+            else if (note.Equals(new Note(Note.Keys.Note1, Note.Octaves.High)) && _currentOctave == Note.Octaves.Middle)
+            {
+                note = new Note(Note.Keys.Note8, Note.Octaves.Middle);
+            }
+            return note;
         }
 
         private void GoToOctave(Note.Octaves targetOctave)
@@ -68,7 +84,7 @@ namespace GuildWars2Orchestra.Instrument
             }
 
             _keyboard.Press("0");
-            Thread.Sleep(_millisecondsTimeout);
+            Thread.Sleep(OctaveTimeout);
             _keyboard.Release("0");
         }
 
@@ -89,14 +105,14 @@ namespace GuildWars2Orchestra.Instrument
             }
 
             _keyboard.Press("9");
-            Thread.Sleep(_millisecondsTimeout);
+            Thread.Sleep(OctaveTimeout);
             _keyboard.Release("9");
         }
 
         private void PressNote(string key)
         {
             _keyboard.Press(key);
-            Thread.Sleep(_millisecondsTimeout);
+            Thread.Sleep(NoteTimeout);
             _keyboard.Release(key);
         }
     }
