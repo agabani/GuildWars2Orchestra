@@ -21,7 +21,8 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
         [TestCase("c'3/6", Note.Keys.Note8, Note.Octaves.High, 3, 24)]
         public void it_parses_duration(string text, Note.Keys key, Note.Octaves octave, int nominator, int denominator)
         {
-            var chordParser = new ChordParser(new NoteParser(), new Fraction(1, 4));
+            var chordParser = new ChordParser(new NoteParser())
+                .WithNotesPerBeat(new Fraction(1, 4));
 
             var chord = chordParser.Parse(text);
 
@@ -38,7 +39,8 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
         {
             const string text = "[D,dfa]6";
 
-            var chordParser = new ChordParser(new NoteParser(), new Fraction(1, 4));
+            var chordParser = new ChordParser(new NoteParser())
+                .WithNotesPerBeat(new Fraction(1, 4));
 
             var chord = chordParser.Parse(text);
 

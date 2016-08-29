@@ -3,7 +3,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Parsers;
+using GuildWars2Orchestra.TestData;
 using ManagedWinapi;
 using ManagedWinapi.Windows;
 
@@ -13,7 +14,11 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
-            var metronomeMark = new MetronomeMark(60, new Fraction(1, 1));
+            var musicSheet = new MusicSheetParser(new ChordParser(new NoteParser())).Parse(
+                Melodies.FinalFantasyXiii2.AWish.Melody,
+                Melodies.FinalFantasyXiii2.AWish.Tempo,
+                Melodies.FinalFantasyXiii2.AWish.Nominator,
+                Melodies.FinalFantasyXiii2.AWish.Denominator);
 
             var process = Process.GetProcesses()
                 .FirstOrDefault(

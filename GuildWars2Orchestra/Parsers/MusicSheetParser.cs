@@ -18,7 +18,15 @@ namespace GuildWars2Orchestra.Parsers
 
         public MusicSheet Parse(string text, int metronome, int nominator, int denominator)
         {
-            return new MusicSheet(new MetronomeMark(metronome, new Fraction(nominator, denominator)), ParseMelody(text));
+            var beatsPerMeasure = BeatsPerMeasure(nominator, denominator);
+            _chordParser.WithNotesPerBeat(beatsPerMeasure);
+
+            return new MusicSheet(new MetronomeMark(metronome, beatsPerMeasure), ParseMelody(text));
+        }
+
+        private static Fraction BeatsPerMeasure(int nominator, int denominator)
+        {
+            return new Fraction(nominator, denominator);
         }
 
         private IEnumerable<ChordOffset> ParseMelody(string text)

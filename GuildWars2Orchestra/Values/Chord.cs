@@ -16,7 +16,7 @@ namespace GuildWars2Orchestra.Values
 
         public override string ToString()
         {
-            return $"{Notes} {Length}";
+            return $"{string.Join(":", Notes)} {Length}";
         }
     }
 }

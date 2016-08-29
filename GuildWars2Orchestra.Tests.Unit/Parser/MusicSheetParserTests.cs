@@ -26,7 +26,7 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
                 Melodies.FinalFantasyXiii2.AWish.Nominator,
                 Melodies.FinalFantasyXiii2.AWish.Denominator);
 
-            var musicSheetParser = new MusicSheetParser(new ChordParser(new NoteParser(), notesPerBeat));
+            var musicSheetParser = new MusicSheetParser(new ChordParser(new NoteParser()).WithNotesPerBeat(notesPerBeat));
 
             var musicSheet = musicSheetParser.Parse(
                 Melodies.FinalFantasyXiii2.AWish.Melody,
