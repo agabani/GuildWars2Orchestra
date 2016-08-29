@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Pokemon - Pokemon Center Theme</name>
+  <tempo>115</tempo>
+  <meter>1/2</meter>
+  <melody>
+    [C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G,
+    [D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [C,c] [G,e] A, B, C B, A, G,
+    [C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G,
+    [D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [E,c] A, G, A, B, C D E
+    [C,e] G, E, G, [C,g] G, E, G, [D,f] [A,g] [F,f] [A,e] [D,d] A, F, A,
+    [D,B] G, F, G, [D,d] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c] G, A, G,
+    [C,e] G, E, G, [C,g] G, E, G, [D,f] [A,e] [F,f] [A,g] [D,a] A, F, A,
+    [D,g] G, [F,f] [G,e] [D,f] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c]4
+    [C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G,
+    [D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [C,c] [G,e] A, B, C B, A, G,
+    [C,c] [G,G] [E,c] [G,g] C, [G,f] E, [G,e] [D,d] [G,B] F, G, D, G, F, G,
+    [D,B] [G,G] [F,B] [G,e] D, [G,d] F, [G,B] [E,c] A, G, A, B, C D E
+    [C,e] G, E, G, [C,g] G, E, G, [D,f] [A,g] [F,f] [A,e] [D,d] A, F, A,
+    [D,B] G, F, G, [D,d] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,c] G, A, G,
+    [C,e] G, E, G, [C,g] G, E, G, [D,f] [A,e] [F,f] [A,g] [D,a] A, F, A,
+    [D,g] G, [F,f] [G,e] [D,f] G, F, G, [C,e] [G,f] [E,e] [G,d] [C,E,G,c]4
+  </melody>
+</song>

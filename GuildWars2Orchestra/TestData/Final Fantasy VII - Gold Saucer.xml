@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Final Fantasy VII - Gold Saucer</name>
+  <tempo>70</tempo>
+  <meter>1/2</meter>
+  <melody>
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2
+    [GB]/2 c/2 [GBd]/2 e/2 [Gd]/2 F/2 [Gg]/2 E/2 [Df] [ca] [Fd] [De]/2 f/2 g [EBe] d [DAc] [GB] [DA]/2 c/2 [GB] [FG]/2 E/2
+    [DF] [AG] A G/2 G/2 [FA] [EB] [Dc] F/2 B/2 [Ac] d [Ee]/2 d/2 c/2 B/2 [DA]/2 B/2 [Dc]/2 B/2 [EA] F
+    [GB]/2 c/2 [GBd]/2 e/2 [Gd]/2 F/2 [Gg]/2 E/2 [Df] [ca] [Fd] [De]/2 f/2 g [EBe] d [DAc]
+    [DGB] [CAc] [DFd]2
+
+    A c [EB] G A2 E/2 G/2 A c [EB] G A G A B
+    c e [Gd] B c2 G/2 B/2 c e [Gd] B c G c B
+    A c [EB] G A2 E/2 G/2 A c [EB] G [AA,] G, A, B,
+    [Cc] e [G,d] B [Cc]2 G,/2 B/2 [Cc] e [Dd]/2 e/2 [A,f]/2 a/2 [Cg] [Ec] [G,B]2
+
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [Cc]2
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d]/2 e/2 f/2 a/2 [Cg] [Gc] [Eg] [Cc] [Dd]/2 [Ec]/2 [FB]/2 [Ec]/2 [Dd] [FA]
+    [CG] c [G,B] c/2 d/2 [A,e] c [B,d] e/2 f/2 [Cg] [Ec] [Fa] c e/2 d/2 [Gc]/2 B/2 [CGc]
+  </melody>
+</song>

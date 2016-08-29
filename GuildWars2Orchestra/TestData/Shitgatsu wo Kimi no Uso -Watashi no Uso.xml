@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Shitgatsu wo Kimi no Uso -Watashi no Uso</name>
+  <tempo>125</tempo>
+  <meter>1/4</meter>
+  <melody>
+    [Fa]6 e2 [Fd]6 e/2 d/2 c/2 d3/4 [Eg]6 b2 [Ac']6
+
+
+    c d e [D,c] A, D F A c
+    [E,A] C D c d e [F,f] e [Cc] G f e c G f e c G F,2
+    c G f c g c f c2 e2 f e c G c f e c G e c f e c G f e c G
+    [F,d]3 G2 d2 g3
+
+    [E,Gc]2 [F,Ad]4 c2 [G,AB]6
+    [A,G]2 g2 G2 [E,c]4 C2 [F,A]6
+    [G,AB]4 G2 [A,c]6
+    G, D E G d c [F,G] D E2 d c [E,e] D [Ed]2 [Af]2 [Ge] E
+    [Gc]2 d2 e B, [EB]2 G6
+
+
+    G,2 E2 [G,G]2 d2 [G,g]2 b2 [Aca]2
+    C,2 F,2 [Ae]2 C,2 F,2 [Gd]2 D,2 G,4
+    e/2 d/2 c/2 e3/4 [Gg]2 D,2 G,2 B2
+    D,2 G,2 [Ac]2 G,2 C4 [G,d]2 [Ce]2
+    f e c f [F,e] c [Cf] e [A,c] f [F,e] c f e [F,c] f [Ce] c
+    [AB]2 [CAc]2 [DBd]2 [Ae]2 E,2 C2 [B,CA]2 A,4
+    B2 D,2 G,2
+
+    [A,C]2 [B,D]2 [CE]2 [A,A]4 C,2 [Ee]4 C,2
+    [Dd]4 D,6
+
+    [D,e]/2 d/2 c/2 d3/4
+    [Gg]4 D,2 [E,Bb]2 D,4 [ec']4
+    [CG]2 D2 G2 [Ec]2 g6
+    e2 [D,f] [Ge] c G F E [D,c]4 G,2 G4 B4 c4
+
+    E, G, [C,E]2 [D] G, D G
+    d2 [C,c]2 d2 e2 [E,c]3
+
+    G, C G [F,G]4 [Cg]2 [G,Bg]4 d2
+    [A,Cc]2 D2 E2 [F,F]/2 G/2 E C
+    F E C F E C [Fc] E C F E C F E C [F,C]6
+
+    [F,d]3 G2 d2 g3
+
+    [E,Gc]2 [F,Ad]4 c2 [G,AB]6
+    [A,G]2 g2 G2 [E,c]4 C2 [F,A]6
+    [G,AB]4 G2 [A,c]6
+    G, D E G d c [F,G] D E2 d c [E,e] D [Ed]2 [Af]2 [Ge] E
+    [Gc]2 d2 e B, [EB]2 G6
+
+
+    G,2 E2 [G,G]2 d2 [G,g]2 b2 [Aca]2
+    C,2 F,2 [Ae]2 C,2 F,2 [Gd]2 D,2 G,4
+    e/2 d/2 c/2 e3/4 [Gg]2 D,2 G,2 B2
+    D,2 G,2 [Ac]2 G,2 C4 [G,d]2 [Ce]2
+    f e c f [F,e] c [Cf] e [A,c] f [F,e] c f e [F,c] f [Ce] c
+    [AB]2 [CAc]2 [DBd]2 [Ae]2 E,2 C2 [B,CA]2 A,4
+    B2 D,2 G,2
+
+    [A,C]2 [B,D]2 [CE]2 [A,A]4 C,2 [Ee]4 C,2
+    [Dd]4 D,6
+
+    [D,e]/2 d/2 c/2 d3/4
+    [Gg]4 D,2 [E,Bb]2 D,4 [ec']4
+    [CG]2 D2 G2 [Ec]2 g6
+    e2 [D,f] [Ge] c G F E [D,c]4 G,2 G4 B4 c4
+
+    E, G, [C,E]2 [D] G, D G
+    d2 [C,c]2 d2 e2 [E,c]3
+
+    G, C G [F,G]4 [Cg]2 [G,Bg]4 d2
+    [A,Cc]2 D2 E2 [F,F]/2 G/2 E C
+    F E C F E C [Fc] E C F E C F E C [F,C]6
+  </melody>
+</song>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Final Fantasy - Prelude</name>
+  <tempo>100</tempo>
+  <meter>1/2</meter>
+  <melody>
+    C D E G c d e g c' g e d c G E D A, B, C E A B c e a e c B A E C B,
+  </melody>
+</song>
