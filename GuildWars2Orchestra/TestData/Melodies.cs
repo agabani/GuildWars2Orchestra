@@ -81,5 +81,84 @@ C,4
 ";
             }
         }
+
+        public static class FinalFantasyVii
+        {
+            public static class Theme
+            {
+                public const int Tempo = 70;
+                public const int Nominator = 1;
+                public const int Denominator = 4;
+                public const string Melody = @"
+[C,G,C2] [DG,] [EG,] [A,B,DB2] [AEC,E,2] [C,G,] [CG,] [DG,] [EG,E,] [C,GC] F [CD,F,] D 
+
+[C,G,C2] [DG,] [EG,] [A,B,DB2] [AEC,E,2] [C,G,] [CG,] [DG,] [EG,E,] [C,A,GC] [FA,] [A,C] [DA,] [EG,E,2] B,2 [A,F,C,D,] [A,F,CE] G E 
+
+[DF,1/2] F,1/2 D,1/2 F,1/2 D,1/2 F,1/2 [D,B,1/2] [F,D1/2] [CA,G,1/2] D,1/2 F,1/2 D1/2 [G,B,1/2] A,1/2 [G,B,G1/2] [BD1/2] [C,EGc1/2] G,1/2 E1/2 G1/2 [B,DGd1/2] G1/2 [eGEC1/2] G1/2 [becA,1/2] E,1/2 C1/2 E1/2 [aecA1/2] E1/2 C1/2 A,1/2 
+
+C,1/2 G,1/2 [CEGc1/2] E1/2 [cdEG,1/2] E,1/2 [CEGe1/2] E,1/2 [E,Egc1/2] G,1/2 [CFf1/2] G,1/2 [cAFC,1/2] G,1/2 [dDA,1/2] D1/2 [cGEE,1/2] G,1/2 E1/2 G1/2 [B,DGd1/2] G1/2 [eGEC1/2] G1/2 [becA,1/2] E,1/2 C1/2 E1/2 [aecA1/2] E1/2 C1/2 A,1/2 
+
+C,1/2 G,1/2 [CEGc1/2] E1/2 [cdEG,1/2] E,1/2 [CEGe1/2] E,1/2 [gcAF,1/2] C1/2  F1/2 G1/2 [AFfc1/2] G1/2 [AFCD,1/2] A,1/2 [D,FAd1/2] C1/2 F1/2 G1/2 A1/2 F1/2 [DFAd1/2] F1/2 [cAFG,1/2] D,1/2 F1/2 A,1/2 [G,DFc] G,
+ 
+[C,CEc1/2] G,1/2 E1/2 G,1/2 [G,Cc1/2] E,1/2 C1/2 E,1/2 C, e f e [eD,1/2] [F,d1/2] [dA,1/2] [Ce1/2] [fD1/2] A,1/2 F,1/2 A,1/2 D,1/2 F,1/2 A,1/2 F,1/2 D1/2 A,1/2 [F,e1/2] [A,d1/2]
+
+[cC,1/2] [G,d1/2] [eC1/2] G,1/2 [CD1/2] G,1/2 [EC1/2] G,1/2 [C,BG1/2] [G,1/2] D1/2 G,1/2 [CAE1/2] G,1/2 E,1/2 C,1/2 [F,Acg1/2] [fC,1/2] [G,g1/2] [aF,1/2] [CEGc1/2] F,1/2 [G,cA1/2] F,1/2 [F,BG1/2] C,1/2 G,1/2 F,1/2 [CAFc1/2] F,1/2 [G,d1/2] F,1/2
+
+[C,EGe1/2] G,1/2 C1/2 G,1/2 [cAFD1/2] G,1/2 [F,e1/2] G,1/2 [C,BE1/2] G,1/2 [Ec1/2] G,1/2  C,1/2 e1/2 f1/2 e1/2 [eD,1/2] [F,d1/2] [dGEA,1/2] [F,e1/2] [fD1/2] A,1/2 F,1/2 A,1/2 D,1/2 F,1/2 [A,EG1/2] F,1/2 [DAF1/2] A,1/2 [F,e1/2] [dA,1/2]
+
+[A,Ec1/2] [dBE,1/2] [A,ce1/2] E,1/2 [A,B,1/2] E,1/2 [CA,1/2] E,1/2 [A,CEA1/2] E,1/2 C1/2 A,1/2 [G,EGB1/2] E,1/2 [B,GBe1/2] G,1/2 [F,cac'1/2] [bgcC,1/2] [G,bgc1/2] [afcA,1/2] [afc1/2] E,1/2 [F,DG1/2] E1/2 [ACF,1/2] C,1/2 [F,A,F] D1/2 a1/2 b1/2 a1/2
+
+[gG,1/2] [D,Fd1/2] [dFF,1/2] [CGe1/2] [fA1/2] E,1/2  [D,CE1/2] F1/2 [DG,1/2] D,1/2 [A,C] [CA,F,] [B,G,] [C,G,C1/2] G,1/2 E,1/2 G,1/2 C,1/2 G,1/2 E,1/2 G,1/2  [E,CG,C,]
+";
+            }
+        }
+
+        public static class FinalFantasy
+        {
+            public static class Prelude
+            {
+                public const int Tempo = 100;
+                public const int Nominator = 1;
+                public const int Denominator = 2;
+                public const string Melody = @"C D E G c d e g c' g e d c G E D A, B, C E A B c e a e c B A E C B, ";
+            }
+        }
+
+        public static class FinalFantasyVi
+        {
+            public static class TerrasTheme
+            {
+                public const int Tempo = 130;
+                public const int Nominator = 1;
+                public const int Denominator = 4;
+                public const string Melody = @"
+D,1/2 A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 E1/2 F D1/2 E1/2 [FD,1/2] [A,A1/2] [FD,1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [ED,1/2] [DA,1/2]
+
+[A,E1/2] E,1/2 A,1/2 B,1/2 [C,A,1/2] B,1/2 A,1/2 E,1/2 A,1/2 E,1/2 A,1/2 B,1/2 C1/2 B,1/2 [A,D1/2] [EE,1/2] [FD,1/2] [A,A1/2] [FD,1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [ED,1/2] [DA,1/2]
+
+[A,E1/2] E,1/2 A,1/2 B,1/2 [CA1/2] B,1/2 A,1/2 E,1/2 A,1/2 E,1/2 A,1/2 B,1/2 C1/2 B,1/2 [A,F1/2] [GE,1/2] [F,A1/2] [cC,1/2] [F,A1/2] G,1/2 E,1/2 G,1/2 F,1/2 C,1/2 F,1/2 C,1/2 F,1/2 G,1/2 E,1/2 G,1/2 [F,G1/2] [FC,1/2]
+
+[C,G1/2] G,1/2 C,1/2 D,1/2 [E,C1/2] D,1/2 C,1/2 G,1/2 C,1/2 G,1/2 [C,1/2] D,1/2 E,1/2 C,1/2 [G,F1/2] [EE,1/2] [G,D1/2] E,1/2 G,1/2 A,1/2 C1/2 A,1/2 G,1/2 D,1/2 G,1/2 D,1/2 G,1/2 A,1/2 C1/2 A,1/2 [G,F1/2] [ED,1/2]
+
+[DD,1/2] A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 F1/2 [D,D] [Dd1/2] [eE1/2] [fD,1/2] [A,a1/2] [fD,1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [D,e1/2] [dA,1/2]
+
+[A,e1/2] E,1/2 A,1/2 B,1/2 [C,A1/2] B,1/2 A,1/2 E,1/2 A,1/2 E,1/2 A,1/2 B,1/2 C1/2 B,1/2 [A,d1/2] [eE,1/2] [D,f1/2] [aA,1/2] [D,f1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [D,e1/2] [dA,1/2]
+
+[A,e1/2] E,1/2 A,1/2 B,1/2 [Ca1/2] B,1/2 A,1/2 E,1/2 A,1/2 E,1/2 A,1/2 B,1/2 C1/2 B,1/2 [A,f1/2] [gE,1/2] [F,a1/2] [c'C,1/2] [F,a1/2] G,1/2 E,1/2 G,1/2 F,1/2 C,1/2 F,1/2 C,1/2 F,1/2 G,1/2 E,1/2 G,1/2 [F,g1/2] [fC,1/2]
+
+[C,g1/2] G,1/2 C,1/2 D,1/2 [E,c1/2] D,1/2 C,1/2 G,1/2 C,1/2 G,1/2 [C,1/2] D,1/2 E,1/2 D,1/2 [C,f1/2] [eG,1/2] [G,d1/2] E,1/2 G,1/2 A,1/2 C1/2 A,1/2 G,1/2 D,1/2 G,1/2 D,1/2 G,1/2 A,1/2 C1/2 A,1/2 [G,f1/2] [eD,1/2]
+
+[D,DAd1/2] A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 F1/2 [DD,] [Ff1/2] [gG1/2] [aF,1/2] [C,c'1/2] [aF,1/2] G,1/2 A,1/2 G,1/2 F,1/2 C,1/2 F,1/2 C,1/2 F,1/2 G,1/2 A,1/2 G,1/2 [F,g1/2] [fC,1/2]
+
+[C,g1/2] G,1/2 C,1/2 D,1/2 [E,c1/2] D,1/2 C,1/2 G,1/2 C,1/2 G,1/2 [C,1/2] D,1/2 E,1/2 D,1/2 [C,f1/2] [gG,1/2] [aF,1/2] [C,c'1/2] [aF,1/2] G,1/2 A,1/2 G,1/2 F,1/2 C,1/2 F,1/2 C,1/2 F,1/2 G,1/2 A,1/2 G,1/2 [F,g1/2] [fC,1/2]
+
+[C,g1/2] G,1/2 C,1/2 D,1/2 [E,c'1/2] D,1/2 C,1/2 G,1/2 C,1/2 G,1/2 [C,1/2] D,1/2 E,1/2 D,1/2 [C,d1/2] [eG,1/2] [D,f1/2] [aA,1/2] [D,f1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [D,e1/2] [dA,1/2] 
+
+[A,e1/2] E,1/2 A,1/2 B,1/2 [CA1/2] B,1/2 A,1/2 E,1/2 A,1/2 E,1/2 A,1/2 B,1/2 C1/2 B,1/2 [A,f1/2] [eE,1/2] [D,d1/2] F,1/2 D,1/2 C,1/2 D,1/2 C,1/2 D,1/2 C,1/2 G,1/2 D,1/2 G,1/2 A,1/2 C1/2 A,1/2 [G,f1/2] [eD,1/2]
+
+[D,Dd1/2] A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 F1/2 [DA,D,]
+";
+            }
+        }
     }
 }

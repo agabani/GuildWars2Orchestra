@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using GuildWars2Orchestra.Controls;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Parsers;
@@ -11,13 +12,47 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
+            string melody;
+            int tempo;
+            int nomintor;
+            int denomintor;
+
+            switch (1)
+            {
+                case 1:
+                    melody = Melodies.FinalFantasyXiii2.AWish.Melody;
+                    tempo = Melodies.FinalFantasyXiii2.AWish.Tempo;
+                    nomintor = Melodies.FinalFantasyXiii2.AWish.Nominator;
+                    denomintor = Melodies.FinalFantasyXiii2.AWish.Denominator;
+                    break;
+
+                case 2:
+                    melody = Melodies.FinalFantasyVii.Theme.Melody;
+                    tempo = Melodies.FinalFantasyVii.Theme.Tempo;
+                    nomintor = Melodies.FinalFantasyVii.Theme.Nominator;
+                    denomintor = Melodies.FinalFantasyVii.Theme.Denominator;
+                    break;
+
+                case 3:
+                    melody = Melodies.FinalFantasy.Prelude.Melody;
+                    tempo = Melodies.FinalFantasy.Prelude.Tempo;
+                    nomintor = Melodies.FinalFantasy.Prelude.Nominator;
+                    denomintor = Melodies.FinalFantasy.Prelude.Denominator;
+                    break;
+
+                case 4:
+                    melody = Melodies.FinalFantasyVi.TerrasTheme.Melody;
+                    tempo = Melodies.FinalFantasyVi.TerrasTheme.Tempo;
+                    nomintor = Melodies.FinalFantasyVi.TerrasTheme.Nominator;
+                    denomintor = Melodies.FinalFantasyVi.TerrasTheme.Denominator;
+                    break;
+
+                default:
+                    throw new ApplicationException();
+            }
+
             var musicSheet = new MusicSheetParser(new ChordParser(new NoteParser()))
-                .Parse(
-                    Melodies.FinalFantasyXiii2.AWish.Melody,
-                    Melodies.FinalFantasyXiii2.AWish.Tempo,
-                    Melodies.FinalFantasyXiii2.AWish.Nominator,
-                    Melodies.FinalFantasyXiii2.AWish.Denominator
-                );
+                .Parse(melody, tempo, nomintor, denomintor);
 
             var harp = new Harp(new GuildWarsKeyboard());
 
@@ -26,33 +61,6 @@ namespace GuildWars2Orchestra
             var musicPlayer = new MusicPlayer(musicSheet, harp);
 
             musicPlayer.Play();
-
-//            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.Low));
-//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.Low));
-
-//            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.Middle));
-//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.Middle));
-
-//            _harp.PlayNote(new Note(Note.Keys.Note1, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note2, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note3, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note4, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note5, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note6, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note7, Note.Octaves.High));
-//            _harp.PlayNote(new Note(Note.Keys.Note8, Note.Octaves.High));
         }
     }
 }

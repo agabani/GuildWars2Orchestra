@@ -20,6 +20,7 @@ namespace GuildWars2Orchestra.Player
         public void Play()
         {
             var wholeNoteLength = _musicSheet.MetronomeMark.WholeNoteLength;
+            var beatsPerMeasure = _musicSheet.BeatsPerMeasure;
             var melody = _musicSheet.Melody.ToArray();
 
             foreach (var strum in melody)
@@ -34,7 +35,8 @@ namespace GuildWars2Orchestra.Player
                 var timeSpan = wholeNoteLength
                     .Multiply(chord.Length.Nominator)
                     .Divide(chord.Length.Denominator)
-                    .Divide(2);
+                    .Multiply(beatsPerMeasure.Nominator)
+                    .Divide(beatsPerMeasure.Denominator);
 
                 Thread.Sleep(timeSpan);
             }
