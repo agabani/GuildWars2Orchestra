@@ -18,7 +18,8 @@
 
 1. Start Guild Wars 2
 2. Ensure key bindings 1,2,3,4,5,6,7,8,9,0 are mapped to the default Guild Wars 2 key binding (skill 1, 2, 3, 4 5, etc...)
-3. Using "command prompt" or "powershell" type the following command:
+3. Using "command prompt" or "powershell", navigate to the directory holding `GuildWars2Orchestra.exe`
+4. Using "command prompt" or "powershell", type the following command:
 `GuildWars2Orchestra.exe "TestData\Final Fantasy XIII 2 - A Wish.xml"`
 
 ## Music Sheets
