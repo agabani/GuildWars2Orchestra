@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using GuildWars2Orchestra.Extensions;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Music;
@@ -17,7 +18,7 @@ namespace GuildWars2Orchestra.Player
             _harp = harp;
         }
 
-        public void Play()
+        public async Task Play()
         {
             var wholeNoteLength = _musicSheet.MetronomeMark.WholeNoteLength;
             var melody = _musicSheet.Melody.ToArray();
@@ -28,14 +29,14 @@ namespace GuildWars2Orchestra.Player
 
                 foreach (var note in chord.Notes)
                 {
-                    _harp.PlayNote(note);
+                    await _harp.PlayNote(note);
                 }
 
                 var timeSpan = wholeNoteLength
                     .Multiply(chord.Length.Nominator)
                     .Divide(chord.Length.Denominator);
 
-                Thread.Sleep(timeSpan);
+                await Task.Delay(timeSpan);
             }
         }
     }

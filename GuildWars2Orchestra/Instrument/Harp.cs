@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Threading.Tasks;
 using GuildWars2Orchestra.Controls;
 using GuildWars2Orchestra.Values;
 
@@ -8,6 +8,9 @@ namespace GuildWars2Orchestra.Instrument
 {
     public class Harp
     {
+        private const int NoteTimeout = 5;
+        private const int OctaveTimeout = 5;
+
         private static readonly Dictionary<Note.Keys, string> NoteMap = new Dictionary<Note.Keys, string>
         {
             {Note.Keys.Note1, "1"},
@@ -21,7 +24,6 @@ namespace GuildWars2Orchestra.Instrument
         };
 
         private readonly IKeyboard _keyboard;
-        private const int NoteTimeout = 5;
 
         private Note.Octaves _currentOctave = Note.Octaves.Middle;
 
@@ -30,12 +32,12 @@ namespace GuildWars2Orchestra.Instrument
             _keyboard = keyboard;
         }
 
-        public void PlayNote(Note note)
+        public async Task PlayNote(Note note)
         {
             note = OptimizeNote(note);
 
-            GoToOctave(note.Octave);
-            PressNote(NoteMap[note.Key]);
+            await GoToOctave(note.Octave);
+            await PressNote(NoteMap[note.Key]);
         }
 
         private Note OptimizeNote(Note note)
@@ -51,22 +53,22 @@ namespace GuildWars2Orchestra.Instrument
             return note;
         }
 
-        private void GoToOctave(Note.Octaves targetOctave)
+        private async Task GoToOctave(Note.Octaves targetOctave)
         {
             while (_currentOctave != targetOctave)
             {
                 if (_currentOctave < targetOctave)
                 {
-                    IncreaseOctave();
+                    await IncreaseOctave();
                 }
                 else
                 {
-                    DecreaseOctave();
+                    await DecreaseOctave();
                 }
             }
         }
 
-        private void IncreaseOctave()
+        private async Task IncreaseOctave()
         {
             switch (_currentOctave)
             {
@@ -84,9 +86,10 @@ namespace GuildWars2Orchestra.Instrument
 
             _keyboard.Press("0");
             _keyboard.Release("0");
+            await Task.Delay(OctaveTimeout);
         }
 
-        private void DecreaseOctave()
+        private async Task DecreaseOctave()
         {
             switch (_currentOctave)
             {
@@ -104,13 +107,14 @@ namespace GuildWars2Orchestra.Instrument
 
             _keyboard.Press("9");
             _keyboard.Release("9");
+            await Task.Delay(OctaveTimeout);
         }
 
-        private void PressNote(string key)
+        private async Task PressNote(string key)
         {
             _keyboard.Press(key);
             _keyboard.Release(key);
-            Thread.Sleep(NoteTimeout);
+            await Task.Delay(NoteTimeout);
         }
     }
 }
