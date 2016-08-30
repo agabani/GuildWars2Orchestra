@@ -45,6 +45,9 @@
     <Compile Include="Instrument\Harp.cs" />
     <Compile Include="Parsers\MusicSheetParser.cs" />
     <Compile Include="Persistance\XmlMusicSheetReader.cs" />
+    <Compile Include="Player\Algorithms\FavourHighNotesAlgorithm.cs" />
+    <Compile Include="Player\Algorithms\FavourLowNotesAlgorithm.cs" />
+    <Compile Include="Player\Algorithms\IPlayAlgorithm.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
     <Compile Include="Values\ChordOffset.cs" />
     <Compile Include="Music\MusicSheet.cs" />
@@ -125,6 +128,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
