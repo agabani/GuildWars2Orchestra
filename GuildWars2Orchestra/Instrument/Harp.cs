@@ -34,19 +34,21 @@ namespace GuildWars2Orchestra.Instrument
 
         public async Task PlayNote(Note note)
         {
-            note = OptimizeNote(note);
-
-            //await GoToOctave(note.Octave);
             if (note.Key != Note.Keys.None)
             {
+                note = OptimizeNote(note);
+                //await GoToOctave(note.Octave);
                 await PressNote(NoteMap[note.Key]);
             }
         }
 
         public async Task PrepareNote(Note note)
         {
-            note = OptimizeNote(note);
-            await GoToOctave(note.Octave);
+            if (note.Octave != Note.Octaves.None)
+            {
+                note = OptimizeNote(note);
+                await GoToOctave(note.Octave);
+            }
         }
 
         private Note OptimizeNote(Note note)
@@ -64,7 +66,7 @@ namespace GuildWars2Orchestra.Instrument
 
         private async Task GoToOctave(Note.Octaves targetOctave)
         {
-            while (_currentOctave != targetOctave && targetOctave != Note.Octaves.None)
+            while (_currentOctave != targetOctave)
             {
                 if (_currentOctave < targetOctave)
                 {
@@ -93,10 +95,10 @@ namespace GuildWars2Orchestra.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-//            _keyboard.Press("0");
-//            _keyboard.Release("0");
+            _keyboard.Press("0");
+            _keyboard.Release("0");
 
-            _keyboard.PressAndRelease("0");
+//            _keyboard.PressAndRelease("0");
 
             //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
@@ -118,10 +120,10 @@ namespace GuildWars2Orchestra.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-//            _keyboard.Press("9");
-//            _keyboard.Release("9");
+            _keyboard.Press("9");
+            _keyboard.Release("9");
 
-            _keyboard.PressAndRelease("9");
+//            _keyboard.PressAndRelease("9");
 
             //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
@@ -129,10 +131,10 @@ namespace GuildWars2Orchestra.Instrument
 
         private async Task PressNote(string key)
         {
-//            _keyboard.Press(key);
-//            _keyboard.Release(key);
+            _keyboard.Press(key);
+            _keyboard.Release(key);
 
-            _keyboard.PressAndRelease(key);
+//            _keyboard.PressAndRelease(key);
 
             await Task.Delay(NoteTimeout);
         }
