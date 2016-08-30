@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using GuildWars2Orchestra.Instrument;
-using GuildWars2Orchestra.Music;
 using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Player.Algorithms
@@ -16,7 +15,7 @@ namespace GuildWars2Orchestra.Player.Algorithms
 
                 foreach (var note in chord.Notes)
                 {
-                    await harp.PrepareNote(note);
+                    await harp.GoToOctave(note);
                     await harp.PlayNote(note);
                 }
 

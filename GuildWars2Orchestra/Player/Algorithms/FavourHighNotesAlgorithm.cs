@@ -10,30 +10,46 @@ namespace GuildWars2Orchestra.Player.Algorithms
     {
         public async Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator)
         {
-            await harp.PrepareNote(melody[0].Chord.Notes.First());
+            await PrepareChordsOctave(harp, melody[0].Chord);
 
             for (var chordIndex = 0; chordIndex < melody.Length; chordIndex++)
             {
                 var chord = melody[chordIndex].Chord;
-                var notes = chord.Notes.ToArray();
 
-                for (var noteIndex = 0; noteIndex < notes.Length; noteIndex++)
-                {
-                    await harp.PlayNote(notes[noteIndex]);
-
-                    if (noteIndex < notes.Length - 1)
-                    {
-                        await harp.PrepareNote(notes[noteIndex + 1]);
-                    }
-                }
+                await PlayChord(harp, chord);
 
                 if (chordIndex < melody.Length - 1)
                 {
-                    await harp.PrepareNote(melody[chordIndex + 1].Chord.Notes.First());
+                    await PrepareChordsOctave(harp, melody[chordIndex + 1].Chord);
                 }
 
                 await Task.Delay(timeCalculator(chord.Length));
             }
+        }
+
+        private static async Task PrepareChordsOctave(Harp harp, Chord chord)
+        {
+            await harp.GoToOctave(chord.Notes.First());
+        }
+
+        private static async Task PlayChord(Harp harp, Chord chord)
+        {
+            var notes = chord.Notes.ToArray();
+
+            for (var noteIndex = 0; noteIndex < notes.Length; noteIndex++)
+            {
+                await harp.PlayNote(notes[noteIndex]);
+
+                if (noteIndex < notes.Length - 1)
+                {
+                    await PrepareNoteOctave(harp, notes[noteIndex + 1]);
+                }
+            }
+        }
+
+        private static async Task PrepareNoteOctave(Harp harp, Note note)
+        {
+            await harp.GoToOctave(note);
         }
     }
 }

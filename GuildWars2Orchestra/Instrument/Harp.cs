@@ -37,17 +37,27 @@ namespace GuildWars2Orchestra.Instrument
             if (note.Key != Note.Keys.None)
             {
                 note = OptimizeNote(note);
-                //await GoToOctave(note.Octave);
                 await PressNote(NoteMap[note.Key]);
             }
         }
 
-        public async Task PrepareNote(Note note)
+        public async Task GoToOctave(Note note)
         {
             if (note.Octave != Note.Octaves.None)
             {
                 note = OptimizeNote(note);
-                await GoToOctave(note.Octave);
+
+                while (_currentOctave != note.Octave)
+                {
+                    if (_currentOctave < note.Octave)
+                    {
+                        await IncreaseOctave();
+                    }
+                    else
+                    {
+                        await DecreaseOctave();
+                    }
+                }
             }
         }
 
@@ -62,21 +72,6 @@ namespace GuildWars2Orchestra.Instrument
                 note = new Note(Note.Keys.Note8, Note.Octaves.Middle);
             }
             return note;
-        }
-
-        private async Task GoToOctave(Note.Octaves targetOctave)
-        {
-            while (_currentOctave != targetOctave)
-            {
-                if (_currentOctave < targetOctave)
-                {
-                    await IncreaseOctave();
-                }
-                else
-                {
-                    await DecreaseOctave();
-                }
-            }
         }
 
         private async Task IncreaseOctave()
