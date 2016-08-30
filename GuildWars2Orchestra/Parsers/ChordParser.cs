@@ -6,8 +6,8 @@ namespace GuildWars2Orchestra.Parsers
 {
     public class ChordParser
     {
-        private static readonly Regex NotesAndDurationRegex = new Regex(@"\[?([ABCDEFGabcdefg',]+)\]?(\d+)?\/?(\d+)?");
-        private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefg][,']?)");
+        private static readonly Regex NotesAndDurationRegex = new Regex(@"\[?([ABCDEFGabcdefgz',]+)\]?(\d+)?\/?(\d+)?");
+        private static readonly Regex NoteRegex = new Regex(@"([ABCDEFGabcdefgz][,']?)");
         private readonly NoteParser _noteParser;
 
         public ChordParser(NoteParser noteParser)

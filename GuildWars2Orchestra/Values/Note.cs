@@ -4,6 +4,7 @@
     {
         public enum Keys
         {
+            None,
             Note1,
             Note2,
             Note3,
@@ -16,6 +17,7 @@
 
         public enum Octaves
         {
+            None,
             Low,
             Middle,
             High

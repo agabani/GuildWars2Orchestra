@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using GuildWars2Orchestra.Extensions;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Music;
+using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Player
 {
@@ -23,7 +24,36 @@ namespace GuildWars2Orchestra.Player
             var wholeNoteLength = _musicSheet.MetronomeMark.WholeNoteLength;
             var melody = _musicSheet.Melody.ToArray();
 
-            foreach (var strum in melody)
+            await _harp.PrepareNote(melody[0].Chord.Notes.First());
+
+            for (int chordIndex = 0; chordIndex < melody.Length; chordIndex++)
+            {
+                var chord = melody[chordIndex].Chord;
+                var notes = chord.Notes.ToArray();
+
+                for (int noteIndex = 0; noteIndex < notes.Length; noteIndex++)
+                {
+                    await _harp.PlayNote(notes[noteIndex]);
+
+                    if (noteIndex < notes.Length - 1)
+                    {
+                        await _harp.PrepareNote(notes[noteIndex + 1]);
+                    }
+                }
+
+                if (chordIndex < melody.Length - 1)
+                {
+                    await _harp.PrepareNote(melody[chordIndex + 1].Chord.Notes.First());
+                }
+
+                var timeSpan = wholeNoteLength
+                    .Multiply(chord.Length.Nominator)
+                    .Divide(chord.Length.Denominator);
+
+                await Task.Delay(timeSpan);
+            }
+
+            /*foreach (var strum in melody)
             {
                 var chord = strum.Chord;
 
@@ -37,7 +67,7 @@ namespace GuildWars2Orchestra.Player
                     .Divide(chord.Length.Denominator);
 
                 await Task.Delay(timeSpan);
-            }
+            }*/
         }
     }
 }

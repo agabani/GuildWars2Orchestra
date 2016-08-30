@@ -51,5 +51,10 @@ namespace GuildWars2Orchestra.Controls
         {
             KeyboardKey[key].Release();
         }
+
+        public void PressAndRelease(string key)
+        {
+            KeyboardKey[key].PressAndRelease();
+        }
     }
 }

@@ -18,6 +18,9 @@ namespace GuildWars2Orchestra.Parsers
             Note.Keys key;
             switch (text)
             {
+                case "z":
+                    key = Note.Keys.None;
+                    break;
                 case "C,":
                 case "C":
                 case "c":
@@ -67,6 +70,9 @@ namespace GuildWars2Orchestra.Parsers
             Note.Octaves octave;
             switch (text)
             {
+                case "z":
+                    octave = Note.Octaves.None;
+                    break;
                 case "C,":
                 case "D,":
                 case "E,":

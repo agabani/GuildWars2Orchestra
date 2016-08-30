@@ -4,5 +4,6 @@
     {
         void Press(string key);
         void Release(string key);
+        void PressAndRelease(string key);
     }
 }

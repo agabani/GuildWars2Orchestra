@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using GuildWars2Orchestra.Controls;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Parsers;
@@ -17,7 +16,7 @@ namespace GuildWars2Orchestra
 
         private static async Task MainAsync(string[] args)
         {
-            var fileName = args.Length == 1 ? args[0] : @"TestData\Final Fantasy XIII 2 - A Wish.xml";
+            var fileName = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
             var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
             var musicSheet = xmlMusicSheetReader.LoadFromFile(fileName);

@@ -8,8 +8,8 @@ namespace GuildWars2Orchestra.Instrument
 {
     public class Harp
     {
-        private const int NoteTimeout = 5;
-        private const int OctaveTimeout = 5;
+        private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(10);
+        private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(1000);
 
         private static readonly Dictionary<Note.Keys, string> NoteMap = new Dictionary<Note.Keys, string>
         {
@@ -36,8 +36,17 @@ namespace GuildWars2Orchestra.Instrument
         {
             note = OptimizeNote(note);
 
+            //await GoToOctave(note.Octave);
+            if (note.Key != Note.Keys.None)
+            {
+                await PressNote(NoteMap[note.Key]);
+            }
+        }
+
+        public async Task PrepareNote(Note note)
+        {
+            note = OptimizeNote(note);
             await GoToOctave(note.Octave);
-            await PressNote(NoteMap[note.Key]);
         }
 
         private Note OptimizeNote(Note note)
@@ -55,7 +64,7 @@ namespace GuildWars2Orchestra.Instrument
 
         private async Task GoToOctave(Note.Octaves targetOctave)
         {
-            while (_currentOctave != targetOctave)
+            while (_currentOctave != targetOctave && targetOctave != Note.Octaves.None)
             {
                 if (_currentOctave < targetOctave)
                 {
@@ -84,8 +93,12 @@ namespace GuildWars2Orchestra.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press("0");
-            _keyboard.Release("0");
+//            _keyboard.Press("0");
+//            _keyboard.Release("0");
+
+            _keyboard.PressAndRelease("0");
+
+            //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
         }
 
@@ -105,15 +118,22 @@ namespace GuildWars2Orchestra.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press("9");
-            _keyboard.Release("9");
+//            _keyboard.Press("9");
+//            _keyboard.Release("9");
+
+            _keyboard.PressAndRelease("9");
+
+            //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
         }
 
         private async Task PressNote(string key)
         {
-            _keyboard.Press(key);
-            _keyboard.Release(key);
+//            _keyboard.Press(key);
+//            _keyboard.Release(key);
+
+            _keyboard.PressAndRelease(key);
+
             await Task.Delay(NoteTimeout);
         }
     }
