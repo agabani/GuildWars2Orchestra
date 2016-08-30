@@ -17,7 +17,7 @@ namespace GuildWars2Orchestra
 
         private static async Task MainAsync(string[] args)
         {
-            var fileName = args.Length == 1 ? args[0] : @"TestData\Final Fantasy XIII 2 - A Wish.xml";
+            var fileName = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
             var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
             var musicSheet = xmlMusicSheetReader.LoadFromFile(fileName);
@@ -26,7 +26,7 @@ namespace GuildWars2Orchestra
 
             await Task.Delay(200);
 
-            var musicPlayer = new MusicPlayer(musicSheet, harp, new FavourHighNotesAlgorithm());
+            var musicPlayer = new MusicPlayer(musicSheet, harp, new FavourLowNotesAlgorithm());
 
             await musicPlayer.Play();
         }

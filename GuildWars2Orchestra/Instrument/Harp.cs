@@ -8,8 +8,8 @@ namespace GuildWars2Orchestra.Instrument
 {
     public class Harp
     {
-        private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(10);
-        private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(1000);
+        private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(5);
+        private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(500);
 
         private static readonly Dictionary<Note.Keys, string> NoteMap = new Dictionary<Note.Keys, string>
         {
