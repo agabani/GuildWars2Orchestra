@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>95</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     [EGBe]1 e1 [Be]/2 f1 e/2 [DGBd]8/2 [EGBe]1 e1 [Bg]/2 f1 e/2 [DGBd]8/2
 

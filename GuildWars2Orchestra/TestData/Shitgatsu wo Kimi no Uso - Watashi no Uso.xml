@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <song>
-  <name>Shitgatsu wo Kimi no Uso -Watashi no Uso</name>
+  <name>Shitgatsu wo Kimi no Uso - Watashi no Uso</name>
   <instrument>harp</instrument>
   <tempo>125</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     [Fa]6 e2 [Fd]6 e/2 d/2 c/2 d3/4 [Eg]6 b2 [Ac']6
 

@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>60</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     [F,d1/2] [eA,1/2] [CA1/2] c1/2 [G,1/2] [B,B1/2] D1/2 A1/2 [A,1/2] C1/2 G1/2 E2 [F,c1/2] [dA,1/2] [cC1/2] [B1/2] G,1/2 B,1/2 [De] [eGC,1/2] [E,1/2] G,1/2 C1/2 [dGB,1/2] [D,1/2] G,1/2 B,1/2 [F,d1/2] [eA,1/2] [CA1/2] c1/2 [G,1/2] [B,B1/2] D1/2 A1/2 [A,1/2] C1/2 G1/2 E2 [F,c1/2] [dA,1/2] [cC1/2] [B1/2]  G,1/2 [ED,1/2] [B,1/2] G,1/2 [AaF,1/2] C,1/2 [EA,B,1/2] C2 [F,1/2] C,1/2 [EA,B,1/2] C2 [A,B1/4] A1/4 [E,E1/2] [C,A,1/2] B, E,1/2 A1/2 c1/2 [dF1/2] C1/2 [AF,A,1/2] G F1/2 A,1/2 F,1/2 [G,Cc1/2] B,1/2 D,1/2 G,1/2 [BB,D,1/2] [C,CB,1/2] [D,DG,1/2] [GD,1/2] [C,EGce1/2] G,1/2 [CG,1/2] E,1/2 [G,DGBd1/2] D,1/2 [D,G,d1/4] [B1/4] [GB,1/4] D1/4 [A,CEB1/4] A1/4 [E1/2] [E,C,1/2] A, E,1/2 [A,CA1/2] [E,Ec1/2] [dFDF,1/2] C,1/2 [A,F,CA1/2] G, F1/2 A,1/2 F,1/2 [G,Cc1/2] B,1/2 D,1/2 G,1/2 [BB,D,1/2] [C,CB,1/2] [D,DG,1/2] [GG,D,1/2] [A,A1/2] A,1/2 [E,C1/2] B, G, A,1/2 A1/2 [E,C1/2] B, [A,A1/2] [B,B1/2] [Cc1/2] [DdF,1/2] [EeA,1/2] [F,A,A1/2] [Cc1/2] [G,1/2] [B,B1/2] [B,G,1/2] [A,A1/2] A,1/2 A1/2 [E,C1/2] B, G, [F,Cc1/2] [DdC,1/2] [A,F,Cc1/2] [B,B1/2] D,1/2 B,1/2 [EeB,G,] [C,EGce1/2] G,1/2 [CG,1/2] E,1/2 [G,DGBd1/2] D,1/2 [G,D,1/2] [B,1/2] [DdF,1/2] [EeA,1/2] [F,A,A1/2] [Cc1/2] [G,1/2] [B,B1/2] [B,G,1/2] [A,A1/2]  A,1/2 A1/2 [E,C1/2] B, G, [F,Cc1/2] [DdC,1/2] [A,F,Cc1/2] [B,B1/2] D,1/2 B,1/2 [G,B,E] [F,A1/2] C,1/2 [F,A,] G,2 A,1/2 C,1/2 E,1/2 A,1/2 C1/2 E1/2 G1/2 E1/2 [A,CAe]
   </melody>

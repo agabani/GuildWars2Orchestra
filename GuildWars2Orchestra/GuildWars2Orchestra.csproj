@@ -95,7 +95,7 @@
     <Content Include="TestData\Guilty Crown - Euterpe.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestData\Shitgatsu wo Kimi no Uso -Watashi no Uso.xml">
+    <Content Include="TestData\Shitgatsu wo Kimi no Uso - Watashi no Uso.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestData\Naruto - Sadness and Sorrow.xml">

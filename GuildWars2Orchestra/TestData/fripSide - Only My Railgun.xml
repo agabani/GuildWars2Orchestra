@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>125</tempo>
   <meter>1/2</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2 A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2
     A, [A,A] [A,A] G/2 A/2 A, [A,A] [A,G] G/2 A/2 A, A/2 A,/2 A G/2 A3/2 c B [A,G]

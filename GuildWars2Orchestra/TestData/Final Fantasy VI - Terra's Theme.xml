@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>130</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     D,1/2 A,1/2 D1/2 E1/2 F1/2 E1/2 D1/2 A,1/2 D,1/2 A,1/2 D1/2 E1/2 F D1/2 E1/2 [FD,1/2] [A,A1/2] [FD,1/2] E,1/2 F,1/2 E,1/2 D,1/2 A,1/2 D,1/2 A,1/2 D,1/2 E,1/2 F,1/2 E,1/2 [ED,1/2] [DA,1/2]
 

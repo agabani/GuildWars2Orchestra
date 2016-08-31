@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>100</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     [A,Gce2] A, E3 [A,GBd] z1/2 B,1/2 A,1/2 G,1/2 E,3 [CFAc2] C1/2 D1/2
 

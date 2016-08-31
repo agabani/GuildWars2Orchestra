@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>75</tempo>
   <meter>1/2</meter>
+  <algorithm>favor chords</algorithm>
   <melody>
     F/5 A/5 c/5 e/5 f/5 a5
     D/5 F/5 A/5 c/5 d/5 f5

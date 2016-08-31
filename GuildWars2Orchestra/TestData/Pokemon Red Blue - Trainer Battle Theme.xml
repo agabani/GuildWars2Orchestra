@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>170</tempo>
   <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
   <melody>
     [B,a]/4 [A,g]/4 [G,f]/4 [F,e]/4 [B,a]/4 [F,e]/4 [G,f]/4 [F,e]/4 [B,a]/4 [G,f]/4 [F,e]/4 [E,d]/4 [B,a]/4 [E,d]/4 [F,e]/4 [E,d]/4
     [B,a]/4 [F,e]/4 [E,d]/4 [D,c]/4 [B,a]/4 [D,c]/4 [E,d]/4 [D,c]/4 [B,a]/4 [E,d]/4 [D,c]/4 [C,B]/4 [B,a]/4 [C,B]/4 [D,c]/4 [C,B]/4
