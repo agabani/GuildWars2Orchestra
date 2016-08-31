@@ -44,9 +44,10 @@
     <Compile Include="Controls\GuildWarsKeyboard.cs" />
     <Compile Include="Instrument\Harp.cs" />
     <Compile Include="Parsers\MusicSheetParser.cs" />
+    <Compile Include="Persistance\RawMusicSheet.cs" />
     <Compile Include="Persistance\XmlMusicSheetReader.cs" />
-    <Compile Include="Player\Algorithms\FavourHighNotesAlgorithm.cs" />
-    <Compile Include="Player\Algorithms\FavourLowNotesAlgorithm.cs" />
+    <Compile Include="Player\Algorithms\FavorNotesAlgorithm.cs" />
+    <Compile Include="Player\Algorithms\FavorChordsAlgorithm.cs" />
     <Compile Include="Player\Algorithms\IPlayAlgorithm.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
     <Compile Include="Values\ChordOffset.cs" />

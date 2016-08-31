@@ -19,14 +19,20 @@ namespace GuildWars2Orchestra
         {
             var fileName = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
-            var xmlMusicSheetReader = new XmlMusicSheetReader(new MusicSheetParser(new ChordParser(new NoteParser())));
-            var musicSheet = xmlMusicSheetReader.LoadFromFile(fileName);
+            var rawMusicSheet = new XmlMusicSheetReader().LoadFromFile(fileName);
 
-            var harp = new Harp(new GuildWarsKeyboard());
+            var musicSheet = new MusicSheetParser(new ChordParser(new NoteParser())).Parse(
+                rawMusicSheet.Melody,
+                int.Parse(rawMusicSheet.Tempo),
+                int.Parse(rawMusicSheet.Meter.Split('/')[0]),
+                int.Parse(rawMusicSheet.Meter.Split('/')[1]));
 
             await Task.Delay(200);
 
-            var musicPlayer = new MusicPlayer(musicSheet, harp, new FavourLowNotesAlgorithm());
+            var algorithm = rawMusicSheet.Algorithm == "favor notes"
+                ? new FavorNotesAlgorithm() : (IPlayAlgorithm) new FavorChordsAlgorithm();
+
+            var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), algorithm);
 
             await musicPlayer.Play();
         }

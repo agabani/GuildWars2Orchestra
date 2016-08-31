@@ -6,7 +6,7 @@ using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Player.Algorithms
 {
-    public class FavourHighNotesAlgorithm : IPlayAlgorithm
+    public class FavorNotesAlgorithm : IPlayAlgorithm
     {
         public async Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator)
         {

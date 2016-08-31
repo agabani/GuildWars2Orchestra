@@ -5,6 +5,7 @@
   <instrument>harp</instrument>
   <tempo>125</tempo>
   <meter>1/4</meter>
+  <algorithm>favor chords</algorithm>
   <melody>
     g [c'F,1/2] C1/2 [Fb1/2] [aC1/2] A1/2 [Cg1/2] F1/2 [Cg1/2] G,1/2 [Dd1/2] G1/2 [De1/2] B1/2 D1/2 [Gf1/2] D1/2 [A,e1/2] E1/2 [Af1/2] E1/2 [ce1/2] [fE1/2] A1/2 [Ee1/2] E,1/2 [B,d1/2] [Ec1/2] B,1/2 G,1/2 [BB,1/2] E1/2 [B,c1/2] [F,C,1/2] G1/2 c1/2 g1/2 c1/2 G1/2 c1/2 g1/2
 
