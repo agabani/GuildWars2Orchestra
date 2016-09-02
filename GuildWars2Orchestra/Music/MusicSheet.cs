@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Domain.Values;
 
 namespace GuildWars2Orchestra.Music
 {

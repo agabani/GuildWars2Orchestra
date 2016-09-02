@@ -1,6 +1,6 @@
 ﻿using System.Linq;
+using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.Parsers;
-using GuildWars2Orchestra.Values;
 using NUnit.Framework;
 
 namespace GuildWars2Orchestra.Tests.Unit.Parser

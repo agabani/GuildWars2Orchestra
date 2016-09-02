@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}</ProjectGuid>
+    <ProjectGuid>{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuildWars2Orchestra.Tests.Unit</RootNamespace>
-    <AssemblyName>GuildWars2Orchestra.Tests.Unit</AssemblyName>
+    <RootNamespace>GuildWars2Orchestra.Midi</RootNamespace>
+    <AssemblyName>GuildWars2Orchestra.Midi</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,35 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.7.3\lib\net35\NAudio.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Parser\ChordParserTests.cs" />
-    <Compile Include="Parser\MusicSheetParserTests.cs" />
-    <Compile Include="Parser\NoteParserTest.cs" />
+    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestData\Melodies.cs" />
-    <Compile Include="Values\MetronomeMarkTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GuildWars2Orchestra.Domain\GuildWars2Orchestra.Domain.csproj">
-      <Project>{d17642dd-3bd3-4629-ae0b-175e0b71251c}</Project>
-      <Name>GuildWars2Orchestra.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GuildWars2Orchestra\GuildWars2Orchestra.csproj">
-      <Project>{2ab64580-18e6-45ea-83d1-1c21a2a387d5}</Project>
-      <Name>GuildWars2Orchestra</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

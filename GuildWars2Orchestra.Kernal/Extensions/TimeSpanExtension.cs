@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GuildWars2Orchestra.Extensions
+namespace GuildWars2Orchestra.Kernal.Extensions
 {
     public static class TimeSpanExtension
     {

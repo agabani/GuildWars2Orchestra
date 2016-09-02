@@ -1,4 +1,4 @@
-﻿namespace GuildWars2Orchestra.Values
+﻿namespace GuildWars2Orchestra.Domain.Values
 {
     public class Beat
     {

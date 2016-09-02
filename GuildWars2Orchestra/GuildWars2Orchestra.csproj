@@ -50,24 +50,25 @@
     <Compile Include="Player\Algorithms\FavorChordsAlgorithm.cs" />
     <Compile Include="Player\Algorithms\IPlayAlgorithm.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
-    <Compile Include="Values\ChordOffset.cs" />
     <Compile Include="Music\MusicSheet.cs" />
-    <Compile Include="Values\Chord.cs" />
     <Compile Include="Parsers\ChordParser.cs" />
     <Compile Include="Parsers\NoteParser.cs" />
-    <Compile Include="Values\Beat.cs" />
-    <Compile Include="Values\Fraction.cs" />
-    <Compile Include="Values\MetronomeMark.cs" />
-    <Compile Include="Extensions\TimeSpanExtension.cs" />
     <Compile Include="Controls\IKeyboard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Values\Note.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GuildWars2Orchestra.Domain\GuildWars2Orchestra.Domain.csproj">
+      <Project>{d17642dd-3bd3-4629-ae0b-175e0b71251c}</Project>
+      <Name>GuildWars2Orchestra.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuildWars2Orchestra.Kernal\GuildWars2Orchestra.Kernal.csproj">
+      <Project>{c728ab00-715a-4d1e-a90c-6781b270c721}</Project>
+      <Name>GuildWars2Orchestra.Kernal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
       <Project>{fbd3ec1e-47e2-4d2d-81c9-d6506125a09a}</Project>
       <Name>ManagedWinapi</Name>
@@ -129,7 +130,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Values\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

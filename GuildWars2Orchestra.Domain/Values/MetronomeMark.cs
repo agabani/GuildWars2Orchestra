@@ -1,7 +1,7 @@
 ﻿using System;
-using GuildWars2Orchestra.Extensions;
+using GuildWars2Orchestra.Kernal.Extensions;
 
-namespace GuildWars2Orchestra.Values
+namespace GuildWars2Orchestra.Domain.Values
 {
     public class MetronomeMark
     {

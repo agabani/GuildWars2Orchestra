@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Domain.Values;
 
 namespace GuildWars2Orchestra.Parsers
 {

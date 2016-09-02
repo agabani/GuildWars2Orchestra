@@ -1,5 +1,5 @@
 ﻿using System;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Domain.Values;
 
 namespace GuildWars2Orchestra.Parsers
 {

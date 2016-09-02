@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GuildWars2Orchestra.Controls;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Domain.Values;
 
 namespace GuildWars2Orchestra.Instrument
 {

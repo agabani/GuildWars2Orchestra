@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.Music;
-using GuildWars2Orchestra.Values;
 
 namespace GuildWars2Orchestra.Parsers
 {

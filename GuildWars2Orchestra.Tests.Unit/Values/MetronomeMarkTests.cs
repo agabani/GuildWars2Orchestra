@@ -1,5 +1,5 @@
 ﻿using System;
-using GuildWars2Orchestra.Values;
+using GuildWars2Orchestra.Domain.Values;
 using NUnit.Framework;
 
 namespace GuildWars2Orchestra.Tests.Unit.Values
