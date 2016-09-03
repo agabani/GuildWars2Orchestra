@@ -34,6 +34,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MusicSheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Values\Beat.cs" />
     <Compile Include="Values\Chord.cs" />
@@ -48,6 +49,7 @@
       <Name>GuildWars2Orchestra.Kernal</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

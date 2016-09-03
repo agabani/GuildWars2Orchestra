@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using GuildWars2Orchestra.Domain;
 using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Kernal.Extensions;
-using GuildWars2Orchestra.Music;
 using GuildWars2Orchestra.Player.Algorithms;
 
 namespace GuildWars2Orchestra.Player

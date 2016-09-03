@@ -51,7 +51,6 @@
     <Compile Include="Player\Algorithms\FavorChordsAlgorithm.cs" />
     <Compile Include="Player\Algorithms\IPlayAlgorithm.cs" />
     <Compile Include="Player\MusicPlayer.cs" />
-    <Compile Include="Music\MusicSheet.cs" />
     <Compile Include="Parsers\ChordParser.cs" />
     <Compile Include="Parsers\NoteParser.cs" />
     <Compile Include="Controls\IKeyboard.cs" />
@@ -132,6 +131,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Music\" />
     <Folder Include="Values\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
