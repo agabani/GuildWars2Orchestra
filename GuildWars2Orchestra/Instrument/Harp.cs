@@ -8,24 +8,51 @@ namespace GuildWars2Orchestra.Instrument
 {
     public class Harp
     {
+        private static readonly Dictionary<string, HarpNote> Map = new Dictionary<string, HarpNote>
+        {
+            {$"{Note.Keys.None}{Note.Octaves.None}", new HarpNote(HarpNote.Keys.None, HarpNote.Octaves.None)},
+            {$"{Note.Keys.C}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note1, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.D}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note2, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.E}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note3, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.F}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note4, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.G}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note5, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.A}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note6, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.B}{Note.Octaves.Low}", new HarpNote(HarpNote.Keys.Note7, HarpNote.Octaves.Low)},
+            {$"{Note.Keys.C}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note1, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.D}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note2, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.E}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note3, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.F}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note4, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.G}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note5, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.A}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note6, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.B}{Note.Octaves.Middle}", new HarpNote(HarpNote.Keys.Note7, HarpNote.Octaves.Middle)},
+            {$"{Note.Keys.C}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note1, HarpNote.Octaves.High)},
+            {$"{Note.Keys.D}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note2, HarpNote.Octaves.High)},
+            {$"{Note.Keys.E}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note3, HarpNote.Octaves.High)},
+            {$"{Note.Keys.F}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note4, HarpNote.Octaves.High)},
+            {$"{Note.Keys.G}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note5, HarpNote.Octaves.High)},
+            {$"{Note.Keys.A}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note6, HarpNote.Octaves.High)},
+            {$"{Note.Keys.B}{Note.Octaves.High}", new HarpNote(HarpNote.Keys.Note7, HarpNote.Octaves.High)},
+            {$"{Note.Keys.C}{Note.Octaves.Highest}", new HarpNote(HarpNote.Keys.Note8, HarpNote.Octaves.High)}
+        };
+
         private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(5);
         private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(500);
 
-        private static readonly Dictionary<Note.Keys, string> NoteMap = new Dictionary<Note.Keys, string>
+        private static readonly Dictionary<HarpNote.Keys, string> NoteMap = new Dictionary<HarpNote.Keys, string>
         {
-            {Note.Keys.Note1, "1"},
-            {Note.Keys.Note2, "2"},
-            {Note.Keys.Note3, "3"},
-            {Note.Keys.Note4, "4"},
-            {Note.Keys.Note5, "5"},
-            {Note.Keys.Note6, "6"},
-            {Note.Keys.Note7, "7"},
-            {Note.Keys.Note8, "8"}
+            {HarpNote.Keys.Note1, "1"},
+            {HarpNote.Keys.Note2, "2"},
+            {HarpNote.Keys.Note3, "3"},
+            {HarpNote.Keys.Note4, "4"},
+            {HarpNote.Keys.Note5, "5"},
+            {HarpNote.Keys.Note6, "6"},
+            {HarpNote.Keys.Note7, "7"},
+            {HarpNote.Keys.Note8, "8"}
         };
 
         private readonly IKeyboard _keyboard;
 
-        private Note.Octaves _currentOctave = Note.Octaves.Middle;
+        private HarpNote.Octaves _currentOctave = HarpNote.Octaves.Middle;
 
         public Harp(IKeyboard keyboard)
         {
@@ -34,22 +61,26 @@ namespace GuildWars2Orchestra.Instrument
 
         public async Task PlayNote(Note note)
         {
-            if (note.Key != Note.Keys.None)
+            var harpNote = Map[$"{note.Key}{note.Octave}"];
+
+            if (harpNote.Key != HarpNote.Keys.None)
             {
-                note = OptimizeNote(note);
-                await PressNote(NoteMap[note.Key]);
+                harpNote = OptimizeNote(harpNote);
+                await PressNote(NoteMap[harpNote.Key]);
             }
         }
 
         public async Task GoToOctave(Note note)
         {
-            if (note.Octave != Note.Octaves.None)
-            {
-                note = OptimizeNote(note);
+            var harpNote = Map[$"{note.Key}{note.Octave}"];
 
-                while (_currentOctave != note.Octave)
+            if (harpNote.Octave != HarpNote.Octaves.None)
+            {
+                harpNote = OptimizeNote(harpNote);
+
+                while (_currentOctave != harpNote.Octave)
                 {
-                    if (_currentOctave < note.Octave)
+                    if (_currentOctave < harpNote.Octave)
                     {
                         await IncreaseOctave();
                     }
@@ -61,15 +92,15 @@ namespace GuildWars2Orchestra.Instrument
             }
         }
 
-        private Note OptimizeNote(Note note)
+        private HarpNote OptimizeNote(HarpNote note)
         {
-            if (note.Equals(new Note(Note.Keys.Note1, Note.Octaves.Middle)) && _currentOctave == Note.Octaves.Low)
+            if (note.Equals(new HarpNote(HarpNote.Keys.Note1, HarpNote.Octaves.Middle)) && _currentOctave == HarpNote.Octaves.Low)
             {
-                note = new Note(Note.Keys.Note8, Note.Octaves.Low);
+                note = new HarpNote(HarpNote.Keys.Note8, HarpNote.Octaves.Low);
             }
-            else if (note.Equals(new Note(Note.Keys.Note1, Note.Octaves.High)) && _currentOctave == Note.Octaves.Middle)
+            else if (note.Equals(new HarpNote(HarpNote.Keys.Note1, HarpNote.Octaves.High)) && _currentOctave == HarpNote.Octaves.Middle)
             {
-                note = new Note(Note.Keys.Note8, Note.Octaves.Middle);
+                note = new HarpNote(HarpNote.Keys.Note8, HarpNote.Octaves.Middle);
             }
             return note;
         }
@@ -78,13 +109,13 @@ namespace GuildWars2Orchestra.Instrument
         {
             switch (_currentOctave)
             {
-                case Note.Octaves.Low:
-                    _currentOctave = Note.Octaves.Middle;
+                case HarpNote.Octaves.Low:
+                    _currentOctave = HarpNote.Octaves.Middle;
                     break;
-                case Note.Octaves.Middle:
-                    _currentOctave = Note.Octaves.High;
+                case HarpNote.Octaves.Middle:
+                    _currentOctave = HarpNote.Octaves.High;
                     break;
-                case Note.Octaves.High:
+                case HarpNote.Octaves.High:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -103,13 +134,13 @@ namespace GuildWars2Orchestra.Instrument
         {
             switch (_currentOctave)
             {
-                case Note.Octaves.Low:
+                case HarpNote.Octaves.Low:
                     break;
-                case Note.Octaves.Middle:
-                    _currentOctave = Note.Octaves.Low;
+                case HarpNote.Octaves.Middle:
+                    _currentOctave = HarpNote.Octaves.Low;
                     break;
-                case Note.Octaves.High:
-                    _currentOctave = Note.Octaves.Middle;
+                case HarpNote.Octaves.High:
+                    _currentOctave = HarpNote.Octaves.Middle;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -132,6 +163,57 @@ namespace GuildWars2Orchestra.Instrument
 //            _keyboard.PressAndRelease(key);
 
             await Task.Delay(NoteTimeout);
+        }
+
+        private class HarpNote
+        {
+            public HarpNote(Keys key, Octaves octave)
+            {
+                Key = key;
+                Octave = octave;
+            }
+
+            public Keys Key { get; }
+            public Octaves Octave { get; }
+
+            public override bool Equals(object obj)
+            {
+                return Equals((HarpNote) obj);
+            }
+
+            protected bool Equals(HarpNote other)
+            {
+                return Key == other.Key && Octave == other.Octave;
+            }
+
+            public override int GetHashCode()
+            {
+                unchecked
+                {
+                    return ((int) Key*397) ^ (int) Octave;
+                }
+            }
+
+            internal enum Octaves
+            {
+                None,
+                Low,
+                Middle,
+                High
+            }
+
+            internal enum Keys
+            {
+                None,
+                Note1,
+                Note2,
+                Note3,
+                Note4,
+                Note5,
+                Note6,
+                Note7,
+                Note8
+            }
         }
     }
 }

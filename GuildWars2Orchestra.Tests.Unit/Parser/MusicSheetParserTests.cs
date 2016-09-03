@@ -35,18 +35,18 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
 
             var melody = musicSheet.Melody.ToArray();
 
-            AssertChord(melody[0], Note.Keys.Note4, Note.Octaves.Middle, 0.0m, new Fraction(1, 5));
-            AssertChord(melody[1], Note.Keys.Note6, Note.Octaves.Middle, 0.2m, new Fraction(1, 5));
-            AssertChord(melody[2], Note.Keys.Note1, Note.Octaves.High, 0.4m, new Fraction(1, 5));
-            AssertChord(melody[3], Note.Keys.Note3, Note.Octaves.High, 0.6m, new Fraction(1, 5));
-            AssertChord(melody[4], Note.Keys.Note4, Note.Octaves.High, 0.8m, new Fraction(1, 5));
-            AssertChord(melody[5], Note.Keys.Note6, Note.Octaves.High, 1.0m, new Fraction(5, 1));
-            AssertChord(melody[6], Note.Keys.Note2, Note.Octaves.Middle, 6.0m, new Fraction(1, 5));
-            AssertChord(melody[7], Note.Keys.Note4, Note.Octaves.Middle, 6.2m, new Fraction(1, 5));
-            AssertChord(melody[8], Note.Keys.Note6, Note.Octaves.Middle, 6.4m, new Fraction(1, 5));
-            AssertChord(melody[9], Note.Keys.Note1, Note.Octaves.High, 6.6m, new Fraction(1, 5));
-            AssertChord(melody[10], Note.Keys.Note2, Note.Octaves.High, 6.8m, new Fraction(1, 5));
-            AssertChord(melody[11], Note.Keys.Note4, Note.Octaves.High, 7.0m, new Fraction(5, 1));
+            AssertChord(melody[0], Note.Keys.F, Note.Octaves.Middle, 0.0m, new Fraction(1, 5));
+            AssertChord(melody[1], Note.Keys.A, Note.Octaves.Middle, 0.2m, new Fraction(1, 5));
+            AssertChord(melody[2], Note.Keys.C, Note.Octaves.High, 0.4m, new Fraction(1, 5));
+            AssertChord(melody[3], Note.Keys.E, Note.Octaves.High, 0.6m, new Fraction(1, 5));
+            AssertChord(melody[4], Note.Keys.F, Note.Octaves.High, 0.8m, new Fraction(1, 5));
+            AssertChord(melody[5], Note.Keys.A, Note.Octaves.High, 1.0m, new Fraction(5, 1));
+            AssertChord(melody[6], Note.Keys.D, Note.Octaves.Middle, 6.0m, new Fraction(1, 5));
+            AssertChord(melody[7], Note.Keys.F, Note.Octaves.Middle, 6.2m, new Fraction(1, 5));
+            AssertChord(melody[8], Note.Keys.A, Note.Octaves.Middle, 6.4m, new Fraction(1, 5));
+            AssertChord(melody[9], Note.Keys.C, Note.Octaves.High, 6.6m, new Fraction(1, 5));
+            AssertChord(melody[10], Note.Keys.D, Note.Octaves.High, 6.8m, new Fraction(1, 5));
+            AssertChord(melody[11], Note.Keys.F, Note.Octaves.High, 7.0m, new Fraction(5, 1));
         }
     }
 }

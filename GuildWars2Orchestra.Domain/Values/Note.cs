@@ -5,14 +5,13 @@
         public enum Keys
         {
             None,
-            Note1,
-            Note2,
-            Note3,
-            Note4,
-            Note5,
-            Note6,
-            Note7,
-            Note8
+            C,
+            D,
+            E,
+            F,
+            G,
+            A,
+            B
         }
 
         public enum Octaves
@@ -20,7 +19,8 @@
             None,
             Low,
             Middle,
-            High
+            High,
+            Highest
         }
 
         public Note(Keys key, Octaves octave)

@@ -9,16 +9,16 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
     internal class ChordParserTests
     {
         [Test]
-        [TestCase("c", Note.Keys.Note1, Note.Octaves.High, 1, 1)]
-        [TestCase("C,2", Note.Keys.Note1, Note.Octaves.Low, 2, 1)]
-        [TestCase("C,4", Note.Keys.Note1, Note.Octaves.Low, 4, 1)]
-        [TestCase("C6", Note.Keys.Note1, Note.Octaves.Middle, 6, 1)]
-        [TestCase("C/2", Note.Keys.Note1, Note.Octaves.Middle, 1, 2)]
-        [TestCase("C/4", Note.Keys.Note1, Note.Octaves.Middle, 1, 4)]
-        [TestCase("C/6", Note.Keys.Note1, Note.Octaves.Middle, 1, 6)]
-        [TestCase("c'3/2", Note.Keys.Note8, Note.Octaves.High, 3, 2)]
-        [TestCase("c'3/4", Note.Keys.Note8, Note.Octaves.High, 3, 4)]
-        [TestCase("c'3/6", Note.Keys.Note8, Note.Octaves.High, 3, 6)]
+        [TestCase("c", Note.Keys.C, Note.Octaves.High, 1, 1)]
+        [TestCase("C,2", Note.Keys.C, Note.Octaves.Low, 2, 1)]
+        [TestCase("C,4", Note.Keys.C, Note.Octaves.Low, 4, 1)]
+        [TestCase("C6", Note.Keys.C, Note.Octaves.Middle, 6, 1)]
+        [TestCase("C/2", Note.Keys.C, Note.Octaves.Middle, 1, 2)]
+        [TestCase("C/4", Note.Keys.C, Note.Octaves.Middle, 1, 4)]
+        [TestCase("C/6", Note.Keys.C, Note.Octaves.Middle, 1, 6)]
+        [TestCase("c'3/2", Note.Keys.C, Note.Octaves.Highest, 3, 2)]
+        [TestCase("c'3/4", Note.Keys.C, Note.Octaves.Highest, 3, 4)]
+        [TestCase("c'3/6", Note.Keys.C, Note.Octaves.Highest, 3, 6)]
         public void it_parses_duration(string text, Note.Keys key, Note.Octaves octave, int nominator, int denominator)
         {
             var chordParser = new ChordParser(new NoteParser());
@@ -46,10 +46,10 @@ namespace GuildWars2Orchestra.Tests.Unit.Parser
 
             Assert.That(chord.Length, Is.EqualTo(new Fraction(6, 1)));
 
-            var note0 = new Note(Note.Keys.Note2, Note.Octaves.Low);
-            var note1 = new Note(Note.Keys.Note2, Note.Octaves.High);
-            var note2 = new Note(Note.Keys.Note4, Note.Octaves.High);
-            var note3 = new Note(Note.Keys.Note6, Note.Octaves.High);
+            var note0 = new Note(Note.Keys.D, Note.Octaves.Low);
+            var note1 = new Note(Note.Keys.D, Note.Octaves.High);
+            var note2 = new Note(Note.Keys.F, Note.Octaves.High);
+            var note3 = new Note(Note.Keys.A, Note.Octaves.High);
 
             Assert.That(notes, Contains.Item(note0));
             Assert.That(notes, Contains.Item(note1));

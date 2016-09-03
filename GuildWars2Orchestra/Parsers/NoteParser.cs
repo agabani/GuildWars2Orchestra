@@ -27,40 +27,38 @@ namespace GuildWars2Orchestra.Parsers
                 case "C,":
                 case "C":
                 case "c":
-                    key = Note.Keys.Note1;
+                case "c'":
+                    key = Note.Keys.C;
                     break;
                 case "D,":
                 case "D":
                 case "d":
-                    key = Note.Keys.Note2;
+                    key = Note.Keys.D;
                     break;
                 case "E,":
                 case "E":
                 case "e":
-                    key = Note.Keys.Note3;
+                    key = Note.Keys.E;
                     break;
                 case "F,":
                 case "F":
                 case "f":
-                    key = Note.Keys.Note4;
+                    key = Note.Keys.F;
                     break;
                 case "G,":
                 case "G":
                 case "g":
-                    key = Note.Keys.Note5;
+                    key = Note.Keys.G;
                     break;
                 case "A,":
                 case "A":
                 case "a":
-                    key = Note.Keys.Note6;
+                    key = Note.Keys.A;
                     break;
                 case "B,":
                 case "B":
                 case "b":
-                    key = Note.Keys.Note7;
-                    break;
-                case "c'":
-                    key = Note.Keys.Note8;
+                    key = Note.Keys.B;
                     break;
                 default:
                     throw new NotSupportedException(text);
@@ -104,8 +102,10 @@ namespace GuildWars2Orchestra.Parsers
                 case "g":
                 case "a":
                 case "b":
-                case "c'":
                     octave = Note.Octaves.High;
+                    break;
+                case "c'":
+                    octave = Note.Octaves.Highest;
                     break;
                 default:
                     throw new NotSupportedException(text);
