@@ -1,10 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using GuildWars2Orchestra.Domain;
-using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.Instrument;
-using GuildWars2Orchestra.Kernal.Extensions;
 using GuildWars2Orchestra.Player.Algorithms;
 
 namespace GuildWars2Orchestra.Player
@@ -24,12 +21,7 @@ namespace GuildWars2Orchestra.Player
 
         public async Task Play()
         {
-            Func<Fraction, TimeSpan> timeCalculation = fraction =>
-                _musicSheet.MetronomeMark.WholeNoteLength
-                    .Multiply(fraction.Nominator)
-                    .Divide(fraction.Denominator);
-
-            await _algorithm.Play(_harp, _musicSheet.Melody.ToArray(), timeCalculation, _musicSheet.MetronomeMark);
+            await _algorithm.Play(_harp, _musicSheet.MetronomeMark, _musicSheet.Melody.ToArray());
         }
     }
 }

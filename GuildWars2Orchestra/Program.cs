@@ -30,8 +30,7 @@ namespace GuildWars2Orchestra
             await Task.Delay(200);
 
             var algorithm = rawMusicSheet.Algorithm == "favor notes"
-                //? new FavorNotesAlgorithm() : (IPlayAlgorithm) new FavorChordsAlgorithm();
-                ? new FavorNotesAlgorithm2() : (IPlayAlgorithm) new FavorChordsAlgorithm2();
+                ? new FavorNotesAlgorithm() : (IPlayAlgorithm) new FavorChordsAlgorithm();
 
             var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), algorithm);
 

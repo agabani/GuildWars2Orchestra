@@ -9,28 +9,7 @@ namespace GuildWars2Orchestra.Player.Algorithms
 {
     public class FavorChordsAlgorithm : IPlayAlgorithm
     {
-        public async Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator, MetronomeMark metronomeMark)
-        {
-            foreach (var strum in melody)
-            {
-                Console.WriteLine(strum.Offest.Value);
-
-                var chord = strum.Chord;
-
-                foreach (var note in chord.Notes)
-                {
-                    await harp.GoToOctave(note);
-                    await harp.PlayNote(note);
-                }
-
-                await Task.Delay(timeCalculator(chord.Length));
-            }
-        }
-    }
-
-    public class FavorChordsAlgorithm2 : IPlayAlgorithm
-    {
-        public async Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator, MetronomeMark metronomeMark)
+        public async Task Play(Harp harp, MetronomeMark metronomeMark, ChordOffset[] melody)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
