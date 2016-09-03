@@ -20,7 +20,7 @@ namespace GuildWars2Orchestra.Parsers
         {
             var beatsPerMeasure = BeatsPerMeasure(nominator, denominator);
 
-            return new MusicSheet(new MetronomeMark(metronome, beatsPerMeasure), ParseMelody(text), beatsPerMeasure);
+            return new MusicSheet(new MetronomeMark(metronome, beatsPerMeasure), ParseMelody(text));
         }
 
         private static Fraction BeatsPerMeasure(int nominator, int denominator)

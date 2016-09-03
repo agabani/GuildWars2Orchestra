@@ -1,13 +1,21 @@
-﻿using System;
-using GuildWars2Orchestra.Domain;
+﻿using GuildWars2Orchestra.Domain;
+using GuildWars2Orchestra.Domain.Values;
+using NAudio.Midi;
 
 namespace GuildWars2Orchestra.Midi
 {
     public class MidiParser
     {
-        public MusicSheet Parse(string text, int metronome, int nominator, int denominator)
+        private static readonly Fraction BeatsPerMeasure = new Fraction(1, 4);
+
+        public MusicSheet Parse(MidiFile midi)
         {
-            throw new NotImplementedException();
+            return new MusicSheet(ParseMetronomeMark(midi), null);
+        }
+
+        private static MetronomeMark ParseMetronomeMark(MidiFile midi)
+        {
+            return new MetronomeMark(midi.DeltaTicksPerQuarterNote/4, BeatsPerMeasure);
         }
     }
 }
