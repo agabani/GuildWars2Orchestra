@@ -7,7 +7,11 @@ namespace GuildWars2Orchestra.Domain.Values
     {
         public MetronomeMark(int metronome, Fraction beatsPerMeasure)
         {
+            BeatsPerMeasure = beatsPerMeasure;
             Metronome = metronome;
+
+            QuaterNoteLength = TimeSpan.FromMinutes(1)
+                .Divide(metronome*16/beatsPerMeasure.Denominator);
 
             WholeNoteLength = TimeSpan.FromMinutes(1)
                 .Divide(metronome*16/beatsPerMeasure.Denominator)
@@ -15,6 +19,8 @@ namespace GuildWars2Orchestra.Domain.Values
         }
 
         public int Metronome { get; }
+        public Fraction BeatsPerMeasure { get; }
+        public TimeSpan QuaterNoteLength { get; }
         public TimeSpan WholeNoteLength { get; }
     }
 }

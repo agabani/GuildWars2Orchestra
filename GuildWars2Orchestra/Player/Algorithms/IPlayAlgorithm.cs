@@ -7,6 +7,6 @@ namespace GuildWars2Orchestra.Player.Algorithms
 {
     public interface IPlayAlgorithm
     {
-        Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator);
+        Task Play(Harp harp, ChordOffset[] melody, Func<Fraction, TimeSpan> timeCalculator, MetronomeMark metronomeMark);
     }
 }

@@ -29,7 +29,7 @@ namespace GuildWars2Orchestra.Player
                     .Multiply(fraction.Nominator)
                     .Divide(fraction.Denominator);
 
-            await _algorithm.Play(_harp, _musicSheet.Melody.ToArray(), timeCalculation);
+            await _algorithm.Play(_harp, _musicSheet.Melody.ToArray(), timeCalculation, _musicSheet.MetronomeMark);
         }
     }
 }

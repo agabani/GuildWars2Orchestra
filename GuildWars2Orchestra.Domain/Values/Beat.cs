@@ -7,6 +7,8 @@
             Value = value;
         }
 
-        public decimal Value { get; private set; }
+        public decimal Value { get; }
+
+        public static implicit operator decimal(Beat beat) => beat.Value;
     }
 }

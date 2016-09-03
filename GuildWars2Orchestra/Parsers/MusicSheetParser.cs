@@ -28,17 +28,20 @@ namespace GuildWars2Orchestra.Parsers
             return new Fraction(nominator, denominator);
         }
 
-        private IEnumerable<ChordOffset> ParseMelody(string text)
+        private IEnumerable<ChordOffset> ParseMelody(string textMelody)
         {
-            var beatCounter = 0m;
+            var currentBeat = 0m;
 
-            return NonWhitespace.Matches(text)
+            return NonWhitespace.Matches(textMelody)
                 .Cast<Match>()
-                .Select(x =>
+                .Select(textChord =>
                 {
-                    var chord = _chordParser.Parse(x.Value);
-                    var chordOffset = new ChordOffset(chord, new Beat(beatCounter));
-                    beatCounter += chord.Length;
+                    var chord = _chordParser.Parse(textChord.Value);
+
+                    var chordOffset = new ChordOffset(chord, new Beat(currentBeat));
+
+                    currentBeat += chord.Length;
+
                     return chordOffset;
                 });
         }
