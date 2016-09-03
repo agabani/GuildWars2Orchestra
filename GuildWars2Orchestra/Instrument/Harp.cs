@@ -124,9 +124,6 @@ namespace GuildWars2Orchestra.Instrument
             _keyboard.Press("0");
             _keyboard.Release("0");
 
-//            _keyboard.PressAndRelease("0");
-
-            //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
         }
 
@@ -149,9 +146,6 @@ namespace GuildWars2Orchestra.Instrument
             _keyboard.Press("9");
             _keyboard.Release("9");
 
-//            _keyboard.PressAndRelease("9");
-
-            //return Task.FromResult<object>(null);
             await Task.Delay(OctaveTimeout);
         }
 
@@ -160,60 +154,7 @@ namespace GuildWars2Orchestra.Instrument
             _keyboard.Press(key);
             _keyboard.Release(key);
 
-//            _keyboard.PressAndRelease(key);
-
             await Task.Delay(NoteTimeout);
-        }
-
-        private class HarpNote
-        {
-            public HarpNote(Keys key, Octaves octave)
-            {
-                Key = key;
-                Octave = octave;
-            }
-
-            public Keys Key { get; }
-            public Octaves Octave { get; }
-
-            public override bool Equals(object obj)
-            {
-                return Equals((HarpNote) obj);
-            }
-
-            protected bool Equals(HarpNote other)
-            {
-                return Key == other.Key && Octave == other.Octave;
-            }
-
-            public override int GetHashCode()
-            {
-                unchecked
-                {
-                    return ((int) Key*397) ^ (int) Octave;
-                }
-            }
-
-            internal enum Octaves
-            {
-                None,
-                Low,
-                Middle,
-                High
-            }
-
-            internal enum Keys
-            {
-                None,
-                Note1,
-                Note2,
-                Note3,
-                Note4,
-                Note5,
-                Note6,
-                Note7,
-                Note8
-            }
         }
     }
 }
