@@ -14,7 +14,6 @@ namespace GuildWars2Orchestra.Midi
         private static readonly Regex Regex = new Regex(@"Ch:\ \d+\ ([a-zA-Z]#?)(\d) .* Len: (\d+)");
 
         public MusicSheet Parse(string midiPath)
-        //public MusicSheet Parse(MidiFile midi)
         {
             var midi = new MidiFile(midiPath);
             return new MusicSheet(ParseMetronomeMark(midi), ParseMelody(midi));
@@ -27,47 +26,51 @@ namespace GuildWars2Orchestra.Midi
 
         private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi)
         {
-            var allEvents = new List<MidiEvent>();
-            foreach (var events in midi.Events)
-            {
-                allEvents.AddRange(events);
-            }
+            var chords = midi.Events
+                .SelectMany(@event => @event)
+                .Where(MidiEvent.IsNoteOn)
+                .GroupBy(@event => @event.AbsoluteTime)
+                .OrderBy(group => group.Key)
+                .Select(ToChordOffset)
+                .ToList();
 
-            var orderedAllEvents = allEvents.OrderBy(a => a.AbsoluteTime).ToList();
-
-
-            //var midiEventCollection = midi.Events;
-            //var midiEvents = midiEventCollection[0];
-
-            var midiEvents = orderedAllEvents;
-
-            var noteOnEvent = midiEvents.Where(@event => @event.CommandCode == MidiCommandCode.NoteOn && MidiEvent.IsNoteOn(@event)).ToList();
-
-            var enumerable = noteOnEvent.Select(note =>
-            {
-                var match = Regex.Match(note.ToString());
-
-                return new MidiNote
-                {
-                    Duration = TimeSpan.FromMilliseconds(double.Parse(match.Groups[3].Value)),
-                    Note = match.Groups[1].Value,
-                    Octave = int.Parse(match.Groups[2].Value)
-                };
-            }).ToList();
-
-            var chordOffsets = enumerable.Select(ToChord);
-
-            return chordOffsets;
+            return chords;
         }
 
-        private static ChordOffset ToChord(MidiNote note)
+        private static ChordOffset ToChordOffset(IGrouping<long, MidiEvent> midiEvents)
+        {
+            var chordDuration = TimeSpan.MaxValue;
+
+            var notes = midiEvents
+                .Select(ToMidiNote)
+                .Select(midiNote =>
+                {
+
+                    chordDuration = midiNote.Duration < chordDuration ? midiNote.Duration : chordDuration;
+                    return ToNote(midiNote);
+                });
+
+            var fraction = new Fraction(chordDuration.Milliseconds, 500);
+            return new ChordOffset(new Chord(notes, fraction), new Beat(0));
+        }
+
+        private static MidiNote ToMidiNote(MidiEvent note)
+        {
+            var match = Regex.Match(note.ToString());
+
+            return new MidiNote
+            {
+                Duration = TimeSpan.FromMilliseconds(double.Parse(match.Groups[3].Value)),
+                Note = match.Groups[1].Value,
+                Octave = int.Parse(match.Groups[2].Value)
+            };
+        }
+
+        private static Note ToNote(MidiNote note)
         {
             var key = ParseKey(note);
             var octave = ParseOctave(note);
-
-            var fraction = new Fraction(note.Duration.Milliseconds, 1000);
-
-            return new ChordOffset(new Chord(new List<Note> {new Note(key, octave)}, fraction), new Beat(0));
+            return new Note(key, octave);
         }
 
         private static Note.Keys ParseKey(MidiNote note)
