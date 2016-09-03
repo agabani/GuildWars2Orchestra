@@ -23,11 +23,11 @@ namespace GuildWars2Orchestra.Midi
 
         private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi)
         {
-            return midi.Events[0]
-                //.SelectMany(@event => @event)
+            return midi.Events
+                .SelectMany(@event => @event)
                 .OfType<NoteOnEvent>()
                 .Where(MidiEvent.IsNoteOn)
-                .Where(note => note.NoteNumber >= 60 && note.NoteNumber <= 96)
+                .Where(note => note.NoteNumber >= 48 && note.NoteNumber <= 84)
                 .GroupBy(@event => @event.AbsoluteTime)
                 .OrderBy(group => group.Key)
                 .Select(ToChordOffset);
