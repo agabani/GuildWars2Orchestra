@@ -69,6 +69,10 @@
       <Project>{c728ab00-715a-4d1e-a90c-6781b270c721}</Project>
       <Name>GuildWars2Orchestra.Kernal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GuildWars2Orchestra.Midi\GuildWars2Orchestra.Midi.csproj">
+      <Project>{e45bebc8-f6c7-43ae-b2e9-8aeebf6fe758}</Project>
+      <Name>GuildWars2Orchestra.Midi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
       <Project>{fbd3ec1e-47e2-4d2d-81c9-d6506125a09a}</Project>
       <Name>ManagedWinapi</Name>
