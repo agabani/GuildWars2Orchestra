@@ -40,7 +40,7 @@ namespace GuildWars2Orchestra
 
         private static async Task MainAsync(string[] args)
         {
-            var musicSheet = new MidiParser().Parse(@"C:/Users/speechless/Desktop/Musician_14th_song_d.gray_man.mid");
+            var musicSheet = new MidiParser().Parse(@"TestData\Musician_14th_song_d.gray_man.mid");
 
             await Task.Delay(200);
 

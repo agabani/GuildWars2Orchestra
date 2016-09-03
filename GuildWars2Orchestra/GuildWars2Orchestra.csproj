@@ -82,6 +82,9 @@
     <Content Include="TestData\Beyonce - Halo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestData\Musician_14th_song_d.gray_man.mid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\Pokemon Red Blue - Trainer Battle Theme.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
