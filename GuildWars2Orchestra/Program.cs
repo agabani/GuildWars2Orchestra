@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 using GuildWars2Orchestra.Controls;
 using GuildWars2Orchestra.Instrument;
 using GuildWars2Orchestra.Midi;
@@ -18,9 +20,26 @@ namespace GuildWars2Orchestra
 
         private static async Task MainAsync(string[] args)
         {
-            var fileName = args.Length == 1 ? args[0] : @"TestData\Yiruma - River Flows In You.xml";
+            var filePath = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
-            var rawMusicSheet = new XmlMusicSheetReader().LoadFromFile(fileName);
+            var extension = Path.GetExtension(filePath)?.ToLower();
+
+            switch (extension)
+            {
+                case ".xml":
+                    await MusicBoxNotationAsync(filePath);
+                    break;
+                case ".mid":
+                    await MidiAsync(filePath);
+                    break;
+                default:
+                    throw new NotSupportedException(extension);
+            }
+        }
+
+        private static async Task MusicBoxNotationAsync(string filePath)
+        {
+            var rawMusicSheet = new XmlMusicSheetReader().LoadFromFile(filePath);
 
             var musicSheet = new MusicSheetParser(new ChordParser(new NoteParser())).Parse(
                 rawMusicSheet.Melody,
@@ -31,16 +50,16 @@ namespace GuildWars2Orchestra
             await Task.Delay(200);
 
             var algorithm = rawMusicSheet.Algorithm == "favor notes"
-                ? new FavorNotesAlgorithm() : (IPlayAlgorithm) new FavorChordsAlgorithm();
+                ? new FavorNotesAlgorithm() : (IPlayAlgorithm)new FavorChordsAlgorithm();
 
             var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), algorithm);
 
             await musicPlayer.Play();
         }
 
-        private static async Task ExperimentalAsync(string[] args)
+        private static async Task MidiAsync(string filePath)
         {
-            var musicSheet = new MidiParser().Parse(@"TestData\Pokemon Red Version  Pokemon Blue Version - The SS Anne.mid");
+            var musicSheet = new MidiParser().Parse(filePath);
 
             await Task.Delay(200);
 
