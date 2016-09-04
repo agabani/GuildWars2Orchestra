@@ -14,6 +14,26 @@
 | Bell2      | No        |
 | Bass       | No        |
 
+## Features
+
+* Play music sheets from [http://gw2mb.com](http://gw2mb.com) [v 0.0.0.1]
+  * Only "Music Box Notation" is supported.
+* Option to choose between "favor chords" or "favor notes" [v 0.0.0.3]
+  * "favor chords": trys to play chords as smoothly as possible.
+  * "favor notes": trys to play every note.
+* Chords played using their "absolute time" instead of using "note queueing and sleep" [v 0.0.0.4]
+  *  This means chords can to be played slowly without it reducing the tempo as a side effect, allowing for more unplayable songs to become playable.
+  *  “note queueing and sleep” is the approach AutoHotkey uses, eg: `Sleep, 400`.
+
+## Upcoming Features
+
+* MIDI file support
+  * Use a midi file (.mid) as an input to listen to it in Guild Wars 2
+* Network Support
+  * Allow for multiple instruments to be played in time with each other
+* Keyboard inputs direct to Guild Wars 2
+  * Allows users to remain in control of their keyboard inputs instead of forcing foreground window focus to Guild Wars 2
+
 ## Usage
 
 1. Start Guild Wars 2

@@ -61,7 +61,7 @@ namespace GuildWars2Orchestra.Midi
 
             var fraction = new Fraction(chordLength, 1000);
 
-            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/(beatsPerMeasure.Denominator*2));
+            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/(beatsPerMeasure.Denominator));
 
             return new ChordOffset(new Chord(notes, fraction), new Beat(absoluteBeat));
         }

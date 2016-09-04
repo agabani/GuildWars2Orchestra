@@ -79,6 +79,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData\Yiruma - River Flows In You.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\Beyonce - Halo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
