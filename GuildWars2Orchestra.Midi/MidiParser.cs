@@ -8,20 +8,39 @@ namespace GuildWars2Orchestra.Midi
 {
     public class MidiParser
     {
-        private static readonly Fraction BeatsPerMeasure = new Fraction(1, 4);
-
         public MusicSheet Parse(string midiPath)
         {
             var midi = new MidiFile(midiPath);
-            return new MusicSheet(ParseMetronomeMark(midi), ParseMelody(midi));
+
+            var tempo = GetTempo(midi);
+            var beatsPerMeasure = GetBeatsPerMeasure(midi);
+
+            var metronomeMark = new MetronomeMark((int) tempo, beatsPerMeasure);
+
+            return new MusicSheet(metronomeMark, ParseMelody(midi, beatsPerMeasure));
         }
 
-        private static MetronomeMark ParseMetronomeMark(MidiFile midi)
+        private static Fraction GetBeatsPerMeasure(MidiFile midi)
         {
-            return new MetronomeMark(midi.DeltaTicksPerQuarterNote/4, BeatsPerMeasure);
+            var timeSignatureEvent = midi.Events
+                .SelectMany(x => x)
+                .OfType<TimeSignatureEvent>()
+                .OrderBy(@event => @event.AbsoluteTime)
+                .Last();
+
+            return new Fraction(1, timeSignatureEvent.Denominator);
         }
 
-        private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi)
+        private static double GetTempo(MidiFile midi)
+        {
+            return midi.Events
+                .SelectMany(x => x)
+                .OfType<TempoEvent>()
+                .OrderBy(@event => @event.AbsoluteTime)
+                .Last().Tempo;
+        }
+
+        private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi, Fraction beatsPerMeasure)
         {
             return midi.Events
                 .SelectMany(@event => @event)
@@ -30,10 +49,10 @@ namespace GuildWars2Orchestra.Midi
                 .Where(note => note.NoteNumber >= 48 && note.NoteNumber <= 84)
                 .GroupBy(@event => @event.AbsoluteTime)
                 .OrderBy(group => group.Key)
-                .Select(ToChordOffset);
+                .Select(x => ToChordOffset(x, beatsPerMeasure));
         }
 
-        private static ChordOffset ToChordOffset(IGrouping<long, NoteOnEvent> midiEvents)
+        private static ChordOffset ToChordOffset(IGrouping<long, NoteOnEvent> midiEvents, Fraction beatsPerMeasure)
         {
             var chordLength = midiEvents.Min(x => x.NoteLength);
 
@@ -42,7 +61,9 @@ namespace GuildWars2Orchestra.Midi
 
             var fraction = new Fraction(chordLength, 1000);
 
-            return new ChordOffset(new Chord(notes, fraction), new Beat(0));
+            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/beatsPerMeasure.Denominator);
+
+            return new ChordOffset(new Chord(notes, fraction), new Beat(absoluteBeat));
         }
     }
 }

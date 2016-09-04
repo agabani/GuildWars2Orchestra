@@ -97,6 +97,12 @@
     <Content Include="TestData\Pokemon - Cycling.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestData\Pokemon Red Version  Pokemon Blue Version - Pokemon Center.mid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Pokemon Red Version  Pokemon Blue Version - The SS Anne.mid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\RWBY - Red Like Roses.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
