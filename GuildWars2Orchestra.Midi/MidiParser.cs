@@ -37,7 +37,7 @@ namespace GuildWars2Orchestra.Midi
                 .SelectMany(x => x)
                 .OfType<TempoEvent>()
                 .OrderBy(@event => @event.AbsoluteTime)
-                .Last().Tempo;
+                .LastOrDefault()?.Tempo ?? 120;
         }
 
         private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi, Fraction beatsPerMeasure)
@@ -61,7 +61,7 @@ namespace GuildWars2Orchestra.Midi
 
             var fraction = new Fraction(chordLength, 1000);
 
-            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/beatsPerMeasure.Denominator);
+            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/(beatsPerMeasure.Denominator*2));
 
             return new ChordOffset(new Chord(notes, fraction), new Beat(absoluteBeat));
         }

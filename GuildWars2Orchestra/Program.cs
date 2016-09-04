@@ -16,9 +16,9 @@ namespace GuildWars2Orchestra
             Task.Run(async () => await MainAsync(args)).Wait();
         }
 
-/*        private static async Task MainAsync(string[] args)
+        private static async Task MainAsync(string[] args)
         {
-            var fileName = args.Length == 1 ? args[0] : @"TestData\Beyonce - Halo.xml";
+            var fileName = args.Length == 1 ? args[0] : @"TestData\Guilty Crown - My Dearest.xml";
 
             var rawMusicSheet = new XmlMusicSheetReader().LoadFromFile(fileName);
 
@@ -36,18 +36,18 @@ namespace GuildWars2Orchestra
             var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), algorithm);
 
             await musicPlayer.Play();
-        }*/
+        }
 
-        private static async Task MainAsync(string[] args)
+        /*private static async Task MainAsync(string[] args)
         {
-            //var musicSheet = new MidiParser().Parse(@"TestData\Musician_14th_song_d.gray_man.mid");
-            var musicSheet = new MidiParser().Parse(@"TestData\Pokemon Red Version  Pokemon Blue Version - The SS Anne.mid");
+            var musicSheet = new MidiParser().Parse(@"TestData\Musician_14th_song_d.gray_man.mid");
+            //var musicSheet = new MidiParser().Parse(@"TestData\Pokemon Red Version  Pokemon Blue Version - The SS Anne.mid");
 
             await Task.Delay(200);
 
             var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), new FavorChordsAlgorithm());
 
             await musicPlayer.Play();
-        }
+        }*/
     }
 }
