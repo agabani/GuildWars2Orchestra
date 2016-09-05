@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Sword Art Online - Courage</name>
+  <instrument>harp</instrument>
+  <tempo>165</tempo>
+  <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+[A,c1/2] E1/2 A1/2 [DB1/2]  D1/2 E1/2 [CG1/2]
+z2 C D
+[F,c1/2] C1/2 F1/2 [DB1] F,1/2 G,1/2 [CG1/2]
+z1/2 c1/2 B1/2 G1/2 [E1/2] D1/2 C1/2 z1/2
+[DF] z1/2 [D,F,1/2] A,1/2 [D,C] F,1/2
+
+[E,G] z1/2 G,1/2 [B,d1/2] D [DG,1/2]
+[F,e] d1/2 [eF] [Ad1/2] [eC1/2] [Ff1/2]
+[dG2] G,2
+[E,G1/2] c1/2 z1/2 [cG] z1/2 c1/2
+[cG1/2] c B [Gc1/2] G1/2 [B,G1/2]
+[E,CG] c1/2 c1/2 [cG] z1/2 c1/2
+
+[cG1/2] [Gc] B [Gc] [BG1/2]
+[B,DG3] z1/2 B1/2
+c1/2 B A B z1/2
+[AC,] z1/2 A1/2 [Ac] z1/2 c1/2
+[BD,] A [BG1/2] G,1/2 [Ac]
+A, [c1/2] [EA1/2] [Ac] z1/2 [Ec1/2]
+
+[cA1/2] [Ec1/2] A,1/2 [CB1/2] C1/2 [Ec] [CG1/2]
+z1/2 [C1/2] [c1/2] [cG1/2] [Gc] z1/2 [c1/2]
+[cC1/2] [c1/2] C1/2 [BG] [Cc] [BG1/2]
+z1/2 B,1/2 [D] [GB,] z1/2 [G,B1/2]
+[c1/2] [GB1/2] B,1/2 [GA1] [B1/2] [G,1/2] D,1/2
+
+[F,A] C,1/2 F,1/2 [A1/2] [Ac1/2] A,1/2  F,1/2 [Cc1/2]
+[BG,] A [FB] G,1/2 G,1/2
+[F,A] F,1/2 [Cc] C1/2 [AF,1/2] C,1/2
+[G,B] [cG,1/2] D1/2 [BG1/2] D1/2 [A1/2] D,1/2
+[A,E,] G, [A,] [A,C1/2] [A,1/2]
+z1/2 [A,E,] [G,C1/2] z1/2 [DA,] z1/2
+
+[F,A] F,1/2 [Cc] C1/2 [AF,1/2] C,1/2
+[G,B] [cG1/2] D1/2 [Bd1/2] D1/2 [B1/2] D,1/2
+[A,] G, [A,] [A,C1/2] [A,1/2]
+z1/2 [A,E,] [G,C1/2] z1/2 [G,D,] G,1/2
+[A,1/2] C,1/2 F,1/2 [B,] z1/2 [A,C] 
+[B,G,1/2] D,1/2 [D,] G, G,
+
+[EC,1/2] G,1/2 C1/2 [E1/2] [D1/2] G,1/2 B,1/2 [G,D1/2]
+[CA,1/2] E,1/2 [E1/2] E,1/2 [D1/2] D,1/2 [G,B,1/2] D,1/2
+[A,F,1/2] C,1/2 F,1/2 A,1/2 C1/2 A,1/2 [df]
+[Ff] [Ce1/2] F1/2 [Fd1/2] C1/2 [Ae1/2] F,1/2
+[G,d1/2] G1/2 d1/2 [eG1/2] G,1/2 z1/2 [G,d1/2] G,1/2
+
+z z1/2 e1/2 [ec] [dG]
+[cC] [Ce1/2] [dG1/2] z1/2 [eG,1/2] [CE1/2] e1/2
+[gB] [e1/2] [GB1/2] [Gd1/2] G,1/2 [Ge1/2] [dA1/2] 
+A, A,1/2 [EA] [cE,1/2] [Ae]
+G, G,1/2 [DG1/2] [Fd1/2] D,1/2 [Ge]
+[fF] [Fe1/2] [Cf] [eC1/2] F,1/2 [Ad1/2]
+
+G, [B1/2] [DG1/2] [Gc1/2] D,1/2 [Gd1/2] B,1/2
+[Ce] [fC1/2] [Ge] G,1/2 C1/2 E1/2
+E1/2 C1/2 G,1/2 E,1/2 [G,e1/2] E,1/2 [Cd1/2] [c1/2]
+F, F,1/2 [CG1/2] c1/2 F,1/2 [Ad1/2] C1/2
+[Gd] G,1/2 [D1/2] B1/2 G,1/2 [Bd1/2] D1/2
+
+
+
+[eC1/2] G,1/2 [Ce1/2] [dG1/2] B,1/2 [e1/2] B,1/2 [Ge1/2] 
+[fA,1/2] E,1/2 [Ae1/2] E,1/2 [G,d1/2] E,1/2 [Gc1/2] E,1/2
+[F,A1/2] C,1/2 [F,c1/2] [cF1/2] C1/2 F1/2 F1/2 c1/2
+[fc'1/2]  c1/2 A1/2 F1/2 C1/2 A,1/2 [Fe1/2] C,1/2
+[Gd] D, [Ge] [eD1/2] [Gd1/2]
+
+[GB] z1/2 e1/2 [ec] d
+[cA] [ec1/2] d [ce] e1/2
+[gD] e [dB] e1/2 [dA1/2]
+[GF,2] z1/2 c1/2 [ce]
+z2 [Bd] [eB]
+[fF1/2] A,1/2 [Ce1/2] [fF] [eF,1/2] [CF1/2] [F,d1/2]
+
+G,1/2 B,1/2 [Dd1/2] G1/2 [ce1/2] G,1/2 [Df1/2] G,1/2
+[Ef1/2] G,1/2 [Be1/2] [ec] E,1/2 [E1/2] E,1/2
+A,1/2 C1/2 E1/2 A1/2 [ce] d1/2 c1/2
+[cF,] F,1/2 [CG1/2] c1/2 F,1/2 [A,d1/2] C1/2
+[Gd] G,1/2 [DG1/2] c1/2 G,1/2 [Bd1/2] D1/2
+[Ce] e1/2 [dB,] [Be] [eB1/2]
+
+[A,f] [eA] [Gd] [cG,1/2] E,1/2
+[F,A] [Fc1/2] [cC] C1/2 F,1/2 C,1/2
+[c1/2] A,1/2 C1/2 [Fc] C1/2 [F,e1/2] C1/2
+[G,d1/2] B,1/2 D,1/2 G,1/2 B,1/2 D1/2 G1/2 B1/2 
+[Ge1/2] d1/2 z1/2 [cG1/2] z1/2 d1/2 z1/2 [cG]
+  </melody>
+</song>

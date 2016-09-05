@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Frozen - Let it Go</name>
+  <instrument>harp</instrument>
+  <tempo>130</tempo>
+  <meter>1/2</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+    [E,B] c E B2 c2 E [C,B] c E c2 B2 D
+    [D,A] B D A2 B2 D [D,A,G]4 F4
+    [E,B] c E B2 c2 E [C,c] B E c2 B2 D
+    [D,A] B D A2 B2 D [D,A,F]4 [CE]4
+    [A,E]2 [E,E]2 [A,E]2 [E,E] E [F,E] D [C,C] C F,2 [C,C] C
+    [G,E] D D,2 [G,D] C [D,B,] A, D,2 A,2 D,2 A, A,
+    [A,E] E [E,E] E A,2 [E,G] G F, E C,2 F,2 [C,C] C
+    [G,D] E D,2 [G,E] D [D,C] D D,2 A,2 D,2 A,2
+    A,2 [E,E] E A, G E, A F, G C, E F, G C, G
+    G, G D, F G, E D, F [D,E]2 A,2 D,2 A,2
+    A,2 [E,E] E [A,D] C E, [G,D]3 [D,E] E [G,D]2 [D,C]2
+    [D,G,]2 A,6 A,8
+    [D,G,]2 [D,D] D D, G D, G [D,G,] D D, D D, G D, A
+    [C,F,]2 [C,A] G [C,A] A C, G [C,A] B C, c C, B C, B
+    [D,G,]2 [D,D] D D, G D, G [D,G,] D D, D D, A D, A
+    F, C, F, C, F, C, F, C, F, C, F, C, F, C, [F,G] [C,A]
+    F, [C,B] F, [C,c] F, C, F, C, F, C, F, C, F, A B c
+    c' g c' g c' [Gg] [Gc'] [dg] b g b g b g [cb] g
+    [Ac'] [Aa] [Ac'] a [Ac'] [Ba] c' [ca] c' a c' a c' [Aa] [Bc'] [ca]
+    c' g c' g c' [Gg] [ec'] [dg] [eb] [dg] b g b [cg] [db] [eg]
+    c' [ea] c' [fa] c' [ea] c' [da] [cc'] a c' a c'4
+    [C,g] G, D [Ece]3 [Bd]2 G, D, A, B, c2 c2
+    [A,g] [E,g] B, [CBe]2 [Ac] [Ac]2 F, C, G, A,3 c c
+    [E,B] B, [EG]4 G2 C, G, C5 E
+    [C,G,F]2 F E F E F F E C2 C, [Gf] C, [Gf] e
+    C, G, [CG] G, [C,c] [G,G] [Cc] [G,d] B, G, [B,G] F, [B,d] [G,c] [B,B] [G,c]
+    A, [E,E] [A,E] [E,E] [A,E] [E,E] A, [E,E] F, [C,C] F, C, F, C, [F,C] C,
+    [G,G] D, [G,G] [D,F] G, [D,E] [G,D] [D,D] D, A, D, A, D, A, [D,C] [A,D]
+    [A,E] [E,E] [A,E] [E,E] A, [E,G] A, [E,A] [G,G] D, [G,G] E, G, D, [G,G] E,
+    [D,c] A, [Dc] [A,B] D, [A,A] D [A,A] D, A, D A, D, A, D A,
+    [D,G,]2 [D,D] D D, G D, G [D,G,] D D, D D, G D, A
+    [D,F,]2 [D,A] G [D,A] A D, G [C,A] B C, c C, d C, G
+    [D,G,]2 [D,D] D D, G D, G [D,G,] D D, G D, D [D,A]2
+    [C,F,]2 C,2 C, B C, c F, C, F, C, F, C, F, C,
+    F, C, F, C, F, A B c C, G, D E D [G,G] [DG] [G,d]
+    G, D, A, B, A, D, [A,c] D, [A,A] [E,A] [B,A] C [B,A] [E,B] B, [E,c]
+    F, [C,d] [G,c] A, G, [C,A] [G,B] [C,c] C, G, D E D [G,G] [De] [G,d]
+    [G,e] [D,d] A, B, A, [D,c] [A,d] [D,e] A, [E,e] B, [Cf] B, [E,e] B, [E,d]
+    [F,c] C, G, A, G, C, G, C, [C,g] G, D [Ee] D G, [G,Bd]3
+    D, A, B, [A,c] D, [A,c] D, [A,g] [E,g] B, [Ce] B, [E,c] [F,Ac]3
+    C, G, A, G, C, [G,c] [C,c] [E,B] B, [EG] G3 [D,G]3
+    A, D6 D, [A,G] [D,A] [A,G] [D,c] [A,B] [D,A] [A,G]
+    [D,F] [A,G] [D,A] [A,F] [D,G] [A,A] C, D, D, [A,G] [D,A] [A,G] [D,c] [A,B] [D,A] [A,G]
+    [D,F] [A,G] [D,A] [A,F] [D,G] [A,A] C, D, G, D [G,G] [DA] G, [DG] G, [DA]
+    G, [DB] G, [Dc] G, [Dd] G, [Df] G, [De] G, [Dd] G, [Dc] G, [Dd]
+    G, D G, D G, D G, D G, D [G,G] [DA] G, [DG] G, [DA]
+    G, [DB] G, [Dc] G, [Dd] G, [Df] G, [De] G, [Dd] G, [Dc] G, [Df]
+    G, [De] [G,d] [De] [G,d] D G, D G, D [G,G] [DA] G, [DG] G, [DA]
+    G, [DB] G, [Dc] G, [Dd] G, [Df] G, [De] G, [Dd] G, [Dc] G, [Dd]
+    G, D G, D G, D G, D [A,E]2 e e2 e2 e
+    [F,C] c2 c4 c [G,Dd]2 [G,c] d [G,D] e [G,D] f
+    [D,A,A]2 [D,A,]2 [D,A,]2 [D,A,]2 [F,C] [F,C] [F,C] [F,C] [F,C] [Af] [Af] [Af]
+    [C,e] G, D E D [G,G] [DG] [G,d] G, D, A, C A, [D,c] [A,A] [D,A]
+    A, [E,A] [B,A] [CA] [B,A] [E,B] B, [E,c] F, [C,d] [G,c] A, G, [C,A] [G,B] [C,c]
+    C, G, D E D [G,G] [De] [G,d] [G,e] [D,d] A, B, A, [D,c] A, [D,e]
+    F, [C,e] G, [A,f] G, [C,e] [G,d] [C,c] F, C, G, A, G, C, G, C,
+    [C,g] G, D [Ece]3 [G,Bd]3 D, A, B, [A,c] D, [A,c] D,
+    [A,g] E, B, [Ce]3 [F,f] e2 [C,d] [G,c] A, G, C, G, C,
+    F, C, F, C, F, C, F, [C,c] [E,B] C [Ec] c3 g2
+    F, C F C F C F C [F,C] [F,C] [F,C] [F,C] [F,C] [F,C] [F,C] E
+    [C,G,F]2 F E F E F F E C3 C,4
+  </melody>
+</song>

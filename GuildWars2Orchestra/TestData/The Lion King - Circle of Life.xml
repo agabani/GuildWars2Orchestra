@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>The Lion King - Circle of Life</name>
+  <instrument>harp</instrument>
+  <tempo>200</tempo>
+  <meter>1/8</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+    E/4 F/4 [C,G]/2 E,/2 G,/2 [CE]/4 F/4 G G/4 A/4 G/2 [C,F]/2 D,/2 F,/2 A,/2 z3/2 D/2 [D,F]/2 [F,F]/2 [G,F]/2 [B,G] z/2 G/4 A/4 E/2 C,/2 E,/2 G,/2 C/2 z3/2 G/2 [C,c]/2 [E,c]/2 [A,c]/2 [Cc] z A/4 B/4 [D,c]/2 [F,d]/2 [A,d]/2 [Dd] z'/2 d/2 d/4 d/4 D,/2 F,/2 E/2 [Dd]/4 e/4 f e/4 c/4 d/2 D,/2 G,/2 B,/2 D/2 z3/2 D/2 [C,CE]/2 [E,DF]/2 G,/2 [CEG]3/2 G/4 A/4 [EG]/2 [C,DF]/2 D,/2 F,/2 A,/2 z E/2 F/2 [D,DF]/2 F,/2 G,/2 [B,F]/4 F/4 [EG]/2 [EG]/2 [FA]/2 [CE]/2  C,/2 E,/2 G,/2 C/2 z3/2 G/2 G/2 [C,Gc]/2 [E,Gc]/2 [G,Gc]/2 [A,Gc]3/2 z/2 G/4 G/4 [D,Ac]/2 [F,Ad]/2 [A,Ad]/2 [DAd] [Ad]/2 [Ad]/2 [Ad]/2 [D,Fd]/2 [F,Fd]/2 [EGe]/2 [DAf]3/2 e/4 c/4 [Gd]/2  D,/2 G,/2 B,/2 [DG]/4 G/4 [Bg] e/4 d/4 [EGc]/2 C,/2 E,/2 G,/2 C G,/2 [C,F,A,C] [C,E,G,C]/2 E,/2 G,/2 [Ce]/4 e/4 [df]/2 G,/2 [Ceg]/2 [G,df]/2 C,/2 [D,Fd]/2 F,/2 A, F,/2 A,/2 F,/2 C,/2 D,/2 [F,df]/2 [A,df]/2 [eg]/2 F,/2 [A,ce]/2 [F,Fc]/2 C,/2 F,/2 A,/2 C A,/2 [C,F,D] [C,F,A,C]/2 F,/2 A,/2 [Cf]/4 f/4 [df]/2 [A,ce]/2 [Ccd]/2 [A,Bd]/2 D,/2 F,/2 G,/2 B, G,/2 B,/2 G,/2 D,/2 F,/2 [G,G]/2 [B,G]/2 [Bdg]/2 G,/2 B,/4 e/4 [G,d]/4 [Ge]/4 E,/4 d/4 [G,EGc]/2 C/2 E C/2 E/2 C/2 C,/2 E,/2 [A,e]/2 [Ce]/2 [Gcf]/2 A,/2 [CAeg]/2 [A,Adg]/2 D,/2 [F,f]/2 A,/2 D A,/2 D/2 A,/2 D,/2 F,/2 E/2 D F/2 [Ec]/4 c/4 [Dceg]/2 C,/2 E,/2 G,/2 [Ce]/4 d/4 [EGc]/2 G,/2 C/2 G,/2 D,/2 G,/2 B,/2 D/4 G/4 [Af]/2 [B,Ge]/2 [Dd]/4 [FAc]/4 [B,c]/2 C,/2 F,/2 A,/2 C A,/2 C/2 A,/2 [C,E,G,C]
+  </melody>
+</song>

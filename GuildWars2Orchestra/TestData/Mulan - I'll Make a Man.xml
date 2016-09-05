@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Mulan - I'll Make a Man</name>
+  <instrument>harp</instrument>
+  <tempo>120</tempo>
+  <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+    [EA,] z1/2 [G,D] z1/2 [EA,1/2] z D,1/4 G,1/4 A1/4  D1/4 G1/4 E1/4 z
+
+    z1/2 [AEA,1/2] z1/2 E1/2 [GDG,1/2] z1/2 D1/2 [EG,E,C,1/2] C,1/2 G1/2 C, C, [DG,C,1/2] [A,E1/2] [FDD,] A, D, [C,G1/2] D1/2 [DG,B,] B, B, G,
+
+    z1/2 [AEA,1/2] z1/2 E1/2 [GDG,1/2] z1/2 D1/2 [EG,E,C,1/2] C,1/2 G1/2 C, C, [DG,C,1/2] [A,E1/2] [FDD,] A, D, [C,G1/2] G1/2 [DG,] G, G,  [G,F1/2] G1/2
+
+    [ACF,] A A d1/2 [DG,1/2] [G,c1/2] B1/2 z1/2 B1/2 z c1/2 d1/2 [eGEC,] z1/2 f1/2 e G1/2 A1/2 [F,2] z1/2 f1/2 e1/2 c1/2 [A,F,2] z1/2 F1/2 e1/2 d1/2 [DB,D,2] z1/2 B1/2 G1/2 A1/2 z1/2 [EA,] z1/2 [G,D] z1/2 [EA,1/2]
+
+    z4 [AEA,1/2] z1/2 E1/2 [GDG,1/2] z1/2 D1/2 [EG,E,C,1/2] C,1/2 G1/2 C, C, [DG,C,1/2] [A,E1/2] [FDD,] A, D, [C,G1/2] D1/2 [DG,B,] B, B, G,
+
+    z1/2 [AEA,1/2] z1/2 E1/2 [GDG,1/2] z1/2 D1/2 [EG,E,C,1/2] C,1/2 G1/2 C, C, [DG,C,1/2] [A,E1/2] [FDD,] A, D, [C,G1/2] G1/2 [DG,] G, G,  [G,F1/2] G1/2
+
+    [ACF,] A A d1/2 [DG,1/2] [G,c1/2] B B z1/2 c1/2 d1/2 [eGEC,] z1/2 f1/2 e G1/2 A1/2 [F,2] z1/2 f1/2 e1/2 c1/2 [A,F,2] z1/2 F1/2 e1/2 d1/2 [DB,D,2] z1/2 E1/2 G1/2 A1/2 z1/2 [EA,] z1/2 [G,D] z1/2 [EA,1/2] z1
+
+    [F,C,1/2] A1/2 A1/4 A1/4 [AA,1/4] A1/4 [BB,1/2] B1/4 B1/4 z1/2 [D,B,1/2]
+
+    [C,B1/4] B1/4 B1/4 B1/4 e1/2 [BC,1/2] [Cd1/2] c1/2 z1/2 [C,E,1/2]  [Dd1/4] d1/4 d1/4 d1/4 g1/2 [dD1/2] [Ef1/2] e1/2 d1/4 c1/2 z1/4 [cAC,F,] z3
+
+    [F,C,1/2] A1/2 A1/4 A1/4 [AA,1/4] A1/4 [BB,1/2] B1/4 B1/4 z1/2 [D,B,1/2]
+
+    [C,B1/4] B1/4 B1/4 B1/4 e1/2 [BC,1/2] [Cd1/2] c1/2 z1/2 [C,E,1/2] [Dd1/4] d1/4 d1/4 d1/4 g1/2 [dD1/2] [Ef1/2] e1/2 d1/4 c1/2 z1/4 [aC,A,] z A1/2 B c1/2 A,1/2
+
+    [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] [C1/2] [eE] [Dd1/2] [DB,1/2] [C,c1/2] [CF,1/2]  z [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] [C1/2] [eE] [Dd1/2] [DB,1/2] A, [F,C,C1/2]
+
+
+    z [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] z1/2 [eE] [Dd] [cC,1/2] z1/2 [AA,1/2] [Cc1/2] c1/2 [cC1/2] c z1/2 [e1/2] d [cG] [B] z1/2 [gG1/2] [Aa1/2] z1/2 [AD] z1/2 [AD] z1/2 [EA1/2] z1/2 [AE1/2] [EA1/2] [AE1/2]
+
+    z1/2 [aEA,1/2] z1/2 e1/2 [gDG,1/2] z1/2 d1/2 [eGCE1/2] C,1/2 g1/2 C, C, [dGC1/2] [Ae1/2] [fDD,] A, D, [C,g1/2] d1/2 [G,B,] B, B, G,
+
+    z1/2 [aEA,1/2] z1/2 e1/2 [gDG,1/2] z1/2 d1/2 [eGCE1/2] C,1/2 g1/2 C, C, [dGC1/2] [Ae1/2] [fDD,] A, D, [C,g1/2] g1/2 [DG,] G, G,  [G,f1/2] G1/2
+
+    [ACF] A A d1/2 [DG,1/2] [[G,c1/2] B B z1/2 c1/2 d1/2 [eGEC,] z1/2 f1/2 e G1/2 A1/2 [F,2] z1/2 f1/2 e1/2 c1/2 [AF,2] z1/2 F1/2 e1/2 d1/2 [BDD,2] z1/2 e1/2 g1/2 a1/2 [cA2] A1/2 B c1/2 z1/2
+
+    [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] [C1/2] [eE] [Dd1/2] [DB,1/2] [C,c1/2] [CF,1/2]  z [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] [C1/2] [eE] [Dd1/2] [cDB,1/2] A, [F,C,C1/2]
+
+    z [C,c1/2] [cC1/2] [Cc1/2] [dD1/2] [BB,1/2] [G,G1/2] [Ff1/2] z1/2 [eE] [Dd] [cC,1/2] z1/2 [AA,1/2] [Cc1/2] c1/2 [cC1/2] c z1/2 [e1/2] d [cG] [B] z1/2 [gG1/2] [Aa1/2] z1/2 [AD] z1/2 [AD] z1/2 [EA1/2] z2 [AA,1/2] [B,B] [Cc1/2]
+
+    [cC1/2] c1/2 [cC1/2] c1/2 [dD1/2] [B,B1/2] G1/2 [Ff1/2] z1/2 [eE] [Dd] [cC] z1/2 z1/2 [cC1/2] c1/2 [cC1/2] [dD1/2] [B,B1/2] G1/2 [Ff1/2] z1/2 [eE] [Dd1/2] [cC2] z1/2 [cC1/2] c1/2 [cC1/2] [dD1/2] [B,B1/2] G1/2 [Ff1/2]
+
+    z1/2 [eE] [Dd1/2] [cC] z1/2 [Cc1/2] [cCF1/2] c1/2 [cC1/2] c1/2 z [eE1/2] [Dd1/2] z1/2 [cC] [BB,] z1/2 [gG1/2] [Aa1/2] z1/2  [BG,] z1/2 [G,B] z1/2 [cA1/2]
+  </melody>
+</song>

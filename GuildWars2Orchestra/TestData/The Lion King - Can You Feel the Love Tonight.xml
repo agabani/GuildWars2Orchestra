@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>The Lion King - Can You Feel the Love Tonight</name>
+  <instrument>harp</instrument>
+  <tempo>70</tempo>
+  <meter>1/2</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+[C,ce] G, [CE] G, [B,Bd] G, [B,Dg] G, [A,Af] A, [CF] A, G, [G,e] [CEc] [G,G] 
+[F,FA] F, [A,C] F, [E,G] [E,c] [G,CG] [E,E] [B,D]2 [C,CE]2 [D,DF]2 [E,EG]2 
+[F,A,A] B/2 c/2 [F,C]/2 d c/2 [E,G,C] G E,/2 G,/2 C [F,A,A] B/2 c/2 [F,C]/2 d c/2 [E,G,C]2 E,/2 G,/2 C 
+[F,A,A] B/2 c/2 [F,A,C] c/2 d/2 [E,c]/2 G e/2 [E,G,C]2 [D,F,f] e/2 d/2 [D,F,A,] e/2 c/2 [D,G,d]2 B,/2 D/2 G/2 G,/2 
+[F,A,A] B/2 c/2 [F,C]/2 d c/2 [E,G,C] G E,/2 G,/2 C [F,A,A] B/2 c/2 [F,C]/2 d c/2 [G,CE]2 G,/2 C/2 E/2 G/2 
+[F,A,A] B/2 c/2 [F,F]/2 G/2 G/2 G/2 [A,Cg] e [A,c]/2 A3/2 [A,Df] e/2 d/2 [A,DF] e [G,B,Dd]2 [G,D]/2 G/2 d 
+[C,Gg] G, [Ce] [G,d] [B,GB] G, [B,g] [G,e] [A,Ac] E, [A,c] [E,A] F, [C,A,]/2 C/2 [F,F]/2 A/2 [A,c] 
+[C,EG] G, [CG]/2 c/2 [G,f] [F,FA] C [F,Fe] [Cd] G, D F [DG] [G,A]/2 G/2 [D,B]/2 G/2 [G,c]/2 G/2 [D,d]/2 g/2 
+[F,Af] C [FA]/2 B/2 [Cc] E, C E [CG]/2 G/2 [A,Cg] d [G,Ce] c [F,A,c] A A,/2 C/2 [FA] 
+[D,Df] F [E,Ce] G [F,Dd] A/2 F/2 [G,Ec] c [A,Fc]2 A,/2 C/2 F/2 A/2 [G,CEc']4 
+[F,A,A] B/2 c/2 [F,C]/2 d c/2 [E,G,C] G E,/2 G,/2 C [F,A,A] B/2 c/2 [F,C]/2 d c/2 [G,CE]2 G,/2 C/2 E/2 G/2 
+[F,A,A] B/2 c/2 [F,F]/2 G/2 G/2 G/2 [A,Cg] e [A,c]/2 A3/2 [A,Df] e/2 d/2 [A,Dd] e [G,B,Dd]2 [G,B,]/2 D,/2 G,/2 D/2 
+[E,G]/2 B,/2 D/2 G/2 [G,B]/2 D/2 [G,G]/2 d/2 [C,Gg] G, [CEG] [G,Ee] [B,Dd] G, [B,Dg] [G,Ee] 
+A, A, [CEc] [A,A] F, F, [A,CF] F, C, G, [G,CG] [G,Cc] [F,Ff] [A,CF] [F,Ee] [A,CF] 
+[G,Dd] G, [B,DG] G, [B,G]/2 G,/2 [G,B,]/2 D/2 [B,G]/2 B,/2 [G,D]/2 G/2 [F,FA] F, [A,A]/2 [B,B]/2 [F,Cc] [E,Cc] [E,G,G] [G,CE] [E,G,G] 
+[A,Gg] [A,Cd] [G,Ee] [G,Cc] [F,Cc] [A,CA] E, [G,A,A] [D,Ff] [A,CF] [E,Ee] [G,CE] [F,Dd] [A,CF] [F,Ee] [A,Cd] 
+G, G, [B,DG] G, [A,CA] [F,B,B] [D,Cc] [G,Dd] [C,Gg] G, [CEG] [G,Ee] [B,Dd] G, [B,Dg] [G,Ee] 
+A, A, [CEc] [A,A] F, F, [A,CF] F, C, G, [G,CG] [G,Cc] [F,Ff] [A,CF] [F,Ee] [A,CF] 
+[G,Dd] G, [B,DG] G, [B,G]/2 G,/2 [G,B,]/2 D/2 [B,G]/2 B,/2 [G,D]/2 G/2 [F,FA] F, [A,A]/2 [B,B]/2 [F,Cc] [E,Cc] [E,G,G] [G,CE] [E,G,G] 
+[A,Gg] [A,Cd] [G,Ee] [G,Cc] [F,Cc] [A,CA] E, [G,A,A] [D,Ff] [A,CF] [E,Ee] [G,CE] [F,Dd] [A,CF] [G,Cc] [CEc] 
+[F,A,C] C/2 F/2 A/2 c/2 f/2 a/2 [E,Ccg]4 
+[F,A,C]28/13 [F,A]7/13 B7/13 c14/13 [E,G,c]14/13 G14/13 [E,G,C]14/13 G14/13 [A,Cg]14/13 d14/13 [G,Ce]14/13 c14/13 [F,c]7/13 c7/13 A14/13 [E,G,C]14/13 A14/13 
+[D,F,A,f]28/13 [E,G,Ce]28/13 [F,A,Cd]28/13 [G,B,c]14/13 B14/13 [Cc]14/13 F7/13 A7/13 c7/13 f7/13 a7/13 c'7/13 [cegc']56/13 
+  </melody>
+</song>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Numb - Linkin Park</name>
+  <instrument>harp</instrument>
+  <tempo>105</tempo>
+  <meter>1/4</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+    e/2 g/2 e/2 [A,a]/2 E/2 A/2 [cc'] A/2 [Eb] F,/2 C/2 F/2 A [Fe]/2 [Cg]/2 e/2 [C,c']/2 G,/2 C/2 [Eb] C/2 [G,g]
+    G,/2 D/2 G/2 B  [Ge]/2 [Dg]/2 e/2 [A,a]/2 E/2 A/2 [cc'] A/2 [Eb] F,/2 C/2 F/2 A [Fe]/2 [Cg]/2 e/2 [Cc']/2 G/2 c/2 [eb] c/2 [Gg]
+    G,/2 D/2 G/2 B [Ge]/2 [Dg]/2 e/2 [A,a]/2 E/2 [Ae]/2 [ce]/2 e/2 [Ae]/2 [Ef]/2 e/2 F,/2 [Ce]/2 [Fd]/2 [Ac] F/2 C/2 G/2 [C,e]/2  [G,e]/2 [Cd]/2 [Ec] [Cd]/2 G,/2 G/2
+    [G,e]/2 [De]/2 [Gd]/2 c [Gd]/2 D A,/2 E/2 [Ae]/2 [Ce]/2 e/2 [Ae]/2 [Ef]/2 e/2 F,/2 [Ce]/2 [Fd]/2 [Ac] F/2 C/2 G/2 [C,e]/2 [G,e]/2 [Cd]/2 [Ec] [Cd]/2 G,/2 G/2
+
+    [G,e]/2 [Dd]/2 G/2 c [Gd]/2 D/2 e/2 F,/2 C/2 [FA]/2 A/4 A/4 A/2 A/4 A/2 A/2 A/4 A/4 [G,A]/2 [DA]/4 A/4 [GA]/2 [BA] G/2 [De]/2  e/2 [A,a]/2 [Ea]/2 [Ag]/2 [ce] [Ae]/2 [Ee]/2 e/2
+    [C,a]/2 [G,a]/2 [Cg]/2 [Ee] [Cf]/2 G,/2 g/2 F,/2 C/2 [FA]/2 A/4 A/4 A/2 A/4 A/2 A/2 A/4 A/4 [G,A]/2 [DA]/4 A/4 [GA]/2 [BA] G/2 D [A,a]/2 E/2 A/2 [ca]/2 a/2 A/2 [Eg]
+    [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg] [A,a]/2 E/2 [Aa]/2 [ca]/2 a/2 A/2 [Eg]
+    [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg] [A,a]/2 E/2 [Aa]/2 [ca]/2 a/2 [Aa]/2 [Eg]/2 a/2
+    F,/2 [Cg]/2 [Fg]/2 [Ag] F/2 C [C,a]/2 [G,g]/2 [Cg]/2 [Eg] [Ce]/2 G,/2 e/2 [G,f]/2 [De]/2 G/2 [Bd] [Ge]/2 D/2 e/2 A,/2 [Ec]/2 [Ae]/2 [ce]/2 e/2 [Ae]/2 [Ef]/2 e/2
+
+    F,/2 [Ce]/2 [Fd]/2 [Ac] F/2 C/2 G/2 [C,e]/2 [G,e]/2 [Cd]/2 [Ec] C/2 G, [G,e]/2 [Dd]/2 G/2 c [Gd]/2 D/2 e/2 F,/2 C/2 [FA]/2 A/4 A/4 A/2 A/4 A/2 A/2 A/4 A/4
+    [G,A]/2 [DA]/4 A/4 [GA]/2 [BA] [De]/2  e/2 [A,a]/2 [Ea]/2 [Ag]/2 [ce] [Ae]/2 [Ee]/2 e/2 [C,a]/2 [G,a]/2 [Cg]/2 [Ee] [Cf]/2 G,/2 g/2 F,/2 C/2 [FA]/2 A/4 A/4 A/2 A/4 A/2 A/2 A/4 A/4
+    [G,A]/2 [DA]/4 A/4 [GA]/2 [BA] G/2 [De]/2 e/2 [A,a]/2 [Ea]/2 [Ag]/2 [ce] [Ae]/2 [Ee]/2 e/2 [Cc']/2 G/4 b/4 c/2 [ec'] c/2 [Gb] [A,a]/2 E/2 A/2 [ca]/2 a/2 A/2 [Eg]
+    [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg] [A,a]/2 E/2 [Aa]/2 [ca]/2 a/2 A/2 [Eg]
+    [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg] [F,a]/2 C/2 F/2 A [Fa]/2 [Cc']/2 b/2
+
+    G,/2 D/2 G/2 B [Ga]/2 [Db] [A,c']/2 E/2 A/2 E/2 [B,b]/2 G/2 c/2 G/2 [Cc']/2 G/2 c/2 G/2 [G,b]/2 D/2 G/2 D/2 [F,a]/2 C/2 F/2 A [Fa]/2 [Cc']/2 b/2
+    G,/2 D/2 G/2 B G/2 [Db]/2 a/2 [E,b]/2 [B,b]/2 E/2 b [B,a]/2 [Eb]/2 [B,a]/2 [E,b]/2 [B,b]/2 E/2 b [B,b]/2 [Ec']/2 [B,b]/2 E,/2 B,/2 [Ea]3/2 [B,g]/2 E/2 B,/2
+    [A,a]/2 E/2 A/2 [ca]/2 a/2 A/2 [Eg] [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg]
+    [A,a]/2 E/2 [Aa]/2 [ca]/2 a/2 A/2 [Eg] [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ca]/2 [ea]/2 a/2 c/2 [Gg] [G,a]/2 D/2 [Ga]/2 [Ba]/2 a/2 G/2 [Dg]
+
+    [A,a]/2 E/2 A/2 [ca]/2 a/2 A/2 [Eg] [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ce]/2 e/2 e/2 [ce]/2 [Gf]/2 e/2 G,/2 [De]/2 [Gd]/2 c G/2 D
+    [A,a]/2 E/2 A/2 [ca]/2 a/2 A/2 [Eg] [F,a]/2 C/2 [Fa]/2 [Aa]/2 a/2 F/2 [Cb] [Cg]/2 G/2 [ce]/2 e/2 e/2 [ce]/2 [Gf]/2 e/2 G,/2 [De]/2 [Gd]/2 c G/2 [DB] A
+  </melody>
+</song>

@@ -79,6 +79,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData\DanMachi - Right Light Rise.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Sword Art Online - Courage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Log Horizon - Your Song.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Mulan - I%27ll Make a Man.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Frozen - Let it Go.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Numb - Linkin Park.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\The Lion King - Circle of Life.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\The Lion King - Can You Feel the Love Tonight.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\Yiruma - River Flows In You.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
