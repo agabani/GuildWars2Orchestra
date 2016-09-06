@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra", "GuildWars2Orchestra\GuildWars2Orchestra.csproj", "{2AB64580-18E6-45EA-83D1-1C21A2A387D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedWinapi", "ManagedWinapi\ManagedWinapi.csproj", "{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Tests.Unit", "GuildWars2Orchestra.Tests.Unit\GuildWars2Orchestra.Tests.Unit.csproj", "{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Midi", "GuildWars2Orchestra.Midi\GuildWars2Orchestra.Midi.csproj", "{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}"
 EndProject
@@ -16,6 +14,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Domain", "GuildWars2Orchestra.Domain\GuildWars2Orchestra.Domain.csproj", "{D17642DD-3BD3-4629-AE0B-175E0B71251C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Kernal", "GuildWars2Orchestra.Kernal\GuildWars2Orchestra.Kernal.csproj", "{C728AB00-715A-4D1E-A90C-6781B270C721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.MusicBoxNotation", "GuildWars2Orchestra.MusicBoxNotation\GuildWars2Orchestra.MusicBoxNotation.csproj", "{968F7155-13BE-4132-B01A-0B023DA3B784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.MusicBoxNotation.Tests.Unit", "GuildWars2Orchestra.MusicBoxNotation.Tests.Unit\GuildWars2Orchestra.MusicBoxNotation.Tests.Unit.csproj", "{C0936A3C-92E6-47D5-BE4A-43346EA580D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.GuildWars2", "GuildWars2Orchestra.GuildWars2\GuildWars2Orchestra.GuildWars2.csproj", "{638F711F-86FA-4602-A4EB-E5E29AB04B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Domain.Tests.Unit", "GuildWars2Orchestra.Domain.Tests.Unit\GuildWars2Orchestra.Domain.Tests.Unit.csproj", "{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +37,6 @@ Global
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97E2FCF7-1EFF-4A61-A17A-077B14C841CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +53,22 @@ Global
 		{C728AB00-715A-4D1E-A90C-6781B270C721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C728AB00-715A-4D1E-A90C-6781B270C721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C728AB00-715A-4D1E-A90C-6781B270C721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968F7155-13BE-4132-B01A-0B023DA3B784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968F7155-13BE-4132-B01A-0B023DA3B784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968F7155-13BE-4132-B01A-0B023DA3B784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968F7155-13BE-4132-B01A-0B023DA3B784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0936A3C-92E6-47D5-BE4A-43346EA580D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0936A3C-92E6-47D5-BE4A-43346EA580D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0936A3C-92E6-47D5-BE4A-43346EA580D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0936A3C-92E6-47D5-BE4A-43346EA580D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638F711F-86FA-4602-A4EB-E5E29AB04B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638F711F-86FA-4602-A4EB-E5E29AB04B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638F711F-86FA-4602-A4EB-E5E29AB04B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638F711F-86FA-4602-A4EB-E5E29AB04B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using GuildWars2Orchestra.Domain.Values;
-using GuildWars2Orchestra.Instrument;
+using GuildWars2Orchestra.GuildWars2.Instrument;
 using GuildWars2Orchestra.Kernal.Extensions;
 
 namespace GuildWars2Orchestra.Player.Algorithms

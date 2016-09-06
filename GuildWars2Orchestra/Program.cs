@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using GuildWars2Orchestra.Controls;
-using GuildWars2Orchestra.Instrument;
+using GuildWars2Orchestra.GuildWars2.Controls;
+using GuildWars2Orchestra.GuildWars2.Instrument;
 using GuildWars2Orchestra.Midi;
-using GuildWars2Orchestra.Parsers;
-using GuildWars2Orchestra.Persistance;
+using GuildWars2Orchestra.MusicBoxNotation.Parsers;
+using GuildWars2Orchestra.MusicBoxNotation.Persistance;
 using GuildWars2Orchestra.Player;
 using GuildWars2Orchestra.Player.Algorithms;
 
