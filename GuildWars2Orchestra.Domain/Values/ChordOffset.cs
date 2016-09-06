@@ -8,7 +8,7 @@
             Offest = offest;
         }
 
-        public Chord Chord { get; private set; }
-        public Beat Offest { get; private set; }
+        public Chord Chord { get; }
+        public Beat Offest { get; }
     }
 }

@@ -11,8 +11,8 @@ namespace GuildWars2Orchestra.Domain
             Melody = melody;
         }
 
-        public MetronomeMark MetronomeMark { get; private set; }
+        public MetronomeMark MetronomeMark { get; }
 
-        public IEnumerable<ChordOffset> Melody { get; private set; }
+        public IEnumerable<ChordOffset> Melody { get; }
     }
 }
