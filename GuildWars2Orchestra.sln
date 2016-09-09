@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra", "GuildWars2Orchestra\GuildWars2Orchestra.csproj", "{2AB64580-18E6-45EA-83D1-1C21A2A387D5}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.GuildWars2", "GuildWars2Orchestra.GuildWars2\GuildWars2Orchestra.GuildWars2.csproj", "{638F711F-86FA-4602-A4EB-E5E29AB04B54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Domain.Tests.Unit", "GuildWars2Orchestra.Domain.Tests.Unit\GuildWars2Orchestra.Domain.Tests.Unit.csproj", "{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Audio", "GuildWars2Orchestra.Audio\GuildWars2Orchestra.Audio.csproj", "{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E5F52E8-FA49-412D-BB1B-F38AF7946D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
