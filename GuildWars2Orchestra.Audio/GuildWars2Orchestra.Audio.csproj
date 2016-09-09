@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NAudio, Version=1.5.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.1.5\lib\NAudio.dll</HintPath>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.7.3\lib\net35\NAudio.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NAudio.Vorbis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -46,8 +46,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Emulation\AudioKeyboard.cs" />
+    <Compile Include="Sound\AudioPlaybackEngine.cs" />
+    <Compile Include="Emulators\HarpEmulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sound\AutoDisposeFileReader.cs" />
+    <Compile Include="Sound\CachedSound.cs" />
+    <Compile Include="Sound\CachedSoundSampleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Licence.txt">

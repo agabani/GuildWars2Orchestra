@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using GuildWars2Orchestra.Audio.Emulators;
 using GuildWars2Orchestra.GuildWars2.Controls;
 using GuildWars2Orchestra.GuildWars2.Instrument;
 using GuildWars2Orchestra.Midi;
@@ -52,7 +53,10 @@ namespace GuildWars2Orchestra
             var algorithm = rawMusicSheet.Algorithm == "favor notes"
                 ? new FavorNotesAlgorithm() : (IPlayAlgorithm)new FavorChordsAlgorithm();
 
-            var musicPlayer = new MusicPlayer(musicSheet, new Harp(new GuildWarsKeyboard()), algorithm);
+            IKeyboard guildWarsKeyboard = new GuildWarsKeyboard();
+            //IKeyboard guildWarsKeyboard = new HarpEmulator();
+
+            var musicPlayer = new MusicPlayer(musicSheet, new Harp(guildWarsKeyboard), algorithm);
 
             await musicPlayer.Play();
         }

@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GuildWars2Orchestra.Audio\GuildWars2Orchestra.Audio.csproj">
+      <Project>{34F4290D-03AB-4D7D-858A-5B5E7A2D26E4}</Project>
+      <Name>GuildWars2Orchestra.Audio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuildWars2Orchestra.Domain\GuildWars2Orchestra.Domain.csproj">
       <Project>{d17642dd-3bd3-4629-ae0b-175e0b71251c}</Project>
       <Name>GuildWars2Orchestra.Domain</Name>
