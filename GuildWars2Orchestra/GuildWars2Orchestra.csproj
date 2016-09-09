@@ -34,10 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommandLine, Version=2.0.275.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.0.275-beta\lib\net45\CommandLine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationOptions.cs" />
+    <Compile Include="MusicPlayerFactory.cs" />
     <Compile Include="Player\Algorithms\FavorNotesAlgorithm.cs" />
     <Compile Include="Player\Algorithms\FavorChordsAlgorithm.cs" />
     <Compile Include="Player\Algorithms\IPlayAlgorithm.cs" />
@@ -47,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GuildWars2Orchestra.Audio\GuildWars2Orchestra.Audio.csproj">
