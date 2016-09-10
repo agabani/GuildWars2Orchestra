@@ -46,6 +46,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Emulators\HarpSoundRepository.cs" />
     <Compile Include="Sound\AudioPlaybackEngine.cs" />
     <Compile Include="Emulators\HarpEmulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

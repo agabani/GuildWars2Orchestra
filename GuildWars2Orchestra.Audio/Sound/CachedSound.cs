@@ -7,11 +7,11 @@ namespace GuildWars2Orchestra.Audio.Sound
 {
     public class CachedSound
     {
-        public CachedSound(VorbisWaveReader vorbisWaveReader)
+        public CachedSound(ISampleProvider vorbisWaveReader)
         {
             WaveFormat = vorbisWaveReader.WaveFormat;
 
-            var wholeFile = new List<float>((int) (vorbisWaveReader.Length/4));
+            var wholeFile = new List<float>();
             var readBuffer = new float[vorbisWaveReader.WaveFormat.SampleRate*vorbisWaveReader.WaveFormat.Channels];
 
             int samplesRead;

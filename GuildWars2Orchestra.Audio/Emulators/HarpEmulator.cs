@@ -1,62 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using GuildWars2Orchestra.Audio.Sound;
 using GuildWars2Orchestra.GuildWars2.Controls;
 using GuildWars2Orchestra.GuildWars2.Instrument;
-using NAudio.Vorbis;
 
 namespace GuildWars2Orchestra.Audio.Emulators
 {
     public class HarpEmulator : IKeyboard
     {
-        private static readonly Dictionary<string, CachedSound> Sound = new Dictionary<string, CachedSound>
-        {
-            {"1" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C3.ogg"))},
-            {"2" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\D3.ogg"))},
-            {"3" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\E3.ogg"))},
-            {"4" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\F3.ogg"))},
-            {"5" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\G3.ogg"))},
-            {"6" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\A3.ogg"))},
-            {"7" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\B3.ogg"))},
-            {"8" + HarpNote.Octaves.Low, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C4.ogg"))},
-            {"1" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C4.ogg"))},
-            {"2" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\D4.ogg"))},
-            {"3" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\E4.ogg"))},
-            {"4" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\F4.ogg"))},
-            {"5" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\G4.ogg"))},
-            {"6" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\A4.ogg"))},
-            {"7" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\B4.ogg"))},
-            {"8" + HarpNote.Octaves.Middle, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C5.ogg"))},
-            {"1" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C5.ogg"))},
-            {"2" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\D5.ogg"))},
-            {"3" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\E5.ogg"))},
-            {"4" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\F5.ogg"))},
-            {"5" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\G5.ogg"))},
-            {"6" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\A5.ogg"))},
-            {"7" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\B5.ogg"))},
-            {"8" + HarpNote.Octaves.High, new CachedSound(new VorbisWaveReader(@"Resources\Harp\C6.ogg"))}
-        };
-
         private HarpNote.Octaves _octave = HarpNote.Octaves.Middle;
 
-        public void Press(string key)
+        private readonly HarpSoundRepository _soundRepository = new HarpSoundRepository();
+
+        public void Press(GuildWarsKeyboard.GuildWarsSkill key)
         {
             switch (key)
             {
-                case "1":
-                case "2":
-                case "3":
-                case "4":
-                case "5":
-                case "6":
-                case "7":
-                case "8":
-                    AudioPlaybackEngine.Instance.PlaySound(Sound[key + _octave]);
+                case GuildWarsKeyboard.GuildWarsSkill.Skill1:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill2:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill3:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill4:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill5:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill6:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill7:
+                case GuildWarsKeyboard.GuildWarsSkill.Skill8:
+                    AudioPlaybackEngine.Instance.PlaySound(_soundRepository.Get(key, _octave));
                     break;
-                case "9":
+                case GuildWarsKeyboard.GuildWarsSkill.Skill9:
                     DecreaseOctave();
                     break;
-                case "0":
+                case GuildWarsKeyboard.GuildWarsSkill.Skill0:
                     IncreaseOctave();
                     break;
                 default:
@@ -64,15 +36,11 @@ namespace GuildWars2Orchestra.Audio.Emulators
             }
         }
 
-        public void Release(string key)
+        public void Release(GuildWarsKeyboard.GuildWarsSkill key)
         {
         }
 
-        public void PressAndRelease(string key)
-        {
-        }
-
-        private void PlaySound(string key)
+        public void PressAndRelease(GuildWarsKeyboard.GuildWarsSkill key)
         {
         }
 

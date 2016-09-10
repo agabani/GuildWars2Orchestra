@@ -10,18 +10,32 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 {
     public class GuildWarsKeyboard : IKeyboard
     {
-        private static readonly Dictionary<string, KeyboardKey> KeyboardKey = new Dictionary<string, KeyboardKey>
+        public enum GuildWarsSkill
         {
-            {"0", new KeyboardKey(Keys.D0)},
-            {"1", new KeyboardKey(Keys.D1)},
-            {"2", new KeyboardKey(Keys.D2)},
-            {"3", new KeyboardKey(Keys.D3)},
-            {"4", new KeyboardKey(Keys.D4)},
-            {"5", new KeyboardKey(Keys.D5)},
-            {"6", new KeyboardKey(Keys.D6)},
-            {"7", new KeyboardKey(Keys.D7)},
-            {"8", new KeyboardKey(Keys.D8)},
-            {"9", new KeyboardKey(Keys.D9)}
+            Skill0,
+            Skill1,
+            Skill2,
+            Skill3,
+            Skill4,
+            Skill5,
+            Skill6,
+            Skill7,
+            Skill8,
+            Skill9
+        }
+
+        private static readonly Dictionary<GuildWarsSkill, KeyboardKey> KeyboardKey = new Dictionary<GuildWarsSkill, KeyboardKey>
+        {
+            {GuildWarsSkill.Skill0, new KeyboardKey(Keys.D0)},
+            {GuildWarsSkill.Skill1, new KeyboardKey(Keys.D1)},
+            {GuildWarsSkill.Skill2, new KeyboardKey(Keys.D2)},
+            {GuildWarsSkill.Skill3, new KeyboardKey(Keys.D3)},
+            {GuildWarsSkill.Skill4, new KeyboardKey(Keys.D4)},
+            {GuildWarsSkill.Skill5, new KeyboardKey(Keys.D5)},
+            {GuildWarsSkill.Skill6, new KeyboardKey(Keys.D6)},
+            {GuildWarsSkill.Skill7, new KeyboardKey(Keys.D7)},
+            {GuildWarsSkill.Skill8, new KeyboardKey(Keys.D8)},
+            {GuildWarsSkill.Skill9, new KeyboardKey(Keys.D9)}
         };
 
         public GuildWarsKeyboard()
@@ -42,17 +56,17 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             SystemWindow.ForegroundWindow = systemWindow;
         }
 
-        public void Press(string key)
+        public void Press(GuildWarsSkill key)
         {
             KeyboardKey[key].Press();
         }
 
-        public void Release(string key)
+        public void Release(GuildWarsSkill key)
         {
             KeyboardKey[key].Release();
         }
 
-        public void PressAndRelease(string key)
+        public void PressAndRelease(GuildWarsSkill key)
         {
             KeyboardKey[key].PressAndRelease();
         }

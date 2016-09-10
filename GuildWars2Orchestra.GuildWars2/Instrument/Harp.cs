@@ -11,16 +11,16 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
         private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(5);
         private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(500);
 
-        private static readonly Dictionary<HarpNote.Keys, string> NoteMap = new Dictionary<HarpNote.Keys, string>
+        private static readonly Dictionary<HarpNote.Keys, GuildWarsKeyboard.GuildWarsSkill> NoteMap = new Dictionary<HarpNote.Keys, GuildWarsKeyboard.GuildWarsSkill>
         {
-            {HarpNote.Keys.Note1, "1"},
-            {HarpNote.Keys.Note2, "2"},
-            {HarpNote.Keys.Note3, "3"},
-            {HarpNote.Keys.Note4, "4"},
-            {HarpNote.Keys.Note5, "5"},
-            {HarpNote.Keys.Note6, "6"},
-            {HarpNote.Keys.Note7, "7"},
-            {HarpNote.Keys.Note8, "8"}
+            {HarpNote.Keys.Note1, GuildWarsKeyboard.GuildWarsSkill.Skill1},
+            {HarpNote.Keys.Note2, GuildWarsKeyboard.GuildWarsSkill.Skill2},
+            {HarpNote.Keys.Note3, GuildWarsKeyboard.GuildWarsSkill.Skill3},
+            {HarpNote.Keys.Note4, GuildWarsKeyboard.GuildWarsSkill.Skill4},
+            {HarpNote.Keys.Note5, GuildWarsKeyboard.GuildWarsSkill.Skill5},
+            {HarpNote.Keys.Note6, GuildWarsKeyboard.GuildWarsSkill.Skill6},
+            {HarpNote.Keys.Note7, GuildWarsKeyboard.GuildWarsSkill.Skill7},
+            {HarpNote.Keys.Note8, GuildWarsKeyboard.GuildWarsSkill.Skill8}
         };
 
         private readonly IKeyboard _keyboard;
@@ -99,8 +99,8 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press("0");
-            _keyboard.Release("0");
+            _keyboard.Press(GuildWarsKeyboard.GuildWarsSkill.Skill0);
+            _keyboard.Release(GuildWarsKeyboard.GuildWarsSkill.Skill0);
 
             await Task.Delay(OctaveTimeout);
         }
@@ -121,13 +121,13 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press("9");
-            _keyboard.Release("9");
+            _keyboard.Press(GuildWarsKeyboard.GuildWarsSkill.Skill9);
+            _keyboard.Release(GuildWarsKeyboard.GuildWarsSkill.Skill9);
 
             await Task.Delay(OctaveTimeout);
         }
 
-        private async Task PressNote(string key)
+        private async Task PressNote(GuildWarsKeyboard.GuildWarsSkill key)
         {
             _keyboard.Press(key);
             _keyboard.Release(key);
