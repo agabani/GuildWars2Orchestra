@@ -24,6 +24,7 @@
 * Chords played using their "absolute time" instead of using "note queueing and sleep" [v 0.0.0.4]
   *  This means chords can to be played slowly without it reducing the tempo as a side effect, allowing for more unplayable songs to become playable.
   *  “note queueing and sleep” is the approach AutoHotkey uses, eg: `Sleep, 400`.
+* Audio emulation alernative to running Guild Wars 2 [v 0.0.0.5]
 
 ## Upcoming Features
 
@@ -42,6 +43,8 @@
 4. Using "command prompt" or "powershell", navigate to the directory holding `GuildWars2Orchestra.exe`
 5. Using "command prompt" or "powershell", type the following command:
 `GuildWars2Orchestra.exe "TestData\Final Fantasy XIII 2 - A Wish.xml"`
+
+For more instructions, type `GuildWars2Orchestra.exe --help`
 
 ## Music Sheets
 
