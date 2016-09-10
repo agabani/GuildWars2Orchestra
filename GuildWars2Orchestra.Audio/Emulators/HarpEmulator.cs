@@ -76,7 +76,7 @@ namespace GuildWars2Orchestra.Audio.Emulators
                     _octave = HarpNote.Octaves.Low;
                     break;
                 case HarpNote.Octaves.High:
-                    _octave = HarpNote.Octaves.High;
+                    _octave = HarpNote.Octaves.Middle;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
