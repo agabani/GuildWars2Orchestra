@@ -2,8 +2,8 @@
 {
     public interface IKeyboard
     {
-        void Press(GuildWarsKeyboard.GuildWarsSkill key);
-        void Release(GuildWarsKeyboard.GuildWarsSkill key);
-        void PressAndRelease(GuildWarsKeyboard.GuildWarsSkill key);
+        void Press(GuildWarsKeyboard.Controls key);
+        void Release(GuildWarsKeyboard.Controls key);
+        void PressAndRelease(GuildWarsKeyboard.Controls key);
     }
 }

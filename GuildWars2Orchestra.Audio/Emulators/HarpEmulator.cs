@@ -1,4 +1,5 @@
 ﻿using System;
+using GuildWars2Orchestra.Audio.Repositories;
 using GuildWars2Orchestra.Audio.Sound;
 using GuildWars2Orchestra.GuildWars2.Controls;
 using GuildWars2Orchestra.GuildWars2.Instrument;
@@ -11,24 +12,24 @@ namespace GuildWars2Orchestra.Audio.Emulators
 
         private readonly HarpSoundRepository _soundRepository = new HarpSoundRepository();
 
-        public void Press(GuildWarsKeyboard.GuildWarsSkill key)
+        public void Press(GuildWarsKeyboard.Controls key)
         {
             switch (key)
             {
-                case GuildWarsKeyboard.GuildWarsSkill.Skill1:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill2:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill3:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill4:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill5:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill6:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill7:
-                case GuildWarsKeyboard.GuildWarsSkill.Skill8:
+                case GuildWarsKeyboard.Controls.WeaponSkill1:
+                case GuildWarsKeyboard.Controls.WeaponSkill2:
+                case GuildWarsKeyboard.Controls.WeaponSkill3:
+                case GuildWarsKeyboard.Controls.WeaponSkill4:
+                case GuildWarsKeyboard.Controls.WeaponSkill5:
+                case GuildWarsKeyboard.Controls.HealingSkill:
+                case GuildWarsKeyboard.Controls.UtilitySkill1:
+                case GuildWarsKeyboard.Controls.UtilitySkill2:
                     AudioPlaybackEngine.Instance.PlaySound(_soundRepository.Get(key, _octave));
                     break;
-                case GuildWarsKeyboard.GuildWarsSkill.Skill9:
+                case GuildWarsKeyboard.Controls.UtilitySkill3:
                     DecreaseOctave();
                     break;
-                case GuildWarsKeyboard.GuildWarsSkill.Skill0:
+                case GuildWarsKeyboard.Controls.EliteSkill:
                     IncreaseOctave();
                     break;
                 default:
@@ -36,11 +37,11 @@ namespace GuildWars2Orchestra.Audio.Emulators
             }
         }
 
-        public void Release(GuildWarsKeyboard.GuildWarsSkill key)
+        public void Release(GuildWarsKeyboard.Controls key)
         {
         }
 
-        public void PressAndRelease(GuildWarsKeyboard.GuildWarsSkill key)
+        public void PressAndRelease(GuildWarsKeyboard.Controls key)
         {
         }
 

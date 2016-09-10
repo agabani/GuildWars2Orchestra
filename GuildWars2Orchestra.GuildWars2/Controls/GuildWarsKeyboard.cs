@@ -10,32 +10,32 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 {
     public class GuildWarsKeyboard : IKeyboard
     {
-        public enum GuildWarsSkill
+        public enum Controls
         {
-            Skill0,
-            Skill1,
-            Skill2,
-            Skill3,
-            Skill4,
-            Skill5,
-            Skill6,
-            Skill7,
-            Skill8,
-            Skill9
+            WeaponSkill1,
+            WeaponSkill2,
+            WeaponSkill3,
+            WeaponSkill4,
+            WeaponSkill5,
+            HealingSkill,
+            UtilitySkill1,
+            UtilitySkill2,
+            UtilitySkill3,
+            EliteSkill,
         }
 
-        private static readonly Dictionary<GuildWarsSkill, KeyboardKey> KeyboardKey = new Dictionary<GuildWarsSkill, KeyboardKey>
+        private static readonly Dictionary<Controls, KeyboardKey> KeyboardKey = new Dictionary<Controls, KeyboardKey>
         {
-            {GuildWarsSkill.Skill0, new KeyboardKey(Keys.D0)},
-            {GuildWarsSkill.Skill1, new KeyboardKey(Keys.D1)},
-            {GuildWarsSkill.Skill2, new KeyboardKey(Keys.D2)},
-            {GuildWarsSkill.Skill3, new KeyboardKey(Keys.D3)},
-            {GuildWarsSkill.Skill4, new KeyboardKey(Keys.D4)},
-            {GuildWarsSkill.Skill5, new KeyboardKey(Keys.D5)},
-            {GuildWarsSkill.Skill6, new KeyboardKey(Keys.D6)},
-            {GuildWarsSkill.Skill7, new KeyboardKey(Keys.D7)},
-            {GuildWarsSkill.Skill8, new KeyboardKey(Keys.D8)},
-            {GuildWarsSkill.Skill9, new KeyboardKey(Keys.D9)}
+            {Controls.WeaponSkill1, new KeyboardKey(Keys.D1)},
+            {Controls.WeaponSkill2, new KeyboardKey(Keys.D2)},
+            {Controls.WeaponSkill3, new KeyboardKey(Keys.D3)},
+            {Controls.WeaponSkill4, new KeyboardKey(Keys.D4)},
+            {Controls.WeaponSkill5, new KeyboardKey(Keys.D5)},
+            {Controls.HealingSkill, new KeyboardKey(Keys.D6)},
+            {Controls.UtilitySkill1, new KeyboardKey(Keys.D7)},
+            {Controls.UtilitySkill2, new KeyboardKey(Keys.D8)},
+            {Controls.UtilitySkill3, new KeyboardKey(Keys.D9)},
+            {Controls.EliteSkill, new KeyboardKey(Keys.D0)}
         };
 
         public GuildWarsKeyboard()
@@ -56,17 +56,17 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             SystemWindow.ForegroundWindow = systemWindow;
         }
 
-        public void Press(GuildWarsSkill key)
+        public void Press(Controls key)
         {
             KeyboardKey[key].Press();
         }
 
-        public void Release(GuildWarsSkill key)
+        public void Release(Controls key)
         {
             KeyboardKey[key].Release();
         }
 
-        public void PressAndRelease(GuildWarsSkill key)
+        public void PressAndRelease(Controls key)
         {
             KeyboardKey[key].PressAndRelease();
         }

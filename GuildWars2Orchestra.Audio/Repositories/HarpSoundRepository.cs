@@ -4,36 +4,36 @@ using GuildWars2Orchestra.GuildWars2.Controls;
 using GuildWars2Orchestra.GuildWars2.Instrument;
 using NAudio.Vorbis;
 
-namespace GuildWars2Orchestra.Audio.Emulators
+namespace GuildWars2Orchestra.Audio.Repositories
 {
     public class HarpSoundRepository
     {
         private static readonly Dictionary<string, string> Map = new Dictionary<string, string>
         {
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill1}{HarpNote.Octaves.Low}", "C3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill2}{HarpNote.Octaves.Low}", "D3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill3}{HarpNote.Octaves.Low}", "E3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill4}{HarpNote.Octaves.Low}", "F3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill5}{HarpNote.Octaves.Low}", "G3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill6}{HarpNote.Octaves.Low}", "A3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill7}{HarpNote.Octaves.Low}", "B3"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill8}{HarpNote.Octaves.Low}", "C4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill1}{HarpNote.Octaves.Middle}", "C4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill2}{HarpNote.Octaves.Middle}", "D4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill3}{HarpNote.Octaves.Middle}", "E4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill4}{HarpNote.Octaves.Middle}", "F4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill5}{HarpNote.Octaves.Middle}", "G4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill6}{HarpNote.Octaves.Middle}", "A4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill7}{HarpNote.Octaves.Middle}", "B4"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill8}{HarpNote.Octaves.Middle}", "C5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill1}{HarpNote.Octaves.High}", "C5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill2}{HarpNote.Octaves.High}", "D5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill3}{HarpNote.Octaves.High}", "E5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill4}{HarpNote.Octaves.High}", "F5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill5}{HarpNote.Octaves.High}", "G5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill6}{HarpNote.Octaves.High}", "A5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill7}{HarpNote.Octaves.High}", "B5"},
-            {$"{GuildWarsKeyboard.GuildWarsSkill.Skill8}{HarpNote.Octaves.High}", "C6"}
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill1}{HarpNote.Octaves.Low}", "C3"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill2}{HarpNote.Octaves.Low}", "D3"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill3}{HarpNote.Octaves.Low}", "E3"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill4}{HarpNote.Octaves.Low}", "F3"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill5}{HarpNote.Octaves.Low}", "G3"},
+            {$"{GuildWarsKeyboard.Controls.HealingSkill}{HarpNote.Octaves.Low}", "A3"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill1}{HarpNote.Octaves.Low}", "B3"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill2}{HarpNote.Octaves.Low}", "C4"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill1}{HarpNote.Octaves.Middle}", "C4"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill2}{HarpNote.Octaves.Middle}", "D4"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill3}{HarpNote.Octaves.Middle}", "E4"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill4}{HarpNote.Octaves.Middle}", "F4"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill5}{HarpNote.Octaves.Middle}", "G4"},
+            {$"{GuildWarsKeyboard.Controls.HealingSkill}{HarpNote.Octaves.Middle}", "A4"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill1}{HarpNote.Octaves.Middle}", "B4"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill2}{HarpNote.Octaves.Middle}", "C5"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill1}{HarpNote.Octaves.High}", "C5"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill2}{HarpNote.Octaves.High}", "D5"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill3}{HarpNote.Octaves.High}", "E5"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill4}{HarpNote.Octaves.High}", "F5"},
+            {$"{GuildWarsKeyboard.Controls.WeaponSkill5}{HarpNote.Octaves.High}", "G5"},
+            {$"{GuildWarsKeyboard.Controls.HealingSkill}{HarpNote.Octaves.High}", "A5"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill1}{HarpNote.Octaves.High}", "B5"},
+            {$"{GuildWarsKeyboard.Controls.UtilitySkill2}{HarpNote.Octaves.High}", "C6"}
         };
 
         private static readonly Dictionary<string, CachedSound> Sound = new Dictionary<string, CachedSound>
@@ -67,7 +67,7 @@ namespace GuildWars2Orchestra.Audio.Emulators
             return Sound[id];
         }
 
-        public CachedSound Get(GuildWarsKeyboard.GuildWarsSkill key, HarpNote.Octaves octave)
+        public CachedSound Get(GuildWarsKeyboard.Controls key, HarpNote.Octaves octave)
         {
             return Sound[Map[$"{key}{octave}"]];
         }
