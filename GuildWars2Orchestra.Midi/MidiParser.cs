@@ -8,19 +8,29 @@ namespace GuildWars2Orchestra.Midi
 {
     public class MidiParser
     {
+        private const int MidiNoteC3 = 48;
+        private const int MidiNoteC6 = 84;
+        private const int DefaultTempo = 120;
+
         public MusicSheet Parse(string midiPath)
         {
             var midi = new MidiFile(midiPath);
 
-            var tempo = GetTempo(midi);
-            var beatsPerMeasure = GetBeatsPerMeasure(midi);
+            var metronomeMark = new MetronomeMark(Metronome(midi), BeatsPerMeasure(midi));
 
-            var metronomeMark = new MetronomeMark((int) tempo, beatsPerMeasure);
-
-            return new MusicSheet(metronomeMark, ParseMelody(midi, beatsPerMeasure));
+            return new MusicSheet(metronomeMark, Melody(midi, metronomeMark));
         }
 
-        private static Fraction GetBeatsPerMeasure(MidiFile midi)
+        private static int Metronome(MidiFile midi)
+        {
+            return (int) (midi.Events
+                .SelectMany(x => x)
+                .OfType<TempoEvent>()
+                .OrderBy(@event => @event.AbsoluteTime)
+                .LastOrDefault()?.Tempo ?? DefaultTempo);
+        }
+
+        private static Fraction BeatsPerMeasure(MidiFile midi)
         {
             var timeSignatureEvent = midi.Events
                 .SelectMany(x => x)
@@ -28,42 +38,50 @@ namespace GuildWars2Orchestra.Midi
                 .OrderBy(@event => @event.AbsoluteTime)
                 .Last();
 
-            return new Fraction(1, timeSignatureEvent.Denominator);
+            return new Fraction(timeSignatureEvent.Numerator, timeSignatureEvent.Denominator);
         }
 
-        private static double GetTempo(MidiFile midi)
-        {
-            return midi.Events
-                .SelectMany(x => x)
-                .OfType<TempoEvent>()
-                .OrderBy(@event => @event.AbsoluteTime)
-                .LastOrDefault()?.Tempo ?? 120;
-        }
-
-        private static IEnumerable<ChordOffset> ParseMelody(MidiFile midi, Fraction beatsPerMeasure)
+        private static IEnumerable<ChordOffset> Melody(MidiFile midi, MetronomeMark metronomeMark)
         {
             return midi.Events
                 .SelectMany(@event => @event)
                 .OfType<NoteOnEvent>()
                 .Where(MidiEvent.IsNoteOn)
-                .Where(note => note.NoteNumber >= 48 && note.NoteNumber <= 84)
+                .Where(note => note.NoteNumber >= MidiNoteC3 && note.NoteNumber <= MidiNoteC6)
                 .GroupBy(@event => @event.AbsoluteTime)
                 .OrderBy(group => group.Key)
-                .Select(x => ToChordOffset(x, beatsPerMeasure));
+                .Select(x => ChordOffset(x, metronomeMark));
         }
 
-        private static ChordOffset ToChordOffset(IGrouping<long, NoteOnEvent> midiEvents, Fraction beatsPerMeasure)
+        private static ChordOffset ChordOffset(IGrouping<long, NoteOnEvent> midiEvents, MetronomeMark metronomeMark)
         {
-            var chordLength = midiEvents.Min(x => x.NoteLength);
+            return new ChordOffset(Chord(midiEvents), Offset(midiEvents.Key, metronomeMark));
+        }
 
-            var notes = midiEvents
-                .Select(@event => MidiMapper.ToNote[@event.NoteNumber]);
+        private static Chord Chord(IGrouping<long, NoteOnEvent> midiEvents)
+        {
+            return new Chord(Notes(midiEvents), Length(midiEvents));
+        }
 
-            var fraction = new Fraction(chordLength, 1000);
+        private static IEnumerable<Note> Notes(IEnumerable<NoteOnEvent> midiEvents)
+        {
+            return midiEvents.Select(@event => MidiMapper.ToNote[@event.NoteNumber]);
+        }
 
-            var absoluteBeat = midiEvents.Key/(1000*beatsPerMeasure.Nominator/(beatsPerMeasure.Denominator));
+        private static Fraction Length(IEnumerable<NoteOnEvent> midiEvents)
+        {
+            return new Fraction(midiEvents.Min(x => x.NoteLength), 1000);
+        }
 
-            return new ChordOffset(new Chord(notes, fraction), new Beat(absoluteBeat));
+        private static Beat Offset(long absoluteTime, MetronomeMark metronomeMark)
+        {
+            decimal
+                time = absoluteTime,
+                wholeNoteLength = (decimal) metronomeMark.WholeNoteLength.TotalMilliseconds;
+
+            var beatsPerMeasure = metronomeMark.BeatsPerMeasure;
+
+            return new Beat(time/wholeNoteLength/beatsPerMeasure);
         }
     }
 }
