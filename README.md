@@ -1,39 +1,41 @@
 # Guild Wars 2 Orchestra
 
-> A program to play music sheets using instruments inside of Guild Wars 2
+> A program to play music sheets using instruments found inside of Guild Wars 2
 
 ## Supported Instruments
 
-| Instrument | Supported |
-|------------|-----------|
-| Bell       | No        |
-| Flute      | No        |
-| Horn       | No        |
-| Harp       | Yes       |
-| Lute       | No        |
-| Bell2      | No        |
-| Bass       | No        |
+| Instrument | Supported | Instrument | Supported |
+|------------|-----------|------------|-----------|
+| Bell       | No        | Lute       | No        |
+| Flute      | No        | Bell2      | No        |
+| Horn       | No        | Bass       | No        |
+| Harp       | **Yes**   |
 
 ## Features
 
-* Play music sheets from [http://gw2mb.com](http://gw2mb.com) [v 0.0.0.1]
-  * Only "Music Box Notation" is supported.
-* Option to choose between "favor chords" or "favor notes" [v 0.0.0.3]
+* Music Player:
+  * Play songs to Guild Wars 2.
+  * Plays songs to your default audio device (emulated mode).
+* Supported Music Sheets:
+  * Music Box Notation ([http://gw2mb.com](http://gw2mb.com))
+* Music player styles, change the method used to play the music sheets (found in `/TestData/*.xml` files):
   * "favor chords": trys to play chords as smoothly as possible.
   * "favor notes": trys to play every note.
-* Chords played using their "absolute time" instead of using "note queueing and sleep" [v 0.0.0.4]
-  *  This means chords can to be played slowly without it reducing the tempo as a side effect, allowing for more unplayable songs to become playable.
-  *  “note queueing and sleep” is the approach AutoHotkey uses, eg: `Sleep, 400`.
-* Audio emulation alernative to running Guild Wars 2 [v 0.0.0.5]
+* Time Management:
+  * Chords played using "absolute time" from music sheet. This means chords can be played slowly so it can be played in Guild Wars 2, whilst not affecting the tempo/when chords starts to play.
+
+## Experimental Features
+
+* MIDI file support:
+  * Use a midi file (.mid) as an input to listen to it in Guild Wars 2.
 
 ## Upcoming Features
 
-* MIDI file support
-  * Use a midi file (.mid) as an input to listen to it in Guild Wars 2
-* Network Support
-  * Allow for multiple instruments to be played in time with each other
-* Keyboard inputs direct to Guild Wars 2
-  * Allows users to remain in control of their keyboard inputs instead of forcing foreground window focus to Guild Wars 2
+* Network Support:
+  * Allow for multiple instruments to be played in time with each other.
+* Keyboard inputs direct to Guild Wars 2:
+  * Allows users to remain in control of their keyboard inputs instead of forcing foreground window focus to Guild Wars 2.
+* Graphical User Interface
 
 ## Usage
 
@@ -61,7 +63,5 @@ Example YouTube video: [Guild Wars 2 Orchestra - Guilty Crown - My Dearest ](htt
 ## Notes
 
 This application simulates keyboard key presses using Windows API, therefore requires Guild Wars 2 to be the foreground window for the entire duration of the music sheet.
-
-## Planned Work
 
 This program is a slow work in progress, current efforts is to get any music played to be as faithful to the music sheet it is currently playing using the harp as a musical instrument. Once that it is completed to a satisfactory level, then support for other instruments will follow suit.
