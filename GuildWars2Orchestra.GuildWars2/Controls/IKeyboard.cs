@@ -4,6 +4,5 @@
     {
         void Press(GuildWarsControls key);
         void Release(GuildWarsControls key);
-        void PressAndRelease(GuildWarsControls key);
     }
 }

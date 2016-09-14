@@ -41,10 +41,6 @@ namespace GuildWars2Orchestra.Audio.Emulators
         {
         }
 
-        public void PressAndRelease(GuildWarsControls key)
-        {
-        }
-
         private void IncreaseOctave()
         {
             switch (_octave)

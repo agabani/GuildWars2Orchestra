@@ -88,10 +88,5 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 
             PInvoke.SendInput((uint) nInputs.Length, nInputs, Input.Size);
         }
-
-        public void PressAndRelease(GuildWarsControls key)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
