@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using GuildWars2Orchestra.GuildWars2.PInvoke;
+using GuildWars2Orchestra.GuildWars2.Extern;
 
 namespace GuildWars2Orchestra.GuildWars2.Controls
 {
@@ -18,7 +17,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
                     _process = Process.GetProcesses()
                         .First(p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase));
 
-                    SetForegroundWindow(_process.MainWindowHandle);
+                    PInvoke.SetForegroundWindow(_process.MainWindowHandle);
                     break;
 
                 case 2:
@@ -27,7 +26,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
                             p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
                                  p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));
 
-                    SetForegroundWindow(_process.MainWindowHandle);
+                    PInvoke.SetForegroundWindow(_process.MainWindowHandle);
                     break;
 
                 case 3:
@@ -67,7 +66,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             };
 
             AttachInput();
-            SendInput((uint) nInputs.Length, nInputs, Input.Size);
+            PInvoke.SendInput((uint) nInputs.Length, nInputs, Input.Size);
             DetachInput();
         }
 
@@ -93,7 +92,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             };
 
             AttachInput();
-            SendInput((uint) nInputs.Length, nInputs, Input.Size);
+            PInvoke.SendInput((uint) nInputs.Length, nInputs, Input.Size);
             DetachInput();
         }
 
@@ -105,19 +104,19 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
         private void AttachInput()
         {
             //var attachThreadInput = AttachThreadInput((uint) GetCurrentProcess().Id, (uint) _process.Id, true);
-            uint currentThreadId = GetCurrentThreadId();
+            uint currentThreadId = PInvoke.GetCurrentThreadId();
             uint temp;
-            uint foregroundThreadId = GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
-            var attachThreadInput = AttachThreadInput(currentThreadId, foregroundThreadId, false);
+            uint foregroundThreadId = PInvoke.GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
+            var attachThreadInput = PInvoke.AttachThreadInput(currentThreadId, foregroundThreadId, false);
         }
 
         private void DetachInput()
         {
             //var attachThreadInput = AttachThreadInput((uint) GetCurrentProcess().Id, (uint) _process.Id, false);
-            uint currentThreadId = GetCurrentThreadId();
+            uint currentThreadId = PInvoke.GetCurrentThreadId();
             uint temp;
-            uint foregroundThreadId = GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
-            var attachThreadInput = AttachThreadInput(currentThreadId, foregroundThreadId, false);
+            uint foregroundThreadId = PInvoke.GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
+            var attachThreadInput = PInvoke.AttachThreadInput(currentThreadId, foregroundThreadId, false);
         }
 
         private ProcessThread GetCurrentProcess()
@@ -134,43 +133,43 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             switch (key)
             {
                 case GuildWarsControls.WeaponSkill1:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_1;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_1;
                     virtualKeyShort = VirtualKeyShort.KEY_1;
                     break;
                 case GuildWarsControls.WeaponSkill2:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_2;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_2;
                     virtualKeyShort = VirtualKeyShort.KEY_2;
                     break;
                 case GuildWarsControls.WeaponSkill3:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_3;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_3;
                     virtualKeyShort = VirtualKeyShort.KEY_3;
                     break;
                 case GuildWarsControls.WeaponSkill4:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_4;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_4;
                     virtualKeyShort = VirtualKeyShort.KEY_4;
                     break;
                 case GuildWarsControls.WeaponSkill5:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_5;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_5;
                     virtualKeyShort = VirtualKeyShort.KEY_5;
                     break;
                 case GuildWarsControls.HealingSkill:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_6;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_6;
                     virtualKeyShort = VirtualKeyShort.KEY_6;
                     break;
                 case GuildWarsControls.UtilitySkill1:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_7;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_7;
                     virtualKeyShort = VirtualKeyShort.KEY_7;
                     break;
                 case GuildWarsControls.UtilitySkill2:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_8;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_8;
                     virtualKeyShort = VirtualKeyShort.KEY_8;
                     break;
                 case GuildWarsControls.UtilitySkill3:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_9;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_9;
                     virtualKeyShort = VirtualKeyShort.KEY_9;
                     break;
                 case GuildWarsControls.EliteSkill:
-                    scanCodeShort = PInvoke.ScanCodeShort.KEY_0;
+                    scanCodeShort = Extern.ScanCodeShort.KEY_0;
                     virtualKeyShort = VirtualKeyShort.KEY_0;
                     break;
                 default:
@@ -178,22 +177,5 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             }
             return scanCodeShort;
         }
-
-        [DllImport("user32.dll")]
-        internal static extern uint SendInput(uint nInputs, [MarshalAs(UnmanagedType.LPArray), In] Input[] pInputs, int cbSize);
-
-        [DllImport("user32.dll")]
-        private static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        [DllImport("kernel32.dll")]
-        private static extern uint GetCurrentThreadId();
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
-
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace GuildWars2Orchestra.GuildWars2.PInvoke
+namespace GuildWars2Orchestra.GuildWars2.Extern
 {
     [Flags]
     internal enum KeyEventF : uint

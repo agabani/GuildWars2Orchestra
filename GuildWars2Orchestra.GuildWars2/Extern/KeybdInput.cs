@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace GuildWars2Orchestra.GuildWars2.PInvoke
+namespace GuildWars2Orchestra.GuildWars2.Extern
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct KeybdInput

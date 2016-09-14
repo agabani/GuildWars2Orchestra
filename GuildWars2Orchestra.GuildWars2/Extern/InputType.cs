@@ -1,4 +1,4 @@
-namespace GuildWars2Orchestra.GuildWars2.PInvoke
+namespace GuildWars2Orchestra.GuildWars2.Extern
 {
     internal enum InputType : uint
     {
