@@ -80,10 +80,6 @@
       <Project>{968F7155-13BE-4132-B01A-0B023DA3B784}</Project>
       <Name>GuildWars2Orchestra.MusicBoxNotation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
-      <Project>{fbd3ec1e-47e2-4d2d-81c9-d6506125a09a}</Project>
-      <Name>ManagedWinapi</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestData\Wiz Khalifa - See  You Again.xml">

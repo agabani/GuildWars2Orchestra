@@ -12,24 +12,24 @@ namespace GuildWars2Orchestra.Audio.Emulators
 
         private readonly HarpSoundRepository _soundRepository = new HarpSoundRepository();
 
-        public void Press(GuildWarsKeyboard.Controls key)
+        public void Press(GuildWarsControls key)
         {
             switch (key)
             {
-                case GuildWarsKeyboard.Controls.WeaponSkill1:
-                case GuildWarsKeyboard.Controls.WeaponSkill2:
-                case GuildWarsKeyboard.Controls.WeaponSkill3:
-                case GuildWarsKeyboard.Controls.WeaponSkill4:
-                case GuildWarsKeyboard.Controls.WeaponSkill5:
-                case GuildWarsKeyboard.Controls.HealingSkill:
-                case GuildWarsKeyboard.Controls.UtilitySkill1:
-                case GuildWarsKeyboard.Controls.UtilitySkill2:
+                case GuildWarsControls.WeaponSkill1:
+                case GuildWarsControls.WeaponSkill2:
+                case GuildWarsControls.WeaponSkill3:
+                case GuildWarsControls.WeaponSkill4:
+                case GuildWarsControls.WeaponSkill5:
+                case GuildWarsControls.HealingSkill:
+                case GuildWarsControls.UtilitySkill1:
+                case GuildWarsControls.UtilitySkill2:
                     AudioPlaybackEngine.Instance.PlaySound(_soundRepository.Get(key, _octave));
                     break;
-                case GuildWarsKeyboard.Controls.UtilitySkill3:
+                case GuildWarsControls.UtilitySkill3:
                     DecreaseOctave();
                     break;
-                case GuildWarsKeyboard.Controls.EliteSkill:
+                case GuildWarsControls.EliteSkill:
                     IncreaseOctave();
                     break;
                 default:
@@ -37,11 +37,11 @@ namespace GuildWars2Orchestra.Audio.Emulators
             }
         }
 
-        public void Release(GuildWarsKeyboard.Controls key)
+        public void Release(GuildWarsControls key)
         {
         }
 
-        public void PressAndRelease(GuildWarsKeyboard.Controls key)
+        public void PressAndRelease(GuildWarsControls key)
         {
         }
 

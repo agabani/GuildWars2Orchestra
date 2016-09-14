@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra", "GuildWars2Orchestra\GuildWars2Orchestra.csproj", "{2AB64580-18E6-45EA-83D1-1C21A2A387D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedWinapi", "ManagedWinapi\ManagedWinapi.csproj", "{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Midi", "GuildWars2Orchestra.Midi\GuildWars2Orchestra.Midi.csproj", "{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildWars2Orchestra.Midi.Tests.Unit", "GuildWars2Orchestra.Midi.Tests.Unit\GuildWars2Orchestra.Midi.Tests.Unit.csproj", "{2D0E880D-3234-43BA-9B34-808C3591D8B9}"
@@ -40,10 +38,6 @@ Global
 		{2AB64580-18E6-45EA-83D1-1C21A2A387D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB64580-18E6-45EA-83D1-1C21A2A387D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB64580-18E6-45EA-83D1-1C21A2A387D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45BEBC8-F6C7-43AE-B2E9-8AEEBF6FE758}.Release|Any CPU.ActiveCfg = Release|Any CPU

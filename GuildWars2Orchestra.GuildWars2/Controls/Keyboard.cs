@@ -8,46 +8,44 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 {
     public class Keyboard : IKeyboard
     {
+        private readonly Process _process;
+
         public Keyboard()
         {
-/*
-            var process = Process.GetProcesses()
-                .First(p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase));
-*/
-
-            var process = Process.GetProcesses()
-                .First(
-                    p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
-                         p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));
-
-            SetForegroundWindow(process.MainWindowHandle);
-
-
-/*            var thisProcess = Process.GetCurrentProcess();
-
-          
-            /*var process = Process.GetProcesses()
-                .FirstOrDefault(
-                    p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
-                         p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));#1#
-
-            var processThreads = thisProcess.Threads
-                .OfType<ProcessThread>();
-
-/*            var thisProcessThread = processThreads
-                .First(p => p.ThreadState == ThreadState.Running);#1#
-
-            var processThread = _targetProcess.Threads
-                .OfType<ProcessThread>()
-                .First();
-
-            foreach (var thread in processThreads)
+            switch (2)
             {
-                AttachThreadInput((uint) thread.Id, (uint) processThread.Id, true);
-            }*/
+                case 1:
+                    _process = Process.GetProcesses()
+                        .First(p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase));
+
+                    SetForegroundWindow(_process.MainWindowHandle);
+                    break;
+
+                case 2:
+                    _process = Process.GetProcesses()
+                        .First(
+                            p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
+                                 p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));
+
+                    SetForegroundWindow(_process.MainWindowHandle);
+                    break;
+
+                case 3:
+                    _process = Process.GetProcesses()
+                        .First(p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase));
+                    break;
+
+                case 4:
+                    _process = Process.GetProcesses()
+                        .First(
+                            p => p.ProcessName.Equals("GW2-64", StringComparison.OrdinalIgnoreCase) ||
+                                 p.ProcessName.Equals("GW2", StringComparison.OrdinalIgnoreCase));
+
+                    break;
+            }
         }
 
-        public void Press(GuildWarsKeyboard.Controls key)
+        public void Press(GuildWarsControls key)
         {
             ScanCodeShort scanCodeShort;
             VirtualKeyShort virtualKeyShort;
@@ -68,12 +66,12 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
                 }
             };
 
-            //AttachInput();
+            AttachInput();
             SendInput((uint) nInputs.Length, nInputs, INPUT.Size);
-            //DetachInput();
+            DetachInput();
         }
 
-        public void Release(GuildWarsKeyboard.Controls key)
+        public void Release(GuildWarsControls key)
         {
             ScanCodeShort scanCodeShort;
             VirtualKeyShort virtualKeyShort;
@@ -94,79 +92,84 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
                 }
             };
 
-            //AttachInput();
+            AttachInput();
             SendInput((uint) nInputs.Length, nInputs, INPUT.Size);
-            //DetachInput();
+            DetachInput();
         }
 
-        public void PressAndRelease(GuildWarsKeyboard.Controls key)
+        public void PressAndRelease(GuildWarsControls key)
         {
             throw new NotImplementedException();
         }
 
         private void AttachInput()
         {
-            var id = Process.GetCurrentProcess().Threads
-                .OfType<ProcessThread>()
-                .Single(p => p.ThreadState == ThreadState.Running).Id;
-
-            AttachThreadInput((uint) id, (uint) Process.GetProcesses()
-                .FirstOrDefault(
-                    p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase)).Id, true);
+            //var attachThreadInput = AttachThreadInput((uint) GetCurrentProcess().Id, (uint) _process.Id, true);
+            uint currentThreadId = GetCurrentThreadId();
+            uint temp;
+            uint foregroundThreadId = GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
+            var attachThreadInput = AttachThreadInput(currentThreadId, foregroundThreadId, false);
         }
 
         private void DetachInput()
         {
-            var id = Process.GetCurrentProcess().Threads
-                .OfType<ProcessThread>()
-                .Single(p => p.ThreadState == ThreadState.Running).Id;
-
-            AttachThreadInput((uint) id, (uint) Process.GetProcesses()
-                .FirstOrDefault(
-                    p => p.ProcessName.Equals("notepad", StringComparison.OrdinalIgnoreCase)).Id, false);
+            //var attachThreadInput = AttachThreadInput((uint) GetCurrentProcess().Id, (uint) _process.Id, false);
+            uint currentThreadId = GetCurrentThreadId();
+            uint temp;
+            uint foregroundThreadId = GetWindowThreadProcessId(_process.MainWindowHandle, out temp);
+            var attachThreadInput = AttachThreadInput(currentThreadId, foregroundThreadId, false);
         }
 
-        private static ScanCodeShort ScanCodeShort(GuildWarsKeyboard.Controls key, out ScanCodeShort scanCodeShort, out VirtualKeyShort virtualKeyShort)
+        private ProcessThread GetCurrentProcess()
+        {
+            var processThreads = Process.GetCurrentProcess().Threads
+                .OfType<ProcessThread>();
+
+            return processThreads
+                .Single(p => p.ThreadState == ThreadState.Running);
+        }
+
+        private static ScanCodeShort ScanCodeShort(GuildWarsControls key, out ScanCodeShort scanCodeShort, out VirtualKeyShort virtualKeyShort)
         {
             switch (key)
             {
-                case GuildWarsKeyboard.Controls.WeaponSkill1:
+                case GuildWarsControls.WeaponSkill1:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_1;
                     virtualKeyShort = VirtualKeyShort.KEY_1;
                     break;
-                case GuildWarsKeyboard.Controls.WeaponSkill2:
+                case GuildWarsControls.WeaponSkill2:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_2;
                     virtualKeyShort = VirtualKeyShort.KEY_2;
                     break;
-                case GuildWarsKeyboard.Controls.WeaponSkill3:
+                case GuildWarsControls.WeaponSkill3:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_3;
                     virtualKeyShort = VirtualKeyShort.KEY_3;
                     break;
-                case GuildWarsKeyboard.Controls.WeaponSkill4:
+                case GuildWarsControls.WeaponSkill4:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_4;
                     virtualKeyShort = VirtualKeyShort.KEY_4;
                     break;
-                case GuildWarsKeyboard.Controls.WeaponSkill5:
+                case GuildWarsControls.WeaponSkill5:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_5;
                     virtualKeyShort = VirtualKeyShort.KEY_5;
                     break;
-                case GuildWarsKeyboard.Controls.HealingSkill:
+                case GuildWarsControls.HealingSkill:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_6;
                     virtualKeyShort = VirtualKeyShort.KEY_6;
                     break;
-                case GuildWarsKeyboard.Controls.UtilitySkill1:
+                case GuildWarsControls.UtilitySkill1:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_7;
                     virtualKeyShort = VirtualKeyShort.KEY_7;
                     break;
-                case GuildWarsKeyboard.Controls.UtilitySkill2:
+                case GuildWarsControls.UtilitySkill2:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_8;
                     virtualKeyShort = VirtualKeyShort.KEY_8;
                     break;
-                case GuildWarsKeyboard.Controls.UtilitySkill3:
+                case GuildWarsControls.UtilitySkill3:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_9;
                     virtualKeyShort = VirtualKeyShort.KEY_9;
                     break;
-                case GuildWarsKeyboard.Controls.EliteSkill:
+                case GuildWarsControls.EliteSkill:
                     scanCodeShort = PInvoke.ScanCodeShort.KEY_0;
                     virtualKeyShort = VirtualKeyShort.KEY_0;
                     break;
@@ -185,5 +188,12 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("kernel32.dll")]
+        private static extern uint GetCurrentThreadId();
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
     }
 }
