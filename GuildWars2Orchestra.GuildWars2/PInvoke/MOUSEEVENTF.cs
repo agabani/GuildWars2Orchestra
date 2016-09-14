@@ -3,7 +3,7 @@ using System;
 namespace GuildWars2Orchestra.GuildWars2.PInvoke
 {
     [Flags]
-    internal enum MOUSEEVENTF : uint
+    internal enum MouseEventF : uint
     {
         ABSOLUTE = 0x8000,
         HWHEEL = 0x01000,

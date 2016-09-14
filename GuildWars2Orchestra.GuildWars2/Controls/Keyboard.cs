@@ -54,11 +54,11 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 
             var nInputs = new[]
             {
-                new INPUT
+                new Input
                 {
                     type = InputType.KEYBOARD, U = new InputUnion
                     {
-                        ki = new KEYBDINPUT
+                        ki = new KeybdInput
                         {
                             wScan = scanCodeShort, wVk = virtualKeyShort
                         }
@@ -67,7 +67,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
             };
 
             AttachInput();
-            SendInput((uint) nInputs.Length, nInputs, INPUT.Size);
+            SendInput((uint) nInputs.Length, nInputs, Input.Size);
             DetachInput();
         }
 
@@ -80,20 +80,20 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
 
             var nInputs = new[]
             {
-                new INPUT
+                new Input
                 {
                     type = InputType.KEYBOARD, U = new InputUnion
                     {
-                        ki = new KEYBDINPUT
+                        ki = new KeybdInput
                         {
-                            wScan = scanCodeShort, wVk = virtualKeyShort, dwFlags = KEYEVENTF.KEYUP
+                            wScan = scanCodeShort, wVk = virtualKeyShort, dwFlags = KeyEventF.KEYUP
                         }
                     }
                 }
             };
 
             AttachInput();
-            SendInput((uint) nInputs.Length, nInputs, INPUT.Size);
+            SendInput((uint) nInputs.Length, nInputs, Input.Size);
             DetachInput();
         }
 
@@ -180,7 +180,7 @@ namespace GuildWars2Orchestra.GuildWars2.Controls
         }
 
         [DllImport("user32.dll")]
-        internal static extern uint SendInput(uint nInputs, [MarshalAs(UnmanagedType.LPArray), In] INPUT[] pInputs, int cbSize);
+        internal static extern uint SendInput(uint nInputs, [MarshalAs(UnmanagedType.LPArray), In] Input[] pInputs, int cbSize);
 
         [DllImport("user32.dll")]
         private static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);

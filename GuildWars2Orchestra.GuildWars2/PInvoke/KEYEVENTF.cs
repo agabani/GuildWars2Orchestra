@@ -3,7 +3,7 @@ using System;
 namespace GuildWars2Orchestra.GuildWars2.PInvoke
 {
     [Flags]
-    internal enum KEYEVENTF : uint
+    internal enum KeyEventF : uint
     {
         EXTENDEDKEY = 0x0001,
         KEYUP = 0x0002,

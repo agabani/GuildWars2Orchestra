@@ -6,10 +6,10 @@ namespace GuildWars2Orchestra.GuildWars2.PInvoke
     internal struct InputUnion
     {
         [FieldOffset(0)]
-        internal MOUSEINPUT mi;
+        internal MouseInput mi;
         [FieldOffset(0)]
-        internal KEYBDINPUT ki;
+        internal KeybdInput ki;
         [FieldOffset(0)]
-        internal HARDWAREINPUT hi;
+        internal HardwareInput hi;
     }
 }

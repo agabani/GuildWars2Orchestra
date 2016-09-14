@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 namespace GuildWars2Orchestra.GuildWars2.PInvoke
 {
     [StructLayout(LayoutKind.Sequential)]
-    internal struct MOUSEINPUT
+    internal struct MouseInput
     {
         internal int dx;
         internal int dy;
         internal int mouseData;
-        internal MOUSEEVENTF dwFlags;
+        internal MouseEventF dwFlags;
         internal uint time;
         internal UIntPtr dwExtraInfo;
     }
