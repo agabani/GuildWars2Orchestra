@@ -62,7 +62,7 @@ namespace GuildWars2Orchestra
 
         private static IKeyboard GetKeyboard(ApplicationOptions options)
         {
-            return options.Emulated ? (IKeyboard) new HarpEmulator() : new GuildWarsKeyboard();
+            return options.Emulated ? (IKeyboard) new HarpEmulator() : new Keyboard();
         }
     }
 }

@@ -86,6 +86,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData\Wiz Khalifa - See  You Again.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\DanMachi - Right Light Rise.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

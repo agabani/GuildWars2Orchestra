@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<song>
+  <name>Wiz Khalifa - See  You Again</name>
+  <instrument>harp</instrument>
+  <tempo>70</tempo>
+  <meter>1/2</meter>
+  <algorithm>favor notes</algorithm>
+  <melody>
+    [A,E,G] d c [CE]2
+    c/2 d/2 e/2 d/2 c/2 d/2
+    [F,CG] d c [CEG]2
+    c/2 d/2 [G,Ge]/2 d/2 c/2 d/2
+    [E,G,G] d c [CEG]2
+    c/2 d/2 e/2 d/2 c/2 d/2
+    [C,F,CG] d c [CEG]2
+
+    c e g [cea]3 [ceg]3/2 a3
+    C/2 [CAd] d c [G,ce]/2 d3
+    e/2 g/2 [E,cea] b a [G,ceg] e d d c [F,Ad] d e [G,Ec] A3
+
+    c/2 [Ge]/2 g/2 [E,cea]3/2 b/2 a [G,ceg]3/2 a3
+    C/2 [C,A,D] D C [G,CE]/2 D2
+    E G [E,CA] [Ec] [Fd] [G,ce] [Fd] [Ec] [CA] [Ec]
+    [C,Ad] [Ad] [Ac] [G,Ec] A2
+    A c [C,Ad] [Fd] [Fc] [G,Ec]6
+
+    [E,Ge] G,/2 d/2 e G,/2 [Gd]/2 e c/2 d/2 e/2 g/2 [Ce]/2 d/2
+    [FAc] F,/2 A/2 c [G,d] [Ge] d/2 C d/2 c/2 [CG]/2 c/2
+    [E,Gd] A,/2 c/2 [Gd] G,/2 c/2 [Gd] C/2 c/2 G [Cc]/2 G/2
+    [Gd] F,/2 G/2 [Gc] [G,Gd]/2 c
+
+    D/2 [CG]/2 c/2 d/2
+    G/2 [Cc]/2 d/2
+    [E,e]/2 G/2 [A,c]/2 d/2 e/2
+    G/2 [G,c]/2 d/2 e/2
+    G/2 [Cc]/2 d/2 e/2 g/2 [Ce]/2 d/2 [c]/2
+    F/2 [F,G]/2 A/2 c/2 A/2
+    [d]/2 [Ge] d/2
+    [CG]/2 c/2 d/2 c/2 [CG]/2 c/2 [E,d]/2 c/2
+    [A,G]/2 c/2 d/2 c/2
+    [G,G]/2 c/2 d/2 c/2
+    [CG]/2 c/2 d/2 c/2
+    [CG]/2 c/2 d/2 c/2
+    [g]/2 G/2 c/2 G/2 [d]/2 [Ec]3
+
+    [E,G] A, C [G,G]2 C
+    c/2 c/2 [Cc]/2 [Ge]
+    c/2 c/2 c/2 c/2 c/2
+    [Ec]/2 c/2 c/2 c/2 [Cc]/2 c/2
+    A/2 G/2 C/2 e/2
+    [Ec]/2 c/2 c/2 c/2 c/2 c/2
+    [Ec]/2 c/2 c/2 c/2 [Cc]/2 c/2
+    A/2 G/2 C/2 A/2 [Ge]/2
+    c/2 c/2 c/2 c/2 c/2 [Gc]/2 c/2 c2 c2
+
+    [Ce] g [E,cea]3 [G,ceg]3/2 a3
+    c/2 [F,Ad] d c [G,ce]/2 d4
+    e/2 g/2 [E,cea] b a [G,ceg] e d d c [F,Ad] d e [C,EGc] A3
+
+    c/2 [Ge] g [E,cea]3/2 b/2 a/2 [G,ceg]3/2 a3
+    c/2 [F,Ad] d c [G,ce]/2 d2
+    E G
+    [E,CEA] [Ec] [Fd] [Ge] [Fd] [Ec] [Ca] [Ec]
+    [FAd] [FAd] [FAc] [EGc] A2 A c
+    [FAd] [Fd] [Fc] [Ec]3 [CEc] [CEB] [CEA]3 [G,CEG]3
+    [CEc] [CEB] [A,CA]3/2 [B,B]/2 [A,A] [G,CG] [G,CE]2 G,/2 A,/2 C/2
+    D/2 [G,CE]3/2 D/2 [G,CE]3/2 D/2 [G,CE]3/2
+    D/2 [G,CE]/2 G/2 E/2 D/2 [F,A,C]3/2 A,/2 [F,C] D/2 [E,G,C]6
+
+
+
+
+    [E,Ge] G,/2 d/2 e G,/2 [Gd]/2 e c/2 d/2 e/2 g/2 [Ce]/2 d/2
+    [FAc] F,/2 A/2 c [G,d] [Ge] d/2 C d/2 c/2 [CG]/2 c/2
+    [E,Gd] A,/2 c/2 [Gd] G,/2 c/2 [Gd] C/2 c/2 G [Cc]/2 G/2
+    [Gd] F,/2 G/2 [Gc] [G,Gd]/2 c
+
+    D/2 [CG]/2 c/2 d/2
+    G/2 [Cc]/2 d/2
+    [E,e]/2 G/2 [A,c]/2 d/2 e/2
+    G/2 [G,c]/2 d/2 e/2
+    G/2 [Cc]/2 d/2 e/2 g/2 [Ce]/2 d/2 [c]/2
+    F/2 [F,G]/2 A/2 c/2 A/2
+    [d]/2 [Ge] d/2
+    [CG]/2 c/2 d/2 c/2 [CG]/2 c/2 [E,d]/2 c/2
+    [A,G]/2 c/2 d/2 c/2
+    [G,G]/2 c/2 d/2 c/2
+    [CG]/2 c/2 d/2 c/2
+    [CG]/2 c/2 d/2 c/2
+    [g]/2 G/2 c/2 G/2 [d]/2 [Ec]3
+
+    [E,G] A, C [G,G]2 C
+    c/2 c/2 [Cc]/2 [Ge]
+    c/2 c/2 c/2 c/2 c/2
+    [Ec]/2 c/2 c/2 c/2 [Cc]/2 c/2
+    A/2 G/2 C/2 e/2
+    [Ec]/2 c/2 c/2 c/2 c/2 c/2
+    [Ec]/2 c/2 c/2 c/2 [Cc]/2 c/2
+    A/2 G/2 C/2 A/2 [Ge]/2
+    c/2 c/2 c/2 c/2 c/2 [Gc]/2 c/2 c2 c2
+
+    e g [ca]3 [cg]3 c [Gd]2 [Ge]4
+    [Gc]4 [Aa] [Aa] a/2 [Aa]3/2 [Gg] [Gg] [Ee]/2 [Gg]3/2 [Aa]6
+
+    D/2 D/2 E/2 [A,CF] [FAd] [FAc] [G,CE] A4
+    D/2 [EGd] e/2 d [DGc] d [CEAc]2 [B,DGB]2 [A,CFA]5 [B,B]3 [Cc]/2 [Dd] [Cc] [A,A]4
+
+    c e g [ca]3 [cg]3/2 a3
+    c/2 [Gd] d c [Ge]4
+    e/2 g/2 [ca] b a [cg] e d d c d d e c A3
+
+
+    c/2 [Ge]/2 g/2 [E,cea]3/2 b/2 a [G,ceg]3/2 a3
+    C/2 [C,A,D] D C [G,CE]/2 D2
+    E G [CEA] [Ec] [Fd] [Ge] [Fd] [Ec] [CA] [Ec]
+    [Fd] [Fd] [Fc] [Ec] A2
+    [A,A] [Cc] [Dd] [Dd] [Cc] [Ee]3
+    [CEc] [CEB] [CEA]3 [G,CEG]3
+    [CEc] [CEB] [A,CA]3/2 [B,B]/2 [A,A] [G,CG] [G,CE]2 G,/2 A,/2 C/2
+    D/2 [G,CE]3/2 D/2 [G,CE]3/2 D/2 [G,CE]3/2
+    D/2 [G,CE]/2 G/2 E/2 D/2 [F,A,C]3/2 A,/2 [F,C] D/2 [E,G,C]6
+  </melody>
+</song>

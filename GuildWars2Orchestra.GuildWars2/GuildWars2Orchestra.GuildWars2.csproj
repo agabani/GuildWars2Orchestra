@@ -37,8 +37,19 @@
   <ItemGroup>
     <Compile Include="Controls\GuildWarsKeyboard.cs" />
     <Compile Include="Controls\IKeyboard.cs" />
+    <Compile Include="PInvoke\HARDWAREINPUT.cs" />
+    <Compile Include="PInvoke\INPUT.cs" />
+    <Compile Include="PInvoke\InputType.cs" />
+    <Compile Include="PInvoke\InputUnion.cs" />
+    <Compile Include="PInvoke\KEYBDINPUT.cs" />
+    <Compile Include="Controls\Keyboard.cs" />
     <Compile Include="Instrument\Harp.cs" />
     <Compile Include="Instrument\HarpNote.cs" />
+    <Compile Include="PInvoke\KEYEVENTF.cs" />
+    <Compile Include="PInvoke\MOUSEEVENTF.cs" />
+    <Compile Include="PInvoke\MOUSEINPUT.cs" />
+    <Compile Include="PInvoke\ScanCodeShort.cs" />
+    <Compile Include="PInvoke\VirtualKeyShort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
