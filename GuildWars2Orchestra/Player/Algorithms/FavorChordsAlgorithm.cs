@@ -32,7 +32,7 @@ namespace GuildWars2Orchestra.Player.Algorithms
                 }
                 else
                 {
-                    Thread.Sleep(TimeSpan.FromMilliseconds(30));
+                    Thread.Sleep(TimeSpan.FromMilliseconds(1));
                 }
             }
 
