@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Threading.Tasks;
 using GuildWars2Orchestra.Domain;
 using GuildWars2Orchestra.GuildWars2.Instrument;
 using GuildWars2Orchestra.Player.Algorithms;
@@ -19,9 +18,9 @@ namespace GuildWars2Orchestra.Player
             _algorithm = algorithm;
         }
 
-        public async Task Play()
+        public void Play()
         {
-            await _algorithm.Play(_harp, _musicSheet.MetronomeMark, _musicSheet.Melody.ToArray());
+            _algorithm.Play(_harp, _musicSheet.MetronomeMark, _musicSheet.Melody.ToArray());
         }
     }
 }

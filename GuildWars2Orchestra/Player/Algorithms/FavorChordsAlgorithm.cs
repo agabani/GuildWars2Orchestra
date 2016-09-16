@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
+using System.Threading;
 using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.GuildWars2.Instrument;
 using GuildWars2Orchestra.Kernal.Extensions;
@@ -9,7 +9,7 @@ namespace GuildWars2Orchestra.Player.Algorithms
 {
     public class FavorChordsAlgorithm : IPlayAlgorithm
     {
-        public async Task Play(Harp harp, MetronomeMark metronomeMark, ChordOffset[] melody)
+        public void Play(Harp harp, MetronomeMark metronomeMark, ChordOffset[] melody)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -24,15 +24,15 @@ namespace GuildWars2Orchestra.Player.Algorithms
 
                     foreach (var note in chord.Notes)
                     {
-                        await harp.GoToOctave(note);
-                        await harp.PlayNote(note);
+                        harp.GoToOctave(note);
+                        harp.PlayNote(note);
                     }
 
                     strumIndex++;
                 }
                 else
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(30));
+                    Thread.Sleep(TimeSpan.FromMilliseconds(30));
                 }
             }
 

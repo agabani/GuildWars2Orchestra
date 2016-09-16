@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
 using CommandLine;
 
 namespace GuildWars2Orchestra
@@ -7,21 +7,17 @@ namespace GuildWars2Orchestra
     {
         private static void Main(string[] args)
         {
-            Task.Run(async () => await MainAsync(args)).Wait();
-        }
-
-        private static async Task MainAsync(string[] args)
-        {
-            await Parser.Default
+            Parser.Default
                 .ParseArguments<ApplicationOptions>(args)
                 .MapResult(
-                    async options =>
+                    options =>
                     {
                         var musicPlayer = MusicPlayerFactory.Create(options);
-                        await Task.Delay(200);
-                        await musicPlayer.Play();
+                        Thread.Sleep(200);
+                        musicPlayer.Play();
+                        return 0;
                     },
-                    errors => Task.FromResult(1)
+                    errors => 1
                 );
         }
     }

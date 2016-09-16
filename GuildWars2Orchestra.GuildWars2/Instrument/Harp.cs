@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Threading;
 using GuildWars2Orchestra.Domain.Values;
 using GuildWars2Orchestra.GuildWars2.Controls;
 
@@ -11,16 +11,16 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
         private static readonly TimeSpan NoteTimeout = TimeSpan.FromMilliseconds(5);
         private static readonly TimeSpan OctaveTimeout = TimeSpan.FromTicks(500);
 
-        private static readonly Dictionary<HarpNote.Keys, Controls.GuildWarsControls> NoteMap = new Dictionary<HarpNote.Keys, Controls.GuildWarsControls>
+        private static readonly Dictionary<HarpNote.Keys, GuildWarsControls> NoteMap = new Dictionary<HarpNote.Keys, GuildWarsControls>
         {
-            {HarpNote.Keys.Note1, Controls.GuildWarsControls.WeaponSkill1},
-            {HarpNote.Keys.Note2, Controls.GuildWarsControls.WeaponSkill2},
-            {HarpNote.Keys.Note3, Controls.GuildWarsControls.WeaponSkill3},
-            {HarpNote.Keys.Note4, Controls.GuildWarsControls.WeaponSkill4},
-            {HarpNote.Keys.Note5, Controls.GuildWarsControls.WeaponSkill5},
-            {HarpNote.Keys.Note6, Controls.GuildWarsControls.HealingSkill},
-            {HarpNote.Keys.Note7, Controls.GuildWarsControls.UtilitySkill1},
-            {HarpNote.Keys.Note8, Controls.GuildWarsControls.UtilitySkill2}
+            {HarpNote.Keys.Note1, GuildWarsControls.WeaponSkill1},
+            {HarpNote.Keys.Note2, GuildWarsControls.WeaponSkill2},
+            {HarpNote.Keys.Note3, GuildWarsControls.WeaponSkill3},
+            {HarpNote.Keys.Note4, GuildWarsControls.WeaponSkill4},
+            {HarpNote.Keys.Note5, GuildWarsControls.WeaponSkill5},
+            {HarpNote.Keys.Note6, GuildWarsControls.HealingSkill},
+            {HarpNote.Keys.Note7, GuildWarsControls.UtilitySkill1},
+            {HarpNote.Keys.Note8, GuildWarsControls.UtilitySkill2}
         };
 
         private readonly IKeyboard _keyboard;
@@ -32,18 +32,18 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
             _keyboard = keyboard;
         }
 
-        public async Task PlayNote(Note note)
+        public void PlayNote(Note note)
         {
             var harpNote = HarpNote.From(note);
 
             if (RequiresAction(harpNote))
             {
                 harpNote = OptimizeNote(harpNote);
-                await PressNote(NoteMap[harpNote.Key]);
+                PressNote(NoteMap[harpNote.Key]);
             }
         }
 
-        public async Task GoToOctave(Note note)
+        public void GoToOctave(Note note)
         {
             var harpNote = HarpNote.From(note);
 
@@ -55,11 +55,11 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
                 {
                     if (_currentOctave < harpNote.Octave)
                     {
-                        await IncreaseOctave();
+                        IncreaseOctave();
                     }
                     else
                     {
-                        await DecreaseOctave();
+                        DecreaseOctave();
                     }
                 }
             }
@@ -83,7 +83,7 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
             return note;
         }
 
-        private async Task IncreaseOctave()
+        private void IncreaseOctave()
         {
             switch (_currentOctave)
             {
@@ -99,13 +99,13 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press(Controls.GuildWarsControls.EliteSkill);
-            _keyboard.Release(Controls.GuildWarsControls.EliteSkill);
+            _keyboard.Press(GuildWarsControls.EliteSkill);
+            _keyboard.Release(GuildWarsControls.EliteSkill);
 
-            await Task.Delay(OctaveTimeout);
+            Thread.Sleep(OctaveTimeout);
         }
 
-        private async Task DecreaseOctave()
+        private void DecreaseOctave()
         {
             switch (_currentOctave)
             {
@@ -121,18 +121,18 @@ namespace GuildWars2Orchestra.GuildWars2.Instrument
                     throw new ArgumentOutOfRangeException();
             }
 
-            _keyboard.Press(Controls.GuildWarsControls.UtilitySkill3);
-            _keyboard.Release(Controls.GuildWarsControls.UtilitySkill3);
+            _keyboard.Press(GuildWarsControls.UtilitySkill3);
+            _keyboard.Release(GuildWarsControls.UtilitySkill3);
 
-            await Task.Delay(OctaveTimeout);
+            Thread.Sleep(OctaveTimeout);
         }
 
-        private async Task PressNote(Controls.GuildWarsControls key)
+        private void PressNote(GuildWarsControls key)
         {
             _keyboard.Press(key);
             _keyboard.Release(key);
 
-            await Task.Delay(NoteTimeout);
+            Thread.Sleep(NoteTimeout);
         }
     }
 }
