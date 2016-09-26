@@ -1,6 +1,4 @@
-﻿using GuildWars2Orchestra.Domain;
-using GuildWars2Orchestra.Midi;
-using GuildWars2Orchestra.MusicBoxNotation.Parsers;
+﻿using GuildWars2Orchestra.Midi;
 using GuildWars2Orchestra.MusicBoxNotation.Persistance;
 using GuildWars2Orchestra.MusicBoxNotation.Serializer;
 
@@ -17,9 +15,11 @@ namespace GuildWars2Orchestra.CommandLineInterface
 
         internal void Run()
         {
-            MusicSheet musicSheet = new MidiParser().Parse(_options.InputMidi);
+            var musicSheet = new MidiParser().Parse(_options.InputMidi);
 
-            RawMusicSheet rawMusicSheet = new MusicSheetSerializer(new ChordOffsetSerializer(new ChordSerializer(new NoteSerializer()))).Serialize(musicSheet);
+            var rawMusicSheet = new MusicSheetSerializer(new ChordOffsetSerializer(new ChordSerializer(new NoteSerializer(), _options.IncludeChordDuration))).Serialize(musicSheet);
+
+            new XmlMusicSheetWriter().SaveToFile(rawMusicSheet, _options.OutputXml);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using GuildWars2Orchestra.Domain;
 using GuildWars2Orchestra.Domain.Values;
@@ -18,7 +19,7 @@ namespace GuildWars2Orchestra.Midi
 
             var metronomeMark = new MetronomeMark(Metronome(midi), BeatsPerMeasure(midi));
 
-            return new MusicSheet(metronomeMark, Melody(midi, metronomeMark));
+            return new MusicSheet(Path.GetFileNameWithoutExtension(midiPath), metronomeMark, Melody(midi, metronomeMark));
         }
 
         private static int Metronome(MidiFile midi)

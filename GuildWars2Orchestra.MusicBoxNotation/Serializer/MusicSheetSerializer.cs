@@ -15,7 +15,7 @@ namespace GuildWars2Orchestra.MusicBoxNotation.Serializer
 
         public RawMusicSheet Serialize(MusicSheet musicSheet)
         {
-            var name = string.Empty;
+            var name = musicSheet.Title;
             var tempo = SerializeTempo(musicSheet);
             var meter = SerializeMeter(musicSheet);
             var melody = SerializeMelody(musicSheet);

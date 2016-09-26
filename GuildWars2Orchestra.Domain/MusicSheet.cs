@@ -5,11 +5,14 @@ namespace GuildWars2Orchestra.Domain
 {
     public class MusicSheet
     {
-        public MusicSheet(MetronomeMark metronomeMark, IEnumerable<ChordOffset> melody)
+        public MusicSheet(string title, MetronomeMark metronomeMark, IEnumerable<ChordOffset> melody)
         {
             MetronomeMark = metronomeMark;
             Melody = melody;
+            Title = title;
         }
+
+        public string Title { get; }
 
         public MetronomeMark MetronomeMark { get; }
 

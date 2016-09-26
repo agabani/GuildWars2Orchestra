@@ -41,6 +41,7 @@
     <Compile Include="Parsers\NoteParser.cs" />
     <Compile Include="Persistance\RawMusicSheet.cs" />
     <Compile Include="Persistance\XmlMusicSheetReader.cs" />
+    <Compile Include="Persistance\XmlMusicSheetWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializer\ChordOffsetSerializer.cs" />
     <Compile Include="Serializer\ChordSerializer.cs" />

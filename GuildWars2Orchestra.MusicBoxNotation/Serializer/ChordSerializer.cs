@@ -6,10 +6,12 @@ namespace GuildWars2Orchestra.MusicBoxNotation.Serializer
 {
     public class ChordSerializer
     {
+        private readonly bool _includeChordDuration;
         private readonly NoteSerializer _noteSerializer;
 
-        public ChordSerializer(NoteSerializer noteSerializer)
+        public ChordSerializer(NoteSerializer noteSerializer, bool includeChordDuration)
         {
+            _includeChordDuration = includeChordDuration;
             _noteSerializer = noteSerializer;
         }
 
@@ -32,15 +34,18 @@ namespace GuildWars2Orchestra.MusicBoxNotation.Serializer
                 stringBuilder.Append("]");
             }
 
-            if (chord.Length.Nominator != 1)
+            if (_includeChordDuration)
             {
-                stringBuilder.Append(chord.Length.Nominator);
-            }
+                if (chord.Length.Nominator != 1)
+                {
+                    stringBuilder.Append(chord.Length.Nominator);
+                }
 
-            if (chord.Length.Denominator != 1)
-            {
-                stringBuilder.Append("/");
-                stringBuilder.Append(chord.Length.Denominator);
+                if (chord.Length.Denominator != 1)
+                {
+                    stringBuilder.Append("/");
+                    stringBuilder.Append(chord.Length.Denominator);
+                }
             }
 
             return stringBuilder.ToString();
