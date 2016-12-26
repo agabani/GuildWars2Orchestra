@@ -52,7 +52,7 @@ For more instructions, type `GuildWars2Orchestra.exe --help`
 
 The music sheets provided as test data in this repository originated from [http://gw2mb.com/archive.php](http://gw2mb.com/archive.php). Guild Wars 2 Orchestra will make its best attempt to play the music sheets faithfully. However, Guild Wars 2 has a limit on speed; some notes may be missed if the score is too fast.
 
-Example YouTube video: [Guild Wars 2 Orchestra - Guilty Crown - My Dearest ](https://www.youtube.com/watch?v=hgCDhFD71ZI)
+Example YouTube video: [Guild Wars 2 Orchestra - Yiruma - River Flows In You](https://www.youtube.com/watch?v=qX8MnCPoaSI)
 
 ## Minimum Requirements
 
